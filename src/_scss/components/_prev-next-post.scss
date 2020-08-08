@@ -1,0 +1,44 @@
+.dual-blocks {
+  display: flex;
+  flex-direction: column;
+
+
+  &__el {
+    width: 100%;
+    position: relative;
+    text-decoration: none;
+  }
+
+}
+
+.previous-next-blog-title {
+  position: relative;
+  padding: 8em 0em;
+  z-index: 50;
+  width: 90%;
+  margin: auto;
+  color: white;
+  text-decoration: none;
+}
+
+@media(min-width: $bp-md) {
+  .dual-blocks {
+    flex-direction: row;
+
+    &__el {
+      width: 50%;
+    }
+  
+    &__el:last-of-type {
+
+      .previous-next-blog-title {
+        text-align: right;
+      }
+    }
+  }
+
+  .previous-next-blog-title {
+    padding: 10em 0em;
+  }
+
+}

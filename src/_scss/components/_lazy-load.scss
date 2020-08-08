@@ -1,0 +1,25 @@
+
+
+img {
+  opacity: 0;
+
+  &.loaded {
+    opacity: 1;
+    transition: opacity 600ms ease;
+  }
+}
+
+.section-bg__el {
+  transition: all 600ms ease;
+}
+
+.section-bg.active {
+  .section-bg__el {
+    opacity: 1;
+    transition: all 1500ms ease;
+  }
+}
+
+.section-bg__el {
+  opacity: 0;
+}

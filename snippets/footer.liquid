@@ -1,0 +1,96 @@
+<footer>
+  <div class="inner footer-column">
+    <div class="footer-column__el">
+      <a href="{{ site.url }}/" id="footer-link">
+        {% include 'logo-with-text'%}
+      </a>
+      <nav class="footer-li">
+        <ul>
+          <li>{{ settings.company_address }} </li>
+          <li>{{ settings.number }}</li>
+          <li><a href="mailto:{{ settings.email }}">{{ settings.email }}</a></li>
+        </ul>
+      </nav>
+
+      <div id="payments" class="desktop">
+        <h5>Payment Methods</h5>
+        <div class="payment-container">
+         {% include 'payment-types' %}
+        </div>
+      </div>
+    </div>
+    <div class="footer-column__el">
+      {% assign menuObj = linklists.customer-support %}
+      <div class="footer-category">
+        <h5>{{ menuObj.title }}</h5>
+        <span class="indicator">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16"  viewBox="0 0 16 16">
+            <g id="Group_72" data-name="Group 72" transform="translate(-396 -5659)">
+              <circle id="Ellipse_6" data-name="Ellipse 6" cx="8" cy="8" r="8" transform="translate(396 5659)" fill="#f1f2f2"/>
+              <path id="Path_73" data-name="Path 73" d="M-1813,5419.478v7.477" transform="translate(2217 244)" fill="none" stroke="#2e2e2e" stroke-width="1"/>
+              <path id="Path_74" data-name="Path 74" d="M-1813,5419.478v7.477" transform="translate(5827.216 7480.216) rotate(90)" fill="none" stroke="#2e2e2e" stroke-width="1"/>
+            </g>
+          </svg>       
+        </span>
+      </div>
+      <nav class="footer-li">
+        <ul>
+          {% for link in menuObj.links %}
+            <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-column__el">
+      {% assign menuObj = linklists.partner-support %}
+      <div class="footer-category">
+        <h5>{{ menuObj.title }}</h5>
+        <span class="indicator">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16"  viewBox="0 0 16 16">
+            <g id="Group_72" data-name="Group 72" transform="translate(-396 -5659)">
+              <circle id="Ellipse_6" data-name="Ellipse 6" cx="8" cy="8" r="8" transform="translate(396 5659)" fill="#f1f2f2"/>
+              <path id="Path_73" data-name="Path 73" d="M-1813,5419.478v7.477" transform="translate(2217 244)" fill="none" stroke="#2e2e2e" stroke-width="1"/>
+              <path id="Path_74" data-name="Path 74" d="M-1813,5419.478v7.477" transform="translate(5827.216 7480.216) rotate(90)" fill="none" stroke="#2e2e2e" stroke-width="1"/>
+            </g>
+          </svg>       
+        </span>
+      </div>
+      <nav class="footer-li">
+        <ul>
+          {% for link in menuObj.links %}
+            <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-column__el">
+      {% assign menuObj = linklists.products %}
+      <div class="footer-category">
+        <h5>{{ menuObj.title }}</h5>
+        <span class="indicator">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16"  viewBox="0 0 16 16">
+            <g id="Group_72" data-name="Group 72" transform="translate(-396 -5659)">
+              <circle id="Ellipse_6" data-name="Ellipse 6" cx="8" cy="8" r="8" transform="translate(396 5659)" fill="#f1f2f2"/>
+              <path id="Path_73" data-name="Path 73" d="M-1813,5419.478v7.477" transform="translate(2217 244)" fill="none" stroke="#2e2e2e" stroke-width="1"/>
+              <path id="Path_74" data-name="Path 74" d="M-1813,5419.478v7.477" transform="translate(5827.216 7480.216) rotate(90)" fill="none" stroke="#2e2e2e" stroke-width="1"/>
+            </g>
+          </svg>       
+        </span>
+      </div>
+      <nav class="footer-li">
+        <ul>
+          {% for link in menuObj.links %}
+            <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+
+    <div class="footer-column__el mobile">
+      <h5>Payment Methods</h5>
+      <div class="payment-container">
+        {% include 'payment-types' %}
+      </div>
+    </div>
+  </div>
+</footer>

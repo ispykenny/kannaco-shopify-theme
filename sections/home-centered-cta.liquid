@@ -1,0 +1,54 @@
+<div class="inner">
+  <div class="content-container min center" id="home-midtro">
+    {{ section.settings.content }}
+    <div class="btn-home-group">
+      <a href="{{ section.settings.secondaryLink }}" class="cta secondary">
+        {{ section.settings.secondaryText}}
+      </a>
+      <a href="{{ section.settings.primaryLink }}" class="cta">
+        {{ section.settings.primaryText }}
+      </a>
+    </div>
+  </div>
+</div>
+<div class="section-full-bg" data-bg="{{section.settings.section_bg | img_url: 'master'}}"></div>
+
+
+{% schema %}
+  {
+    "tag": "section",
+    "name": "Centered Text",
+    "settings": [
+      {
+        "id": "content",
+        "type": "html",
+        "label": "Centered Text"
+      },
+      {
+        "id": "secondaryText",
+        "type": "text",
+        "label": "Secondary Link Text"
+      },
+      {
+        "id": "secondaryLink",
+        "type": "url",
+        "label": "Secondary Link"
+      },
+      {
+        "id": "primaryText",
+        "type": "text",
+        "label": "Primary Link Text"
+      },
+      {
+        "id": "primaryLink",
+        "type": "url",
+        "label": "Primary Link"
+      },
+      {
+        "id": "section_bg",
+        "type": "image_picker",
+        "label": "Section Background"
+      }
+    ]
+  }
+{% endschema %}

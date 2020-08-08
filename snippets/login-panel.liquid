@@ -1,0 +1,58 @@
+<div class="header-spacer"></div>
+<section style="overflow: visible;">
+  <div class="inner">
+    <div class="login-panel-parent">
+      <div class="login-panel-parent__inner">
+        {% assign company_logo = settings.company_logo  | img_url: 'master' %}
+        <div class="sign-in">
+          <div class="login-panel">
+            <h3>Login to your account ({{ 'or create an account' | customer_register_link }})</h3>
+            {% form 'customer_login' %}
+              <div class="input-el">
+                <label for="customer_email">Email Address</label>
+                <input type="email" name="customer[email]" />
+              </div>
+              <div class="input-el">
+                <label for="customer_password">Password</label>
+                <input type="password" name="customer[password]" />
+              </div>
+              <input type="hidden" name="checkout_url" value="/" />
+              <div class="form-btn-group">
+                <button class="primary-btn go" type="submit" id="login-btn">
+                  Login
+                </button>
+                <a id="init-password-reset" href="#recover">
+                  Forgot your password?
+                </a>
+              </div>
+            {% endform %}
+
+            <div class="reset-password-form" id="recover">
+              <div class="reset-password-form__inner">
+                <h3>Reset your password</h3>
+                 {% form 'recover_customer_password' %} {{ form.errors | default_errors
+                    }}
+
+                    <div class="input-el">
+                      <label for="customer_email">Email Address</label>
+                      <input type="email" name="email" />
+                    </div>
+
+                    <div class="input-el">
+                      <p>Once filled out, an email will be sent to you promptly for you to reset your password </p>
+                    </div>
+
+                    <div class="btn-group">
+                      <input class="go" type="submit" value="Submit" />
+                    </div>
+
+                    {% endform %} 
+              
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

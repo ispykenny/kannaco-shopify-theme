@@ -1,0 +1,95 @@
+.cta-parent {
+  padding-top: 1em;
+
+  &.has-two-callouts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media(min-width: $bp-md) {
+      justify-content: left;
+    }
+
+    .cta-secondary {
+      margin-left: 30px;
+    }
+  }
+}
+
+.cta {
+  display: inline-block;
+  padding: 0.8em 2em;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  background: $primary;
+  color: white;
+
+  &:hover {
+    transition: background 500ms ease;
+    background: darken($primary, 10%);
+  }
+}
+
+.cta-secondary {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0; right: 0%;
+    width: 0%;
+    height: 2px; 
+    background: $secondary;
+    transition: width 300ms $ease-out-quart;
+  }
+
+  &:hover {
+
+    span {
+      transform: translateY(-2px);
+      transition: transform 300ms ease;
+    }
+
+    &:after {
+      right: auto; left: 0;
+      width: 100%;
+    }
+
+    svg {
+      transform: rotate(180deg);
+      transition: 150ms transform ease;
+    }
+  }
+
+  span:last-of-type {
+    margin-left: 10px;
+    top: 1px;
+    position: relative;
+  }
+
+  &.on-dark {
+    color: white;
+  }
+}
+
+.secondary-cta-parent {
+  display: inline-block;
+
+  a {
+    color: $dark;
+  }
+  
+}
+
+.single-secondary-cta {
+  
+  a {
+    margin-left: 0em;
+  }
+}

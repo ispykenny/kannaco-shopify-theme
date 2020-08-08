@@ -1,0 +1,75 @@
+    <div class="inner">
+
+      <div class="about-content dark-header">
+        <h3>{{section.settings.section_header}}</h3>
+        <div class="hr"></div>
+        <p>{{section.settings.section_content}}</p>
+      </div>
+      
+      <div class="blog-features">
+
+      {% assign blog_handle = 'article' %}
+        {% for article in blogs[blog_handle].articles limit: 4 %}
+        
+
+        {% comment %} <div class="about-slider__item">
+          <div class="about-slider__image">
+            <img src="{{ team.image.src | img_url: '600x300', crop: 'center' }}" alt="">
+          </div>
+          <div class="about-slider__who">
+            <p>{{ article.title }}</p>
+            <p>{{ team.metafields.accentuate.job_title}}</p>
+          </div>
+        </div> {% endcomment %}
+
+        <div class="blog-item">
+          <div class="blog-item__inner">
+            <div class="blog-item__image"><img src="{{ article.image.src | img_url: 'master'  }}" alt=""></div>
+            <div class="blog-item__content">
+              <h4>{{ article.title }}</h4>
+              <p>{{ article.content | strip_html | truncatewords: 20 }}</p>
+              <a href="{{ article.url }}" class="cta-secondary">
+                <span class="link-text">Learn More</span>
+                <span class="link-crt">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="8" height="11" viewBox="0 0 8 11">
+                    <path id="Polygon_3" data-name="Polygon 3" d="M5.17.479a.4.4,0,0,1,.659,0l4.74,6.894A.4.4,0,0,1,10.24,8H.76a.4.4,0,0,1-.33-.627Z" transform="translate(8) rotate(90)" fill="#da6227"></path>
+                  </svg> 
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+        {% endfor %}
+
+        
+
+      </div>
+
+      <div class="cta-read-all">
+        <a class="cta" href="{{shop.url}}/blogs">View More</a>
+      </div>
+    </div>
+
+
+
+  {% schema %}
+{
+  "name": "Featured Blogs",
+  "tag": "section",
+  "class": "blog-section-component",
+  "settings": [
+    {
+      "id": "section_header",
+      "type": "text",
+      "label": "Header"
+    },
+    {
+      "id": "section_content",
+      "type": "text",
+      "label": "Copy"
+    }
+  ]
+}
+{% endschema %}

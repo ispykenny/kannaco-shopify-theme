@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700&display=swap');
+
+
+@font-face {
+  font-family: 'kannaco';
+  src: url('webfont.eot'); /* IE9 Compat Modes */
+  src: url('FuturaPRO-Medium.eot') format('embedded-opentype'), /* IE6-IE8 */
+       url('FuturaPRO-Medium.woff') format('woff'), /* Pretty Modern Browsers */
+       url('FuturaPRO-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('FuturaPRO-Medium.svg#kannaco') format('svg'); /* Legacy iOS */
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'kannaco';
+  src: url('webfont.eot'); /* IE9 Compat Modes */
+  src: url('FuturaPRO-Book.eot') format('embedded-opentype'), /* IE6-IE8 */
+       url('FuturaPRO-Book.woff') format('woff'), /* Pretty Modern Browsers */
+       url('FuturaPRO-Book.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('FuturaPRO-Book.svg#kannaco') format('svg'); /* Legacy iOS */
+  font-weight: medium;
+}
+
+@font-face {
+  font-family: 'kannaco';
+  src: url('webfont.eot'); /* IE9 Compat Modes */
+  src: url('FuturaPRO-Bold.eot') format('embedded-opentype'), /* IE6-IE8 */
+       url('FuturaPRO-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('FuturaPRO-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('FuturaPRO-Bold.svg#kannaco') format('svg'); /* Legacy iOS */
+  font-weight: bold;
+}
+
+$body : 'Roboto', sans-serif;
+
+p, a , li  {
+  line-height: 1.8;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+h2 {
+  font-size: 2.1em;
+}
+h3 {
+  font-size: 1.7em;
+}
+h4 {
+  font-size: 1.3em;
+}
+h5 {
+  font-size: 0.9em;
+}
+
+.section-subtitle {
+  color: $primary;
+  font-size: 1.2em;
+  padding-bottom: 0.4em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: 1.2;
+  margin: 0;
+  font-family: 'kannaco';
+}
+
+
+
+body {
+  color: $dark;
+  font-size: 14px;
+  font-family: $body;
+  @include font-smoothing();
+
+  @media(min-width: $bp-md) {
+    font-size: 16px;
+  }
+
+  @media(min-width: $bp-lg) {
+    font-size: 18px;
+  }
+
+}
+

@@ -1,0 +1,42 @@
+.subscribe {
+  text-align: center;
+}
+
+.subscribe__form {
+  max-width: 500px;
+  margin: auto;
+}
+
+
+.subscribe-input-el {
+  input {
+    outline: none;
+    border-radius: 0px;
+    -webkit-appearance: none;
+    border: none;
+    height: 50px;
+    background: $gray;
+    font-size: 1em;
+    width: calc(100% - 1em);
+    padding-left: 1em;
+  }
+}
+
+
+.subscribe-button-el {
+  margin-top: 1em;
+
+  button {
+    @include btn-reset();
+    color: white;
+    background: $primary;
+    font-size: 1em;
+    padding: 1em 2.6em;
+  }
+}
+
+.subscribe-msg {
+  color: #999;
+  font-style: italic;
+  font-size: 800;
+}

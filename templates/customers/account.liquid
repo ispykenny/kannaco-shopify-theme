@@ -1,0 +1,66 @@
+<div class="header-spacer"></div>
+<section>
+  <div class="inner">
+    <div class="user-settings">
+      <div class="user-settings__el">
+        <strong>Hello {{customer.first_name}},</strong>
+      </div>
+      <div class="user-settings__el">
+        <ul>
+          <li><a href="{{ shop_url }}/account/addresses">Edit Account</a></li>
+          <li>{{ 'Log out' | customer_logout_link }}</li>
+        </ul>
+      </div>
+    </div>
+    <p>Here are your recent orders:</p>
+    
+    {% assign orderLength = customer.orders | size %}
+
+    {% if customer.orders_count > 0%} 
+      {% comment %} <p>Your last order was placed on: {{ customer.last_order.created_at | date: "%B %d, %Y %I:%M%p" }}</p> {% endcomment %}
+
+      {% for order in customer.orders %}
+        <div class="order-parent"> 
+          <h5 style="margin-top: none;">Order Number: #{{ order.order_number }}</h5>
+          <a class="cta" style="margin-top: 0.6em;" href="/cart/{% for line_item in order.line_items %}{{ line_item.variant_id }}:{{ line_item.quantity }}{% unless forloop.last %},{% endunless %}{% endfor %}">Reorder this</a>
+          <p>Placed on: {{order.created_at | date: "%B %d, %Y %I:%M%p" }}</p>
+         <div class="account-shipping">
+            <div>Shipped to:</div>
+            <div class="shipped-address">{{order.shipping_address.name}} to {{order.shipping_address.street}}, <br>{{order.shipping_address.city}}, {{order.shipping_address.province}}, {{order.shipping_address.zip}}.  </div>
+         </div>
+          {% comment %} <p>Order {{order.line_items}}</p> {% endcomment %}
+          {% comment %} <p>Status: {{ order.fulfillment_status }}</p> {% endcomment %}
+          <div class="order">
+            {% for prods in order.line_items %}
+              <div class="orders__el">
+                <div class="orders__column">
+                  <a href="{{prods.url}}">
+                    <div>
+                      <img src="{{prods | img_url : 'master'}}" alt="">
+                    </div>
+                    {{prods.title}}
+                  </a>
+                </div>
+                <div class="orders__column">
+                  {{prods.title}}
+                </div>
+                <div class="orders__column">
+                  Quantity: {{prods.quantity}}
+                </div>
+                <div class="orders__column">
+                  {{prods.price | money_with_currency}}
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+          <div class="check-status-total">
+            <div class="">Total: {{order.total_price | money_with_currency }}</div>
+            <a href="{{order.order_status_url}}">Check status</a>
+          </div>
+        </div>
+      {% endfor %}
+      
+
+    {% endif %}
+  </div>
+</section>

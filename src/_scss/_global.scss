@@ -1,0 +1,78 @@
+.inner {
+  max-width: 1600px;
+  width: 95%;
+  margin: auto;
+}
+
+.inner-most {
+  max-width: 1240px;
+  width: 95%;
+  margin: auto;
+}
+
+.content-area {
+  max-width: 1000px;
+
+  img {
+    width: 100%;
+    height: auto !important;
+    max-width: 100%;
+  }
+
+  a {
+    color: $primary;
+
+    &:hover {
+      color: $secondary;
+    }
+  }
+
+}
+.no-overlay {
+
+  &:after {
+    display: none;
+  }
+}
+.bg-el {
+  opacity: 0;
+  transform: scale(1.1);
+  transition: opacity 600ms ease;
+}
+
+.bg-is-set {
+  .bg-el {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+header, 
+footer, 
+section {
+  position: relative;
+}
+
+
+.is-el-bg {
+  @include fill-parent();
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 800ms ease;
+
+  &.ready {
+    opacity: 1;
+  }
+}
+
+.clear-fix {
+  @include clearfix();
+}
+.white-text {
+
+  p {
+    color: white;
+  }
+}

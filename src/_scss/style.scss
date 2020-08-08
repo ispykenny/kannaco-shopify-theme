@@ -1,0 +1,56 @@
+@import 'vars';
+@import 'lib/flickity';
+@import 'lib/mixins';
+@import 'settings';
+@import 'fonts';
+@import 'global';
+
+body {
+  background: #eee;
+}
+
+.orange {
+  color: $primary;
+}
+
+// == components
+
+// nav maseter
+@import 'components/nav/index';
+@import 'components/headers/default';
+@import 'components/footer/default';
+@import 'components/elements/index';
+@import 'components/elements/qty';
+@import 'components/transitions';
+@import 'spacing';
+@import 'components/cta';
+@import 'components/centered-text';
+@import 'components/three-col';
+@import 'components/lazy-load';
+@import 'components/full-width-banner';
+@import 'components/offset-image';
+@import 'components/icon-row';
+@import 'components/form-el';
+@import 'components/two-col-fluid';
+@import 'components/blog-listing';
+@import 'components/blog-single';
+@import 'components/share-article';
+@import 'components/prev-next-post';
+@import 'components/subscribe-blog';
+@import 'components/explore-products';
+@import 'components/new-hero';
+@import 'components/new-about';
+@import 'components/batch';
+@import 'components/subscribe';
+@import 'components/featured-blogs';
+@import 'lib/select-2';
+
+@import 'pages/product-single';
+@import 'pages/password-reset';
+@import 'pages/account';
+@import 'pages/login';
+@import 'pages/cart';
+@import 'pages/about';
+@import 'pages/contact';
+@import 'pages/collection';
+@import 'pages/single-page-template';

@@ -1,0 +1,64 @@
+<div class="header-spacer"></div>
+{% assign img = page.metafields.accentuate.about_image | first  %}
+  <section id="hero">
+    <div class="inner">
+      
+      <div class="large-hero">
+        <h1 class="large-hero__text">{{page.metafields.accentuate.hero_title}}</h1>
+
+        <form action="" class="batch-search">
+          <input type="text" class="batch-search__item" placeholder="Enter Batch Number">
+          <div class="batch-submit">
+            <button type="submit">Search</button>
+          </div>
+        </form>
+      </div>
+  
+    </div>
+  
+    <div class="section-bg fade-overlay" id="hero_paralax">
+      <div class="section-bg__el" data-bg="{{ img.src }}">
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="batch-nav">
+    <div class="inner">
+      <div class="batch">
+        <div class="batch__el">Batch Number</div>
+        <div class="batch__el">Product</div>
+        <div class="batch__el">Date</div>
+        <div class="batch__el">Link</div>
+      </div>
+      <hr>
+    </div>
+  </section>
+
+  <section class="batch-items">
+    <div class="inner">
+
+      <div class="no-results">
+        <h2>No Results for <span class="batch-search-query"></span></h2>
+        <button class="cta reset-batch">View All</button>
+      </div>
+
+        {% assign blog_handle = 'batch' %}
+          {% for batch in blogs[blog_handle].articles %}
+          {% assign pdf = batch.metafields.accentuate.batch_pdf | first  %}
+          
+          <div class="batch batch__item batch-id-{{ batch.title }}">
+            <div class="batch__el">{{ batch.title }}</div>
+            <div class="batch__el">{{ batch.metafields.accentuate.product_name }}</div>
+            <div class="batch__el">{{ batch.metafields.accentuate.batch_date}}</div>
+            <div class="batch__el">
+              <a href="{{pdf.src}}" target="_blank" class="cta batch-cta">View</a>
+            </div>
+          </div>
+        {% endfor %}
+
+      
+        
+      
+    </div>
+  </section>

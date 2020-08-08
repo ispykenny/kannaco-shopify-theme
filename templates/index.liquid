@@ -1,0 +1,25 @@
+{% section 'home-hero' %}
+{% section 'centered-text' %}
+{% section 'product-categories' %}
+{% section 'full-banner' %}
+{% section 'facts' %}
+{% section 'find-products' %}
+{% section 'products' %}
+{% section 'pre-footer' %}
+{% section 'featured-blogs' %}
+
+
+
+
+
+
+  {% comment %} {% for product in collections.frontpage.products limit:6 %}
+  <div>
+    <a href="{{ product.url | within: collection }}">{{ product.title }}</a>
+    {{ product.price | money }}
+    {% unless product.available %}<br><strong>sold out</strong>{% endunless %}
+    <a href="{{ product.url | within: collection }}">
+      <img src="{{ product.featured_image.src | img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}">
+    </a>
+  </div>
+{% endfor %} {% endcomment %}

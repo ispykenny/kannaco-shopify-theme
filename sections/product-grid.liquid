@@ -1,0 +1,45 @@
+<div class="inner flexed-product-grid">
+  {% for block in section.blocks %}
+    {% assign product_image = block.settings.product_preview_image  | img_url: 'master' %}
+    <a class="product-grid-items" href="{{ block.settings.product_link }}">
+      <div class="product-type">
+        <span>{{ block.settings.product_type}}</span>
+      </div>
+      <div class="product-preview">
+        <div class="section-full-bg" data-bg="{{ product_image }}">
+        </div>
+      </div>
+    </a>
+  {% endfor %}
+</div>
+
+
+{% schema %}
+{
+  "tag": "section",
+  "blocks": [
+    {
+      "type": "categories",
+      "name": "Categories",
+      "settings": [
+        {
+          "id": "product_type",
+          "type": "text",
+          "label": "Product Type"
+        },
+        {
+          "id": "product_link",
+          "type": "url",
+          "label": "Preview Link"
+        },
+        {
+          "id": "product_preview_image",
+          "type": "image_picker",
+          "label": "Preview Image"
+        }
+      ]
+    }
+  ]
+}
+
+{% endschema %}

@@ -1,0 +1,38 @@
+<section id="hero">
+  <div class="inner">
+    <div id="hdr-content" class="is-centered">
+      <h1 class="orange">{{section.settings.section_header}}</h1>
+      <p>{{section.settings.section_content}}</p>
+    </div>
+  </div>
+  <div class="section-bg has-overlay">
+    <div class="section-bg__el lazy-bg" data-bg="{{section.settings.section_bg | img_url: 'master'}}">
+    </div>
+  </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "Hero Banner",
+  "tag": "section",
+  "class": "full-width-banner-parent",
+  "settings": [
+    {
+      "id": "section_header",
+      "type": "text",
+      "label": "Header"
+    },
+    {
+      "id": "section_content",
+      "type": "text",
+      "label": "Copy"
+    },
+    {
+      "id": "section_bg",
+      "type": "image_picker",
+      "label": "Background Image"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,32 @@
+
+{% assign previousBlog = blog.previous_article %}
+{% assign previousBlogImage = previousBlog.image.src | img_url : 'master' %}
+{% assign nextBlog = blog.next_article %}
+{% assign nextBlogImage = nextBlog.image.src | img_url : 'master' %}
+
+
+{% if previousBlog and nextBlog %}
+  <section class="dual-blocks">
+    <a class="dual-blocks__el" href="{{ previousBlog }}">
+      <div class="previous-next-blog-title">
+        <h4><span>Previous Blog</span></h4>
+        <span>{{ previousBlog.title }}</span>
+      </div>
+      <div class="section-bg has-overlay">
+        <div class="section-bg__el lazy-bg" data-bg="{{ previousBlogImage }}"></div>
+        <div class="in-view-indicator-bg"></div>
+      </div>
+    </a>
+
+    <a class="dual-blocks__el" href="{{ nextBlog }}">
+      <div class="previous-next-blog-title">
+        <h4><span>Next Blog</span></h4>
+        <span>{{ nextBlog.title }}</span>
+      </div>
+      <div class="section-bg has-overlay">
+        <div class="section-bg__el" data-bg="{{ nextBlogImage }}"></div>
+        <div class="in-view-indicator-bg"></div>
+      </div>
+    </a>
+  </section>
+{% endif %}

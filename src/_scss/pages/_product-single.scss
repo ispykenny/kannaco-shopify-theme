@@ -1,0 +1,52 @@
+.has-overlap {
+  overflow: visible !important;
+}
+
+.product-single {
+  display: flex;
+  flex-direction: column;
+
+  &__el {
+    width: 100%;
+
+    &:first-of-type {
+      margin-bottom: 2em;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    background: #f2f2f2;
+  }
+}
+
+.selection {
+  max-width: 400px;
+}
+
+.all-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-row-gap: 10px;
+  grid-gap: 10px;
+  padding-top: 1em;
+
+  img {
+    background: #f2f2f2;
+  }
+}
+
+@media(min-width: $bp-md) {
+  .product-single {
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__el {
+      width: 48%;
+
+      &:first-of-type {
+        margin-bottom: 0em;
+      }
+    }
+  }
+}

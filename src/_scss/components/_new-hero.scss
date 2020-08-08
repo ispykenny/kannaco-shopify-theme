@@ -1,0 +1,15 @@
+.large-hero {
+  padding: 8em 0em;
+  max-width: 1000px;
+  margin: auto;
+  &__text {
+    color: white;
+    font-size: 3.5em;
+    padding: 0.2em 0em;
+  }
+}
+
+.paddingTop {
+  padding-top: 4em;
+} 
+

@@ -1,0 +1,81 @@
+.orders__el {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 40px;
+  padding-top: 2em;
+
+  @media(min-width: $bp-md) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+  }
+
+  @media(min-width: $bp-lg) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+}
+
+.order-parent {
+  padding: 1em 1em;
+  border-bottom: 1px solid $gray;
+  border-left: 2px solid $gray;
+
+  &:nth-child(even) {
+    border-left: 2px solid darken($gray, 15%);
+  }
+}
+
+.orders__column {
+  text-align: center;
+
+  a {
+    color: $dark;
+  }
+}
+
+.account-shipping {
+  display: flex;
+}
+
+.shipped-address {
+  margin-left: 15px;
+  p {
+    margin: 0;
+    display: inline;
+  }
+  
+}
+
+@media(min-width: $bp-md) {
+  .check-status-total {
+    text-align: right;
+
+    a {
+      color: $dark;
+    }
+  }
+}
+
+
+.user-settings {
+
+  @media(min-width: $bp-md) {
+    display: flex;
+    justify-content: space-between;
+  } 
+
+  ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0; padding: 0;
+
+    li {
+      margin-left: 24px;
+    }
+  }
+
+  a {
+    color: $dark;
+  }
+
+}

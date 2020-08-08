@@ -1,0 +1,57 @@
+.blog-article-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 40px;
+
+  @media(min-width: $bp-md) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 80px;
+  }
+
+  @media(min-width: $bp-lg) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+}
+
+.section-title-spacing {
+  padding-bottom: 4em;
+}
+
+.blog-image-container {
+  padding-bottom: (1 / 1.4) * 100%;
+  position: relative;
+  background: $gray;
+}
+
+.blog-grid-element-title {
+  font-size: 1.3em; 
+
+  a {
+    color: $dark;
+    text-decoration: none;
+  }
+}
+
+.blog-article-header {
+  padding-top: 1.4em;
+}
+
+.day {
+  display: block;
+  padding-bottom: 0.4em;
+  color: #999;
+}
+
+.content-general {
+  p:first-of-type {
+    margin-top: 0.5em;
+  }
+}
+
+.blog-categories {
+  span {
+    color: #999;
+    font-style: italic;
+  }
+}

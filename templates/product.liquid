@@ -1,0 +1,70 @@
+{% assign current_variant = product.selected_or_first_available_variant %}
+{% assign featured_image = current_variant.featured_image | default: product.featured_image %}
+
+<div class="header-spacer"></div>
+
+<section class="has-overlap">
+
+  <div class="inner">
+    <div class="product-single">
+    
+      <div class="product-single__el">
+        <div class="product-single__img">
+          <img src="{{ featured_image | img_url: 'master' }}" alt="">
+        </div>
+
+        <div class="all-images">
+          {% for img in product.images %}
+          <div class="all-images__preview">
+            <img src="{{ img  | img_url: 'master' }}" alt="">
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+
+      <div class="product-single__el">
+        <h1 class="section-title">{{ product.title }}</h1>
+        <div>{{ product.description }}</div>  
+        <form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm">
+          {% assign tags =  product.tags %}
+         
+          <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+          
+          {% comment %} {{ current_variant.price | money }} {% endcomment %}
+          <div>
+            <label for="Quantity">quantity</label>
+            <div class="qty">
+              <div class="qty__ui">
+                <div class="qty__change subtract">-</div>
+                <div class="qty__value">0</div>
+                <div class="qty__change add">+</div>
+              </div>
+              <input type="number" id="Quantity" name="quantity" value="1" min="1">
+            </div>
+          </div>
+          <button type="submit" name="add" id="AddToCart" class="cta">Add to cart</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+
+
+
+
+{% comment %} {% for image in product.images %}
+        <a href="{{ image.src | img_url: 'large' }}" style="position: relative; height: 40px; width: 40px; display: inline-block;">
+          <div class="product-prev-img">
+            <div class="section-bg">
+              <div class="section-bg__el" data-bg="{{ image.src | img_url: 'compact' }}">
+                
+              </div>
+              <div class="in-view-indicator-bg"></div>
+            </div>
+          </div>
+        </a>
+      {% endfor %} {% endcomment %}

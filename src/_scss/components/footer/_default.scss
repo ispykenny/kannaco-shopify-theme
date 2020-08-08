@@ -1,0 +1,164 @@
+footer {
+  background: white; 
+  border-top: 2px solid #f2f2f2;
+}
+.footer-column {
+  padding: 2em 0em;
+
+  &__el {
+    border-bottom: 1px solid $gray;
+
+    &:first-of-type, &:last-of-type {
+      border: none;
+    }
+
+    &.active {
+
+      .footer-category span {
+    
+        svg {
+          transform: rotate(45deg);
+        }
+        
+      }
+    }
+  }
+  
+  h5 {
+    padding: 1.4em 0em;
+    cursor: pointer;
+  }
+
+  @media(min-width: $bp-md) {
+    padding: 3.4em 0em;
+
+    &__el {
+      border: none;
+    }
+
+    h5 {
+      cursor: auto;
+    }
+  }
+
+  
+}
+
+#footer-link {
+  padding-bottom: 1.4em;
+  display: inline-block;
+}
+
+.footer-category {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+
+  span {
+    margin-left: 12px;
+    svg {
+      transition: all 250ms ease;
+      position: relative;
+      width: 22px;
+    }
+  }
+
+  @media(min-width: $bp-md) {
+    span {
+      display: none; 
+    }
+  }
+}
+.footer-li {
+  display: none;
+  padding-bottom: 1.4em;
+
+  @media(min-width: $bp-md) {
+    display: block !important;
+    padding-bottom: 0em;
+  }
+}
+
+.footer-li ul {
+  margin: 0; padding: 0;
+  list-style-type: none;
+  // padding-top: 1em;
+
+  li {
+    margin-bottom: 10px;
+    font-size: 0.9em;
+  }
+
+  li:last-of-type {
+    margin-bottom: 0px;
+  }
+
+  a {
+    text-decoration: none;
+    color: $dark;
+    transition: color 250ms ease;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+#payments {
+  padding-top: 1.4em;
+}
+
+.payment-container {
+  display: flex;
+  padding-top: 6px;
+}
+
+.payment-item {
+  width: 52px;
+  margin-right: 10px;
+}
+
+.desktop {
+  display: none;
+}
+@media(min-width: $bp-md) {
+  .footer-column {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__el {
+      width: 48%;
+    }
+  }
+
+  .desktop {
+    display: block;
+  }
+
+  .mobile {
+    display: none;
+  }
+}
+
+
+@media(min-width: $bp-lg) {
+  .footer-column {
+
+    &__el {
+      width: 31%;
+    }
+  }
+}
+
+
+@media(min-width: $bp-lg) {
+  .footer-column {
+
+    &__el {
+      width: 24%;
+      margin-bottom: 0em;
+    }
+  }
+}

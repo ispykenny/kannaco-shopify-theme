@@ -1,0 +1,65 @@
+<div class="header-spacer"></div>
+<section>
+  <div class="inner">
+
+    {% if cart.item_count > 0 %}
+      <h1>Cart</h1>
+      <form action="/cart" method="post" novalidate>
+        <div class="cart">
+          {% for item in cart.items %}
+            <div class="cart__el">
+              <div class="cart__column">
+                <h4>Product</h4>
+                <a href="{{ item.url }}">
+                <div class="cart__image">
+                  <img src="{{ item | img_url : 'master' }}" alt="{{ item.title | escape }}">
+                </div>
+                {{item.product.title}}
+                {{item.variant.title}}
+                </a>
+              </div>
+
+              <div class="cart__column">
+                <h4>Unit price:</h4>
+                {{ item.price | money }}
+              </div>
+
+              <div class="cart__column">
+                <h4>Update</h4>
+                <div class="qty">
+                  <div class="qty__ui">
+                    <button class="qty__change subtract">-</button>
+                    <div class="qty__value">0</div>
+                    <button class="qty__change add">+</button>
+                  </div>
+                  <input type="number" name="updates[]" id="updates_{{ item.key }}" value="{{ item.quantity }}" min="0">
+                </div>
+                <div>
+                  <a href="/cart/change?line={{ forloop.index }}&quantity=0">Remove</a>
+                </div>
+              </div>
+
+              <div class="cart__column">
+              <h4>Price</h4>
+                {% if item.original_line_price != item.line_price %}{{ item.original_line_price | money }}{% endif %}
+                    {{ item.line_price | money }}
+                {% for discount in item.discounts %}{{ discount.title }}{% endfor %}
+              </div>            
+            </div>
+          {% endfor %}
+
+          </div>
+          <div class="total check-out">
+            <p>sub total:</p><p><strong>{{ cart.total_price | money }}</strong></p>
+            {% comment %} <button type="submit" name="update">Update</button> {% endcomment %}
+            <button class="cta" type="submit" name="checkout">Checkout</button>
+          </div>
+      </form>
+
+    {% else %}
+
+    <h1>cart</h1>
+      Cart is empty
+    {% endif %}
+  </div>
+</section>

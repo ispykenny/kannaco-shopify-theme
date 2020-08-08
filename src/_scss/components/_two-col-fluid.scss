@@ -1,0 +1,92 @@
+.two-col-fluid {
+  display: flex;
+  flex-direction: column;
+
+  &__el {
+    width: 100%;
+    text-align: center;
+    position: relative;
+  }
+
+  &__inner {
+    padding: 6em 0em;
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    position: relative;
+    color: white;
+    z-index: 4;
+  }
+
+  input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    height: 55px;
+    
+    &::placeholder {
+      color: $gray;
+    }
+
+    &:active, &:focus {
+      border-color: transparent;
+
+      + label {
+        .label-el {
+          color: $gray;
+          font-size: 12px;
+          transform: translateY(-200%);
+        }
+        .border-stripe {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .input-el {
+    position: relative;
+    
+    input {
+      position: relative;
+      z-index: 99;
+    }
+
+    label {
+      position: absolute;
+      left: 0px;
+      top: 50%;
+      background: red;
+      transform: translateY(-50%);
+      width: 100%;
+      transition: all 200ms ease;
+
+      .label-el {
+        position: absolute;
+        left: 10px;
+        transition: all 200ms ease;
+      }
+      .border-stripe {
+        height: 1px;
+        width: 0%;
+        left: 0%;
+        transform: translate(0%, -50%);
+        background: $primary;
+        position: absolute;
+        top: 29px;
+        transition: all 500ms ease;
+      }
+    }
+  }
+}
+
+@media(min-width: $bp-md) {
+  .two-col-fluid {
+    flex-direction: row;
+
+    &__el {
+      width: 50%;
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{% for collection in collections %}
+  {% unless collection.handle == 'frontpage' %}
+    {% capture collection_title %}{{ collection.title | escape }}{% endcapture %}
+    <a href="{{ collection.url }}">More {{ collection_title }} &rsaquo;</a>
+    {% for product in collection.products limit:5 %}
+      {% assign grid_item_width = 'large--one-fifth medium--one-half' %}
+      <div>
+        <a href="{{ product.url | within: collection }}">{{ product.title }}</a>
+        {{ product.price | money }}
+        {% unless product.available %}<br><strong>sold out</strong>{% endunless %}
+        <a href="{{ product.url | within: collection }}">
+          <img src="{{ product.featured_image.src | img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}">
+        </a>
+      </div>
+    {% endfor %}
+  {% endunless %}
+{% endfor %}
+
+
+
+
+{% schema %}
+{
+  "name": "Full Width Banner",
+  "tag": "section",
+  "class": "full-width-banner-parent",
+  "settings": [
+    {
+      "id": "section_bg",
+      "type": "image_picker",
+      "label": "Background Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "content",
+      "name": "Column Content",
+      "limit": 2,
+      "settings": [
+        {
+          "id": "column_pre_header",
+          "type": "text",
+          "label": "Column Pre Header"
+        },
+        {
+          "id": "column_header",
+          "type": "text",
+          "label": "Column Header"
+        },
+        {
+          "id": "column_copy",
+          "type": "richtext",
+          "label": "Column Copy"
+        },
+        {
+          "id": "column_cta_link",
+          "type": "url",
+          "label": "Column Cta Link"
+        },
+        {
+          "id": "column_cta_text",
+          "type": "text",
+          "label": "Column Cta Text"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

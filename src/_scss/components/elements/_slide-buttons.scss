@@ -1,0 +1,35 @@
+.align-right {
+  text-align: right;
+}
+
+.push-top {
+  padding-top: 1em;
+}
+
+.slide-btn {
+  @include btn-reset();
+  background: $primary;
+  padding: 1em 2em;
+  color: white;
+  cursor: pointer;
+
+  &:active {
+    top: 1px;
+    position: relative;
+  }
+
+  &:first-of-type {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  &:last-of-type {
+    margin-left: 10px;
+  }
+
+  &:hover {
+    transition: background 500ms ease;
+    background: darken($primary, 10%);
+  }
+}

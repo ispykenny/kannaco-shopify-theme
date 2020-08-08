@@ -1,0 +1,26 @@
+<div class="inner center intro-content">
+  <h2 class="section-title">{{ section.settings.header }}</h2>
+  <p>{{ section.settings.content }}</p>
+</div>
+
+
+{% schema %}
+{
+  "name": "Centered Text",
+  "tag": "section",
+  "class": "section-block reduce-bottom",
+  "settings": [
+    {
+      "id": "header",
+      "type": "text",
+      "label": "Header"
+    }, 
+    {
+      "id": "content",
+      "type": "html",
+      "label": "Content"
+    }
+
+  ]
+}
+{% endschema %}

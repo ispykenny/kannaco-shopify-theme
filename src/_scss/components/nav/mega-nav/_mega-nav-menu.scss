@@ -1,0 +1,43 @@
+.is-mega-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &__el {
+    width: 45%;
+  }
+
+  &__el:first-of-type {
+    margin-bottom: 1em;
+  }
+}
+
+.is-mega-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 1em 0em;
+  font-size: 14px;
+
+  h5 a {
+    color: $primary;
+    text-decoration: none;
+  }
+  
+  li {
+    margin-bottom: 1em;
+  }
+
+  li:last-of-type {
+    margin-bottom: 0em;
+  }
+
+  a {
+    color: $dark;
+    text-decoration: none;
+    transition: all 400ms ease;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.section-block {
+  padding: 6em 0em;
+
+  &.section-block-slick-top {
+    padding-top: 0em;
+  }
+
+  &.reduce-bottom {
+    padding-bottom: 3em;
+  }
+}
+
+
+@media(min-width: $bp-md) {
+  
+  .section-block {
+
+    &.reduce-bottom {
+      padding-bottom: 5em;
+    }
+  }
+}

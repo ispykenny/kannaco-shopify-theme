@@ -1,0 +1,318 @@
+{% assign img = page.metafields.accentuate.hero_image | first  %}
+
+<section id="hero" class="paddingTop">
+  <div class="inner">
+    
+    <div class="large-hero">
+      <h1 class="large-hero__text">{{page.title}}</h1>
+    </div>
+
+  </div>
+
+  <div class="section-bg fade-overlay" id="hero_paralax">
+    <div class="section-bg__el" data-bg="{{ img.src }}">
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="inner grid-element-parent">
+    <div class="grid-element-item">
+      <svg xmlns="http://www.w3.org/2000/svg" width="111" height="111" viewBox="0 0 111 111">
+        <g id="Group_38" data-name="Group 38" transform="translate(-1607 -2177)">
+          <rect id="Rectangle_68" data-name="Rectangle 68" width="11" height="11" transform="translate(1607 2177)" fill="#e5e3e3"/>
+          <rect id="Rectangle_68-2" data-name="Rectangle 68" width="11" height="11" transform="translate(1632 2177)" fill="#e5e3e3"/>
+          <rect id="Rectangle_68-3" data-name="Rectangle 68" width="11" height="11" transform="translate(1657 2177)" fill="#e5e3e3"/>
+          <rect id="Rectangle_68-4" data-name="Rectangle 68" width="11" height="11" transform="translate(1682 2177)" fill="#e5e3e3"/>
+          <rect id="Rectangle_68-5" data-name="Rectangle 68" width="11" height="11" transform="translate(1707 2177)" fill="#e5e3e3"/>
+          <rect id="Rectangle_68-6" data-name="Rectangle 68" width="11" height="11" transform="translate(1607 2202)" fill="#e5e3e3"/>
+          <rect id="Rectangle_68-7" data-name="Rectangle 68" width="11" height="11" transform="translate(1632 2202)" fill="#e5e3e3"/>
+          <rect id="Rectangle_68-8" data-name="Rectangle 68" width="11" height="11" transform="translate(1657 2202)" fill="#e5e3e3"/>
+          <rect id="Rectangle_68-9" data-name="Rectangle 68" width="11" height="11" transform="translate(1682 2202)" fill="#e5e3e3"/>
+          <rect id="Rectangle_68-10" data-name="Rectangle 68" width="11" height="11" transform="translate(1707 2202)" fill="#e5e3e3"/>
+          <rect id="Rectangle_68-11" data-name="Rectangle 68" width="11" height="11" transform="translate(1607 2227)" fill="#e5e3e3"/>
+          <rect id="Rectangle_68-12" data-name="Rectangle 68" width="11" height="11" transform="translate(1632 2227)" fill="#e5e3e3"/>
+          <rect id="Rectangle_68-13" data-name="Rectangle 68" width="11" height="11" transform="translate(1657 2227)" fill="#e5e3e3"/>
+          <rect id="Rectangle_68-14" data-name="Rectangle 68" width="11" height="11" transform="translate(1682 2227)" fill="#e5e3e3"/>
+          <rect id="Rectangle_68-15" data-name="Rectangle 68" width="11" height="11" transform="translate(1707 2227)" fill="#e5e3e3"/>
+          <rect id="Rectangle_68-16" data-name="Rectangle 68" width="11" height="11" transform="translate(1607 2252)" fill="#e5e3e3"/>
+          <rect id="Rectangle_68-17" data-name="Rectangle 68" width="11" height="11" transform="translate(1632 2252)" fill="#e5e3e3"/>
+          <rect id="Rectangle_68-18" data-name="Rectangle 68" width="11" height="11" transform="translate(1657 2252)" fill="#e5e3e3"/>
+          <rect id="Rectangle_68-19" data-name="Rectangle 68" width="11" height="11" transform="translate(1682 2252)" fill="#e5e3e3"/>
+          <rect id="Rectangle_68-20" data-name="Rectangle 68" width="11" height="11" transform="translate(1707 2252)" fill="#e5e3e3"/>
+          <rect id="Rectangle_68-21" data-name="Rectangle 68" width="11" height="11" transform="translate(1607 2277)" fill="#e5e3e3"/>
+          <rect id="Rectangle_68-22" data-name="Rectangle 68" width="11" height="11" transform="translate(1632 2277)" fill="#e5e3e3"/>
+          <rect id="Rectangle_68-23" data-name="Rectangle 68" width="11" height="11" transform="translate(1657 2277)" fill="#e5e3e3"/>
+          <rect id="Rectangle_68-24" data-name="Rectangle 68" width="11" height="11" transform="translate(1682 2277)" fill="#e5e3e3"/>
+          <rect id="Rectangle_68-25" data-name="Rectangle 68" width="11" height="11" transform="translate(1707 2277)" fill="#e5e3e3"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+
+<section class="about-content-parent">
+  <div class="inner">
+    <div class="about-content">
+      <h3>{{page.metafields.accentuate.about_title}}</h3>
+      <div class="hr"></div>
+      {{page.metafields.accentuate.about_copy}}
+    </div>
+  </div>
+
+  <div class="spaced-blob">
+    <svg xmlns="http://www.w3.org/2000/svg" width="796.717" height="790.625" viewBox="0 0 796.717 790.625">
+      <path id="Path_60" data-name="Path 60" d="M480.422-42.623c36.484,40.571,28.633,137.94,59.114,225.674,30.942,87.227,100.678,164.818,90.98,219.082-9.7,54.77-98.369,85.706-169.952,135.4C388.519,586.73,334.024,654.179,283.223,648.6s-97.907-84.184-169.028-133.883S-52.062,444.732-72.844,393c-20.32-51.22,33.713-133.376,77.587-199.3C49.077,127.774,83.714,78.075,128.05,40.547c43.873-38.035,97.907-63.392,165.8-84.691C361.271-65.444,443.476-82.686,480.422-42.623Z" transform="translate(653.503 84.815) rotate(83)" fill="#faf7f7" opacity="0.49"/>
+    </svg>
+    
+  </div>
+
+  <div class="inner">
+  {% assign primary_image_one = page.metafields.accentuate.lazy_river_image_primary_one | first  %}
+  {% assign mini_image_one = page.metafields.accentuate.lazy_river_image_mini_one | first  %}
+  {% assign primary_image_two = page.metafields.accentuate.lazy_river_image_primary_two | first  %}
+  {% assign mini_image_two = page.metafields.accentuate.lazy_river_image_mini_two | first  %}
+
+  
+    <div class="lazy-river-container">
+      <div class="lazy-river">
+        <div class="indicator-strip"></div>
+        <div class="lazy-river__item">
+          <div class="lazy-river__inner">
+            <div class="main-img">
+              <img src="{{ primary_image_one.src }}" alt="">
+            </div>
+
+            <div class="label-img">
+              <div class="label-img__par">
+                <img src="{{ mini_image_one.src }}" alt="">
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+        
+
+        <div class="lazy-river__item">
+          <div class="lazy-river__inner">
+            <h3>{{ page.metafields.accentuate.lazy_river_title_one }}</h3>
+            <div class="hr"></div>
+            {{ page.metafields.accentuate.lazy_river_copy_one }}
+          </div>
+        </div>
+      </div>
+
+      <div class="indicator-strip"></div>
+    </div>
+
+    <div class="lazy-river-container">
+
+      <div class="lazy-river">
+        <div class="lazy-river__item">
+          <div class="lazy-river__inner">
+            <h3>{{ page.metafields.accentuate.lazy_river_title_two }}</h3>
+            <div class="hr"></div>
+            {{ page.metafields.accentuate.lazy_river_copy_two }}
+          </div>
+        </div>
+
+        <div class="lazy-river__item">
+          <div class="lazy-river__inner">
+            <div class="main-img">
+              <img src="{{ primary_image_two.src }}" alt="">
+            </div>
+
+            <div class="label-img">
+              <div class="label-img__par">
+                <img src="{{ mini_image_two.src }}" alt="">
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="indicator-strip"></div> 
+    </div>
+  </div>
+</section>
+
+
+<section class="category-parent">
+  <div class="inner">
+    <div class="category">
+      <div class="category__el">
+        <div class="category__list">
+          <ul>
+            <li class="active">
+              <span>
+                {{ page.metafields.accentuate.accordion_title_one }}
+              </span>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16.929" height="16.5" viewBox="0 0 16.929 16.5">
+                  <path id="Icon_awesome-arrow-right" data-name="Icon awesome-arrow-right" d="M7.2,3.752l.839-.839a.9.9,0,0,1,1.281,0l7.345,7.341a.9.9,0,0,1,0,1.281L9.317,18.881a.9.9,0,0,1-1.281,0L7.2,18.042a.908.908,0,0,1,.015-1.3l4.553-4.338H.907A.9.9,0,0,1,0,11.5V10.293a.9.9,0,0,1,.907-.907H11.766L7.213,5.048A.9.9,0,0,1,7.2,3.752Z" transform="translate(0 -2.647)" fill="#ff8f58"/>
+                </svg>                  
+              </span>
+            </li>
+
+            <li>
+              <span>
+                {{ page.metafields.accentuate.accordion_title_two }}
+              </span>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16.929" height="16.5" viewBox="0 0 16.929 16.5">
+                  <path id="Icon_awesome-arrow-right" data-name="Icon awesome-arrow-right" d="M7.2,3.752l.839-.839a.9.9,0,0,1,1.281,0l7.345,7.341a.9.9,0,0,1,0,1.281L9.317,18.881a.9.9,0,0,1-1.281,0L7.2,18.042a.908.908,0,0,1,.015-1.3l4.553-4.338H.907A.9.9,0,0,1,0,11.5V10.293a.9.9,0,0,1,.907-.907H11.766L7.213,5.048A.9.9,0,0,1,7.2,3.752Z" transform="translate(0 -2.647)" fill="#ff8f58"/>
+                </svg>                  
+              </span>
+            </li>
+
+            <li>
+              <span>
+                {{ page.metafields.accentuate.accordion_title_three }}
+              </span>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16.929" height="16.5" viewBox="0 0 16.929 16.5">
+                  <path id="Icon_awesome-arrow-right" data-name="Icon awesome-arrow-right" d="M7.2,3.752l.839-.839a.9.9,0,0,1,1.281,0l7.345,7.341a.9.9,0,0,1,0,1.281L9.317,18.881a.9.9,0,0,1-1.281,0L7.2,18.042a.908.908,0,0,1,.015-1.3l4.553-4.338H.907A.9.9,0,0,1,0,11.5V10.293a.9.9,0,0,1,.907-.907H11.766L7.213,5.048A.9.9,0,0,1,7.2,3.752Z" transform="translate(0 -2.647)" fill="#ff8f58"/>
+                </svg>                  
+              </span>
+            </li>
+
+            <li>
+              <span>
+                {{ page.metafields.accentuate.accordion_title_four }}
+              </span>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16.929" height="16.5" viewBox="0 0 16.929 16.5">
+                  <path id="Icon_awesome-arrow-right" data-name="Icon awesome-arrow-right" d="M7.2,3.752l.839-.839a.9.9,0,0,1,1.281,0l7.345,7.341a.9.9,0,0,1,0,1.281L9.317,18.881a.9.9,0,0,1-1.281,0L7.2,18.042a.908.908,0,0,1,.015-1.3l4.553-4.338H.907A.9.9,0,0,1,0,11.5V10.293a.9.9,0,0,1,.907-.907H11.766L7.213,5.048A.9.9,0,0,1,7.2,3.752Z" transform="translate(0 -2.647)" fill="#ff8f58"/>
+                </svg>                  
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="category__el has-content">
+        <div class="category__content">
+          <div class="category__content-inner">
+            <div class="category__content-item active">
+              {{ page.metafields.accentuate.accordion_copy_one }}
+            </div>
+
+            <div class="category__content-item">
+              {{ page.metafields.accentuate.accordion_copy_two }}
+            </div>
+
+            <div class="category__content-item">
+              {{ page.metafields.accentuate.accordion_copy_three }}
+            </div>
+
+
+            <div class="category__content-item">
+              {{ page.metafields.accentuate.accordion_copy_four }}
+            </div>
+
+            <div class="boxy-el">
+              <svg xmlns="http://www.w3.org/2000/svg" width="111" height="111" viewBox="0 0 111 111">
+                <g id="Group_38" data-name="Group 38" transform="translate(-1607 -2177)">
+                  <rect id="Rectangle_68" data-name="Rectangle 68" width="11" height="11" transform="translate(1607 2177)" fill="#e5e3e3"/>
+                  <rect id="Rectangle_68-2" data-name="Rectangle 68" width="11" height="11" transform="translate(1632 2177)" fill="#e5e3e3"/>
+                  <rect id="Rectangle_68-3" data-name="Rectangle 68" width="11" height="11" transform="translate(1657 2177)" fill="#e5e3e3"/>
+                  <rect id="Rectangle_68-4" data-name="Rectangle 68" width="11" height="11" transform="translate(1682 2177)" fill="#e5e3e3"/>
+                  <rect id="Rectangle_68-5" data-name="Rectangle 68" width="11" height="11" transform="translate(1707 2177)" fill="#e5e3e3"/>
+                  <rect id="Rectangle_68-6" data-name="Rectangle 68" width="11" height="11" transform="translate(1607 2202)" fill="#e5e3e3"/>
+                  <rect id="Rectangle_68-7" data-name="Rectangle 68" width="11" height="11" transform="translate(1632 2202)" fill="#e5e3e3"/>
+                  <rect id="Rectangle_68-8" data-name="Rectangle 68" width="11" height="11" transform="translate(1657 2202)" fill="#e5e3e3"/>
+                  <rect id="Rectangle_68-9" data-name="Rectangle 68" width="11" height="11" transform="translate(1682 2202)" fill="#e5e3e3"/>
+                  <rect id="Rectangle_68-10" data-name="Rectangle 68" width="11" height="11" transform="translate(1707 2202)" fill="#e5e3e3"/>
+                  <rect id="Rectangle_68-11" data-name="Rectangle 68" width="11" height="11" transform="translate(1607 2227)" fill="#e5e3e3"/>
+                  <rect id="Rectangle_68-12" data-name="Rectangle 68" width="11" height="11" transform="translate(1632 2227)" fill="#e5e3e3"/>
+                  <rect id="Rectangle_68-13" data-name="Rectangle 68" width="11" height="11" transform="translate(1657 2227)" fill="#e5e3e3"/>
+                  <rect id="Rectangle_68-14" data-name="Rectangle 68" width="11" height="11" transform="translate(1682 2227)" fill="#e5e3e3"/>
+                  <rect id="Rectangle_68-15" data-name="Rectangle 68" width="11" height="11" transform="translate(1707 2227)" fill="#e5e3e3"/>
+                  <rect id="Rectangle_68-16" data-name="Rectangle 68" width="11" height="11" transform="translate(1607 2252)" fill="#e5e3e3"/>
+                  <rect id="Rectangle_68-17" data-name="Rectangle 68" width="11" height="11" transform="translate(1632 2252)" fill="#e5e3e3"/>
+                  <rect id="Rectangle_68-18" data-name="Rectangle 68" width="11" height="11" transform="translate(1657 2252)" fill="#e5e3e3"/>
+                  <rect id="Rectangle_68-19" data-name="Rectangle 68" width="11" height="11" transform="translate(1682 2252)" fill="#e5e3e3"/>
+                  <rect id="Rectangle_68-20" data-name="Rectangle 68" width="11" height="11" transform="translate(1707 2252)" fill="#e5e3e3"/>
+                  <rect id="Rectangle_68-21" data-name="Rectangle 68" width="11" height="11" transform="translate(1607 2277)" fill="#e5e3e3"/>
+                  <rect id="Rectangle_68-22" data-name="Rectangle 68" width="11" height="11" transform="translate(1632 2277)" fill="#e5e3e3"/>
+                  <rect id="Rectangle_68-23" data-name="Rectangle 68" width="11" height="11" transform="translate(1657 2277)" fill="#e5e3e3"/>
+                  <rect id="Rectangle_68-24" data-name="Rectangle 68" width="11" height="11" transform="translate(1682 2277)" fill="#e5e3e3"/>
+                  <rect id="Rectangle_68-25" data-name="Rectangle 68" width="11" height="11" transform="translate(1707 2277)" fill="#e5e3e3"/>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="about-content-parent">
+  <div class="inner">
+    <div class="about-content dark-header">
+      <h3>{{ page.metafields.accentuate.meet_team_title }}</h3>
+      <div class="hr"></div>
+      {{ page.metafields.accentuate.meet_the_team_blurb }}
+    </div>
+  </div>
+
+  <div class="about-slider">
+
+    
+      <div class="box-overlay-el">
+        <svg xmlns="http://www.w3.org/2000/svg" width="111" height="111" viewBox="0 0 111 111">
+          <g id="Group_38" data-name="Group 38" transform="translate(-1607 -2177)">
+            <rect id="Rectangle_68" data-name="Rectangle 68" width="11" height="11" transform="translate(1607 2177)" fill="#e5e3e3"/>
+            <rect id="Rectangle_68-2" data-name="Rectangle 68" width="11" height="11" transform="translate(1632 2177)" fill="#e5e3e3"/>
+            <rect id="Rectangle_68-3" data-name="Rectangle 68" width="11" height="11" transform="translate(1657 2177)" fill="#e5e3e3"/>
+            <rect id="Rectangle_68-4" data-name="Rectangle 68" width="11" height="11" transform="translate(1682 2177)" fill="#e5e3e3"/>
+            <rect id="Rectangle_68-5" data-name="Rectangle 68" width="11" height="11" transform="translate(1707 2177)" fill="#e5e3e3"/>
+            <rect id="Rectangle_68-6" data-name="Rectangle 68" width="11" height="11" transform="translate(1607 2202)" fill="#e5e3e3"/>
+            <rect id="Rectangle_68-7" data-name="Rectangle 68" width="11" height="11" transform="translate(1632 2202)" fill="#e5e3e3"/>
+            <rect id="Rectangle_68-8" data-name="Rectangle 68" width="11" height="11" transform="translate(1657 2202)" fill="#e5e3e3"/>
+            <rect id="Rectangle_68-9" data-name="Rectangle 68" width="11" height="11" transform="translate(1682 2202)" fill="#e5e3e3"/>
+            <rect id="Rectangle_68-10" data-name="Rectangle 68" width="11" height="11" transform="translate(1707 2202)" fill="#e5e3e3"/>
+            <rect id="Rectangle_68-11" data-name="Rectangle 68" width="11" height="11" transform="translate(1607 2227)" fill="#e5e3e3"/>
+            <rect id="Rectangle_68-12" data-name="Rectangle 68" width="11" height="11" transform="translate(1632 2227)" fill="#e5e3e3"/>
+            <rect id="Rectangle_68-13" data-name="Rectangle 68" width="11" height="11" transform="translate(1657 2227)" fill="#e5e3e3"/>
+            <rect id="Rectangle_68-14" data-name="Rectangle 68" width="11" height="11" transform="translate(1682 2227)" fill="#e5e3e3"/>
+            <rect id="Rectangle_68-15" data-name="Rectangle 68" width="11" height="11" transform="translate(1707 2227)" fill="#e5e3e3"/>
+            <rect id="Rectangle_68-16" data-name="Rectangle 68" width="11" height="11" transform="translate(1607 2252)" fill="#e5e3e3"/>
+            <rect id="Rectangle_68-17" data-name="Rectangle 68" width="11" height="11" transform="translate(1632 2252)" fill="#e5e3e3"/>
+            <rect id="Rectangle_68-18" data-name="Rectangle 68" width="11" height="11" transform="translate(1657 2252)" fill="#e5e3e3"/>
+            <rect id="Rectangle_68-19" data-name="Rectangle 68" width="11" height="11" transform="translate(1682 2252)" fill="#e5e3e3"/>
+            <rect id="Rectangle_68-20" data-name="Rectangle 68" width="11" height="11" transform="translate(1707 2252)" fill="#e5e3e3"/>
+            <rect id="Rectangle_68-21" data-name="Rectangle 68" width="11" height="11" transform="translate(1607 2277)" fill="#e5e3e3"/>
+            <rect id="Rectangle_68-22" data-name="Rectangle 68" width="11" height="11" transform="translate(1632 2277)" fill="#e5e3e3"/>
+            <rect id="Rectangle_68-23" data-name="Rectangle 68" width="11" height="11" transform="translate(1657 2277)" fill="#e5e3e3"/>
+            <rect id="Rectangle_68-24" data-name="Rectangle 68" width="11" height="11" transform="translate(1682 2277)" fill="#e5e3e3"/>
+            <rect id="Rectangle_68-25" data-name="Rectangle 68" width="11" height="11" transform="translate(1707 2277)" fill="#e5e3e3"/>
+          </g>
+        </svg>
+      </div>
+
+    {% assign blog_handle = 'team' %}
+      {% for team in blogs[blog_handle].articles %}
+      
+
+      <div class="about-slider__item">
+        <div class="about-slider__image">
+          <img src="{{ team.image.src | img_url: '380x405', crop: 'center' }}" alt="">
+        </div>
+        <div class="about-slider__who">
+          <p>{{ team.title }}</p>
+          <p>{{ team.metafields.accentuate.job_title}}</p>
+        </div>
+      </div>
+
+    {% endfor %}
+
+    
+  </div>
+</section>
+
+{% section 'pre-footer' %}

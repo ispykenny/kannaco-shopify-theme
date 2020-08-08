@@ -1,0 +1,89 @@
+.three-col {
+
+  .flickity-page-dots {
+    bottom: -55px;
+
+    .dot {
+      background: $primary;
+    }    
+  }
+
+  .flickity-button-icon {
+    fill: $primary;
+  }
+
+  &:after {
+    content: 'flickity';
+    display: none;
+  }
+
+
+  h4 {
+    margin-top: 0em;
+    font-size: 1em;
+    padding-top: 0.5em;
+  }
+
+  .in-view-indicator {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 50%;
+  }
+
+}
+
+
+.three-col-content {
+  max-width: 700px;
+  width: 93%;
+  margin: auto;
+  text-align: center;
+}
+
+
+.three-col-expanded {
+  padding: 2em 0em;
+  border: 10px solid $gray;
+  width: calc(80% - 20px);
+  margin: 0em 1em;
+
+  &__el {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+
+    &:first-of-type {
+      max-width: 70%;
+      margin: auto;
+    }
+  }
+}
+
+
+
+@media(min-width: $bp-md) {
+  
+  .three-col {
+    padding: 0em 0px;
+    border: none;
+
+    h5 {
+      font-size: 1.1em;
+      padding-top: 0.3em;
+    }
+    
+    p {
+      font-size: 0.95em;
+    }
+  
+  }
+  
+  .three-col-expanded {
+    padding: 2em 0em;
+    border: 10px solid $gray;
+    width: 500px;
+  }
+  
+  
+}

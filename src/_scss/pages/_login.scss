@@ -1,0 +1,55 @@
+.login-panel {
+  padding-bottom: 2em;
+  max-width: 800px;
+  margin: auto;
+
+  h3 {
+    padding-bottom: 1em;
+    text-align: center;
+    font-size: 1.2em;
+
+    a {
+      color: $primary;
+    }
+  }
+
+  label {
+    display: inline-block;
+    padding-bottom: 0.3em;
+  }
+}
+
+
+.reset-password-form {
+  display: none;
+}
+
+.form-btn-group {
+  padding-top: 1em;
+  display: flex;
+  align-items: center;
+
+  button {
+    border: none;
+    outline: none;
+  }
+}
+
+.reset-password-form {
+  padding-top: 2em;
+}
+
+.login-panel-parent button {
+  border: none;
+  outline: none;
+}
+
+#init-password-reset {
+  display: inline-block;
+  color: #aaa;
+  margin-left: 1em;
+  &:hover {
+    transition: color 500ms ease;
+    color: $dark;
+  }
+}

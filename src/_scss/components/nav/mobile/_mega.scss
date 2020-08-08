@@ -1,0 +1,45 @@
+.mm-mega {
+  position: absolute;
+  top: 100%; width: 100%;
+  background: white;
+  z-index: 99;
+
+  > .inner {
+    position: relative;
+  }
+}
+
+.mm-slider__el {
+  width: 40%;
+  margin-right: 10px;
+  position: absolute;
+
+  &-image {
+    padding-bottom: (220/370) * 100%;
+    background: $gray;
+    color: white;
+    
+    p {
+      font-size: 14px;
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 80%;
+      text-align: center;
+      transform: translate(-50%, -50%);
+      margin: 0;
+      z-index: 5;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      
+    }
+
+    &:after {
+      content: '';
+      @include fill-parent();
+      background: rgba(black, 0.6);
+    }
+  }
+
+}
+

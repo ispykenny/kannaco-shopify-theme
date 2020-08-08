@@ -1,0 +1,15 @@
+.blog-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__el {
+    &:first-of-type {
+      // margin-right: 12px;
+    }
+  }
+}
+
+.blog-tags {
+  padding-top: 0.6em;
+}

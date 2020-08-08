@@ -1,0 +1,57 @@
+<!-- /templates/customers/addresses.liquid -->
+<div class="header-spacer"></div>
+<section>
+  <div class="inner">
+    <a href="{{ shop_url }}/account">Go back</a>
+      {% for address in customer.addresses %} 
+      <h4 style="padding-bottom: 1em;">Edit Information</h4>
+        {% form 'customer_address', address %}
+          <div class="input-el">
+            <label for="">First & Last Name</label>
+            <input type="text" name="address[name]" size="40" value="{{address.name}}" />
+          </div>
+          <div class="input-el">
+            <label for="">Address 1</label>
+            <input type="text" name="address[address1]" size="40" value="{{address.address1}}" />
+          </div>
+          <div class="input-el">
+            <label for="">Address 2</label>
+            <input type="text" name="address[address2]" size="40" value="{{address.address2}}" />
+          </div>
+          <div class="input-el">
+            <label for="">City</label>
+            <input type="text" name="address[city]" size="40" value="{{address.city}}" />
+          </div>
+          <div class="input-el">
+            <label for="">Country</label>
+            <input type="text" name="address[country]" size="40" value="{{address.country}}" />
+          </div>
+          <div class="input-el">
+            <label for="">Province</label>
+            <input type="text" name="address[province]" size="40" value="{{address.province}}" />
+          </div>
+          <div class="input-el">
+            <label for="">Postal/Zip Code</label>
+            <input type="text" name="address[zip]" size="40" value="{{address.zip}}" />
+          </div>
+          <div class="input-el">
+            <label for="">Phone Number</label>
+            <input type="text" name="address[phone]" size="40" value="{{address.phone}}" />
+          </div>
+
+          <input type="submit" value="Update">
+        {% endform %}
+        <form
+            class="address-delete-form"
+            method="post"
+            action="/account/addresses/{{ address.id }}"
+            data-confirm-message="You sure you want to delete this?"
+          >
+            <input type="hidden" name="_method" value="delete" />
+            <button type="submit">
+              Remove
+            </button>
+          </form>
+      {% endfor %} 
+  </div>
+</section>

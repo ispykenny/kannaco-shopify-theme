@@ -1,0 +1,27 @@
+<div class="header-spacer"></div>
+<section>
+  <div class="inner">
+    {% paginate search.results by 10 %}
+      {% if search.performed %}
+        {% for item in search.results %}
+          <div class="search__item">
+            {% if item.featured_image %}
+              <a class="search__image" href="{{ item.url | within: collection }}" title="{{ item.title | escape }}">
+                {{ item.featured_image.src | img_url: 'master' | img_tag: item.featured_image.alt }}
+              </a>
+            {% endif %}
+            <div class="blurb">
+              <h5>{{ item.title }}</h5>
+              <p>{{ item.content | strip_html | truncatewords: 50 }}</p>
+              <a href="{{ item.url | within: collection }}" class="cta">Learn More</a>
+            </div>
+          </div>
+        {% else %}
+          no results
+        {% endfor %}
+      {% endif %}
+
+      {% if paginate.pages > 1 %}{{ paginate | default_pagination }}{% endif %}
+    {% endpaginate %}
+  </div>
+</section>

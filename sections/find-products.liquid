@@ -1,0 +1,51 @@
+<div class="inner">
+  <div class="full-width-banner">
+    <div class="full-width-banner_el">
+      <div class="content-container">
+        <h4 class="section-title-mini"> {{ section.settings.column_header}} </h4>
+        <p>{{ section.settings.column_copy }}</p>
+        <div class="cta-el">
+          <a href="{{ section.settings.column_cta_link }}" class="cta">{{ section.settings.column_cta_text }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section-bg has-overlay">
+  <div class="section-bg__el lazy-bg" data-bg="{{section.settings.section_bg | img_url: 'master'}}"></div>
+</div>
+
+{% schema %}
+{
+  "name": "Full Width Banner",
+  "tag": "section",
+  "class": "full-width-banner-parent",
+  "settings": [
+    {
+      "id": "section_bg",
+      "type": "image_picker",
+      "label": "Background Image"
+    },
+    {
+      "id": "column_header",
+      "type": "text",
+      "label": "Column Header"
+    },
+    {
+      "id": "column_copy",
+      "type": "richtext",
+      "label": "Column Copy"
+    },
+    {
+      "id": "column_cta_link",
+      "type": "url",
+      "label": "Column Cta Link"
+    },
+    {
+      "id": "column_cta_text",
+      "type": "text",
+      "label": "Column Cta Text"
+    }
+  ]
+}
+{% endschema %}

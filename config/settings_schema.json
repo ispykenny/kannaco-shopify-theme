@@ -1,0 +1,53 @@
+[
+  {
+    "name": "Company Info",
+    "settings": [
+      {
+        "id": "company_logo",
+        "type": "image_picker",
+        "label": "Company Logo"
+      },
+      {
+        "id": "company_address",
+        "type": "text",
+        "label": "Company Address"
+      },
+      {
+        "id": "number",
+        "type": "text",
+        "label": "Phone Number"
+      }
+      ,
+      {
+        "id": "email",
+        "type": "text",
+        "label": "Email"
+      }
+    ]
+  },
+  {
+    "name": "Social Media",
+    "settings": [
+      {
+        "id": "facebook_link",
+        "type": "text",
+        "label": "Facebook Link"
+      },
+      {
+        "id": "twitter_link",
+        "type": "text",
+        "label": "Twitter Link"
+      },
+      {
+        "id": "instagram_link",
+        "type": "text",
+        "label": "Instagram Link"
+      },
+      {
+        "id": "youtube_link",
+        "type": "text",
+        "label": "Youtube Link"
+      }
+    ]
+  }
+]

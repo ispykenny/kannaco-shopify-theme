@@ -1,0 +1,94 @@
+#mega-menu-container {
+  border-top: 1px solid $gray;
+  position: absolute;
+  display: none;
+  visibility: hidden;
+  width: 100%;
+  top: 100%;
+}
+
+#mega-nav {
+  background: white;
+  opacity: 0;
+  transform: translateY(-50px);
+
+  > .inner {
+      padding: 1.3em 0em;
+    }
+}
+
+.mega {
+  display: flex;
+  justify-content: space-between;
+
+  &__el:first-of-type {
+    width: 60%;
+  }
+
+  &__el {
+    width: 35%;
+  }
+}
+
+.is-mega-nav__el {
+  h5 {
+    transform: translateY(-30px);
+    opacity: 0;
+
+    a {
+      color: $primary;
+      text-decoration: none;
+    }
+    
+  }
+  li {
+    transform: translateY(-15px);
+    opacity: 0;
+  }
+
+  &.active {
+
+    h5 {
+      transition: all 1100ms ease;
+      transform: translateY(0px);
+      opacity: 1;
+    }
+
+    @for $i from 0 through 20 {
+
+      li:nth-child(#{$i}) {
+        transition: all 1100ms ease;
+        opacity: 1;
+        transform: translateY(0px);
+        transition-delay: 120ms * $i;
+      }
+    }
+  }
+}
+
+
+.mega-showing {
+
+  #mega-menu-container {
+    visibility: visible;
+    display: block;
+  }
+
+  #mega-nav {
+    transition-delay: 400ms;
+    transition: all 400ms ease;
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+
+.section-bg {
+  @include fill-parent();
+
+  &__el {
+    @include fill-parent();
+    background-size: cover;
+    background-position: center;
+  }
+}
