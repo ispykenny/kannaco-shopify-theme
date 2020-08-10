@@ -9,8 +9,9 @@
       <div class="blog-features">
 
       {% assign blog_handle = 'article' %}
+      
         {% for article in blogs[blog_handle].articles limit: 4 %}
-        
+        <h1>{{article.article_count}}</h1>
 
         {% comment %} <div class="about-slider__item">
           <div class="about-slider__image">

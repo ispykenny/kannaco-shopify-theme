@@ -4,6 +4,8 @@ import _dropDown from './_drop-down';
 import useCaseSlide from './use-case-slide';
 import {runAboutSlider, accordion} from './about';
 import initCategorySlider from './category-slider';
+import ajaxToCart from './ajax-to-cart';
+ajaxToCart();
 
 $(window).on({
   'load': () => {

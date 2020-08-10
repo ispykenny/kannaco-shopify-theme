@@ -4,6 +4,11 @@ const setFeaturedBlogMarkup = () => {
   let setWrapper = ``;
   let sideMain = ``;
 
+  if(blog_item.length < 4) {
+    blog_item[0].closest('section').remove();
+    return;
+  }
+
   blog_item.forEach((blog, index) => {
     if(index < 1) {
       setWrapper = `
