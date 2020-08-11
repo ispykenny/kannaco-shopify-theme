@@ -1063,17 +1063,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__use_case_slide__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__about__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__category_slider__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ajax_to_cart__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__password_reset__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__nav__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__mobile_menu__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__three_col__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__footer__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__qty__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__scroll__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__search__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__batch__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__featured_blogs__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ajax_to_cart__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__password_reset__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__nav__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__mobile_menu__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__three_col__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__footer__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__qty__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__scroll__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__search__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__batch__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__featured_blogs__ = __webpack_require__(20);
 
 
 
@@ -12046,6 +12046,50 @@ const initCategorySlider = () => {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony default export */ __webpack_exports__["a"] = (function() {
+  let $btn = $('#AddToCart');
+  let $btnCurrentText = $btn.text();
+
+  const addToCart = event => {
+    let bubble = $('#cart-element__qty span');
+    let bubbleValue = parseInt(bubble.text());
+  
+    event.preventDefault();
+
+    let total = bubbleValue + parseInt($("#Quantity").val());
+
+
+    if(total <= 11) {
+      bubble.text(total);
+
+      $btn.text('Added!')
+
+      $.post('/cart/add.js', 
+          {
+            quantity: $("#Quantity").val(),
+            id: $('[name="id"]').val()
+          },
+          null,
+          'json'
+        
+      );
+
+      setTimeout(() => $btn.text($btnCurrentText), 1200)
+    } else {
+      alert('unable to add to cart. Exceeded limit (11) items')
+    }
+
+
+  }
+  
+  $("#AddToCartForm").on('submit', event => addToCart(event))
+});
+
+/***/ }),
+/* 11 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return showPasswordReset; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return justShowPassword; });
 const showPasswordReset = () => {
@@ -12074,7 +12118,7 @@ const justShowPassword = () => {
 
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12177,7 +12221,7 @@ const justShowPassword = () => {
 });
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12261,7 +12305,7 @@ const justShowPassword = () => {
 });
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12278,7 +12322,7 @@ const justShowPassword = () => {
 });
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12306,7 +12350,7 @@ const justShowPassword = () => {
 });
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12371,7 +12415,7 @@ const justShowPassword = () => {
 });
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12425,7 +12469,7 @@ const justShowPassword = () => {
 });
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12448,7 +12492,7 @@ const justShowPassword = () => {
 });
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12493,7 +12537,7 @@ const justShowPassword = () => {
 });
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12532,35 +12576,6 @@ const setFeaturedBlogMarkup = () => {
 
 
 /* harmony default export */ __webpack_exports__["a"] = (setFeaturedBlogMarkup);
-
-/***/ }),
-/* 20 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony default export */ __webpack_exports__["a"] = (function() {
-  let bubble = $('#cart-element__qty span');
-  let bubbleValue = bubble.text()
-
-  const addToCart = event => {
-    event.preventDefault();
-
-    $.post('/cart/add.js', $('form[action="/cart/add"]').serialize());
-
-
-  }
-  
-
-  // $("#addToCart").on('click', function(event) {
-  //   event.[reve]
-  //   let qty = parseInt($("#Quantity").val());
-  //   let updateNumber = parseInt(bubbleValue) + qty;
-
-  //   console.log(updateNumber, 'here')
-  //   bubble.html(updateNumber)
-  // })
-  $("#AddToCartForm").on('submit', event => addToCart(event))
-});
 
 /***/ })
 /******/ ]);

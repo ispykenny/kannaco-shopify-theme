@@ -1,23 +1,38 @@
 export default function() {
-  let bubble = $('#cart-element__qty span');
-  let bubbleValue = bubble.text()
+  let $btn = $('#AddToCart');
+  let $btnCurrentText = $btn.text();
 
   const addToCart = event => {
+    let bubble = $('#cart-element__qty span');
+    let bubbleValue = parseInt(bubble.text());
+  
     event.preventDefault();
 
-    $.post('/cart/add.js', $('form[action="/cart/add"]').serialize());
+    let total = bubbleValue + parseInt($("#Quantity").val());
+
+
+    if(total <= 11) {
+      bubble.text(total);
+
+      $btn.text('Added!')
+
+      $.post('/cart/add.js', 
+          {
+            quantity: $("#Quantity").val(),
+            id: $('[name="id"]').val()
+          },
+          null,
+          'json'
+        
+      );
+
+      setTimeout(() => $btn.text($btnCurrentText), 1200)
+    } else {
+      alert('unable to add to cart. Exceeded limit (11) items')
+    }
 
 
   }
   
-
-  // $("#addToCart").on('click', function(event) {
-  //   event.[reve]
-  //   let qty = parseInt($("#Quantity").val());
-  //   let updateNumber = parseInt(bubbleValue) + qty;
-
-  //   console.log(updateNumber, 'here')
-  //   bubble.html(updateNumber)
-  // })
   $("#AddToCartForm").on('submit', event => addToCart(event))
 }
