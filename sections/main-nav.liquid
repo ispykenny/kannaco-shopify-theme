@@ -10,9 +10,7 @@
               </svg>              
             </a></li>
             <li><a href="">
-              <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 21 18">
-                <path id="Shape" d="M30.526,16.846a4.51,4.51,0,0,0,1.893-2.513,8.355,8.355,0,0,1-2.736,1.1A4.194,4.194,0,0,0,26.539,14a4.43,4.43,0,0,0-4.307,4.544,4.754,4.754,0,0,0,.11,1.035,12.033,12.033,0,0,1-8.88-4.748,4.724,4.724,0,0,0-.583,2.285A4.616,4.616,0,0,0,14.8,20.9a4.154,4.154,0,0,1-1.952-.568v.056A4.49,4.49,0,0,0,16.3,24.842a4.011,4.011,0,0,1-1.136.16,4.051,4.051,0,0,1-.81-.081,4.345,4.345,0,0,0,4.024,3.155,8.364,8.364,0,0,1-5.351,1.945A8.136,8.136,0,0,1,12,29.959,11.747,11.747,0,0,0,18.6,32c7.926,0,12.257-6.924,12.257-12.929,0-.2,0-.394-.011-.588A9.006,9.006,0,0,0,33,16.131,8.257,8.257,0,0,1,30.526,16.846Z" transform="translate(-12 -14)" fill-rule="evenodd"/>
-              </svg>              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>           
             </a></li>
             <li><a href="">
               <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 22 16">
@@ -52,11 +50,11 @@
             </li>
             <li id="cart-element">
               <a href="{{ site.url }}/cart">
-                {% if cart.item_count > 0 %}
-                  <div id="cart-element__qty">
+                
+                  <div id="cart-element__qty" {% if cart.item_count <= 0 %} class="hide" {% endif %}>
                     <span>{{cart.item_count}}</span>
                   </div>
-                {% endif %}
+                
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"   viewBox="0 0 45.176 35">
                   <defs>
                     <clipPath id="clip-path">

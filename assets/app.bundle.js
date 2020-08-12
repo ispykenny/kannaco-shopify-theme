@@ -12050,18 +12050,23 @@ const initCategorySlider = () => {
   let $btn = $('#AddToCart');
   let $btnCurrentText = $btn.text();
 
+
   const addToCart = event => {
     let bubble = $('#cart-element__qty span');
-    let bubbleValue = parseInt(bubble.text());
-  
+    let total;    
     event.preventDefault();
-
-    let total = bubbleValue + parseInt($("#Quantity").val());
-
-
-    if(total <= 11) {
+    
+    if(bubble.text().length > 0) {
+      let bubbleValue = parseInt(bubble.text());
+       total = bubbleValue + parseInt($("#Quantity").val());
+    } else {
+      total = parseInt($("#Quantity").val());
+    }
+    
+    if(total <= 10) {
+      $("#cart-element__qty").fadeIn();
       bubble.text(total);
-
+      
       $btn.text('Added!')
 
       $.post('/cart/add.js', 
@@ -12078,7 +12083,6 @@ const initCategorySlider = () => {
     } else {
       alert('unable to add to cart. Exceeded limit (11) items')
     }
-
 
   }
   
