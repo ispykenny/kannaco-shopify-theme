@@ -52,13 +52,17 @@
 
 </section>
 
+
+{% assign hasAccordion =  product.metafields.accentuate.show_accordion %}
+
+{% if hasAccordion %}
 <div class="product-hr"></div>
 
 <section class="default-block">
   <div class="inner product-section-content">
   <div class="inner intro-content center">
     <h2 class="section-title orange">Product Information</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate consequuntur iusto ad dolorum minus adipisci.</p>
+    <p>Get more information on {{product.title}}.</p>
   </div>
     <div class="category">
       <div class="category__el">
@@ -180,7 +184,7 @@
   </div>
 </section>
 
-
+{% endif %}
 
 <div class="product-hr"></div>
 
