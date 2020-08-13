@@ -32,8 +32,8 @@
           <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
           
           {% comment %} {{ current_variant.price | money }} {% endcomment %}
-          <div>
-            <label for="Quantity">quantity</label>
+          <div class="qty-parent">
+            <label for="Quantity">Qty:</label>
             <div class="qty">
               <div class="qty__ui">
                 <div class="qty__change subtract">-</div>
@@ -52,9 +52,178 @@
 
 </section>
 
+<div class="product-hr"></div>
+
+<section class="default-block">
+  <div class="inner product-section-content">
+  <div class="inner intro-content center">
+    <h2 class="section-title orange">Product Information</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate consequuntur iusto ad dolorum minus adipisci.</p>
+  </div>
+    <div class="category">
+      <div class="category__el">
+        <div class="category__list">
+          <ul>
+          {% if product.metafields.accentuate.accordion_title_one.size > 1 %}
+            <li class="active">
+              <span>
+                {{ product.metafields.accentuate.accordion_title_one }}
+              </span>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16.929" height="16.5" viewBox="0 0 16.929 16.5">
+                  <path id="Icon_awesome-arrow-right" data-name="Icon awesome-arrow-right" d="M7.2,3.752l.839-.839a.9.9,0,0,1,1.281,0l7.345,7.341a.9.9,0,0,1,0,1.281L9.317,18.881a.9.9,0,0,1-1.281,0L7.2,18.042a.908.908,0,0,1,.015-1.3l4.553-4.338H.907A.9.9,0,0,1,0,11.5V10.293a.9.9,0,0,1,.907-.907H11.766L7.213,5.048A.9.9,0,0,1,7.2,3.752Z" transform="translate(0 -2.647)" fill="#ff8f58"/>
+                </svg>                  
+              </span>
+            </li>
+            {% endif %}
+
+          {% if product.metafields.accentuate.accordion_title_two.size > 1 %}
+            <li>
+              <span>
+                {{ product.metafields.accentuate.accordion_title_two }}
+              </span>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16.929" height="16.5" viewBox="0 0 16.929 16.5">
+                  <path id="Icon_awesome-arrow-right" data-name="Icon awesome-arrow-right" d="M7.2,3.752l.839-.839a.9.9,0,0,1,1.281,0l7.345,7.341a.9.9,0,0,1,0,1.281L9.317,18.881a.9.9,0,0,1-1.281,0L7.2,18.042a.908.908,0,0,1,.015-1.3l4.553-4.338H.907A.9.9,0,0,1,0,11.5V10.293a.9.9,0,0,1,.907-.907H11.766L7.213,5.048A.9.9,0,0,1,7.2,3.752Z" transform="translate(0 -2.647)" fill="#ff8f58"/>
+                </svg>                  
+              </span>
+            </li>
+          {% endif %}
+
+          {% if product.metafields.accentuate.accordion_title_three.size > 1 %}
+            <li>
+              <span>
+                {{ product.metafields.accentuate.accordion_title_three }}
+              </span>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16.929" height="16.5" viewBox="0 0 16.929 16.5">
+                  <path id="Icon_awesome-arrow-right" data-name="Icon awesome-arrow-right" d="M7.2,3.752l.839-.839a.9.9,0,0,1,1.281,0l7.345,7.341a.9.9,0,0,1,0,1.281L9.317,18.881a.9.9,0,0,1-1.281,0L7.2,18.042a.908.908,0,0,1,.015-1.3l4.553-4.338H.907A.9.9,0,0,1,0,11.5V10.293a.9.9,0,0,1,.907-.907H11.766L7.213,5.048A.9.9,0,0,1,7.2,3.752Z" transform="translate(0 -2.647)" fill="#ff8f58"/>
+                </svg>                  
+              </span>
+            </li>
+          {% endif %}
+
+          {% if product.metafields.accentuate.accordion_title_four.size > 1 %}
+            <li>
+              <span>
+                {{ product.metafields.accentuate.accordion_title_four }}
+              </span>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16.929" height="16.5" viewBox="0 0 16.929 16.5">
+                  <path id="Icon_awesome-arrow-right" data-name="Icon awesome-arrow-right" d="M7.2,3.752l.839-.839a.9.9,0,0,1,1.281,0l7.345,7.341a.9.9,0,0,1,0,1.281L9.317,18.881a.9.9,0,0,1-1.281,0L7.2,18.042a.908.908,0,0,1,.015-1.3l4.553-4.338H.907A.9.9,0,0,1,0,11.5V10.293a.9.9,0,0,1,.907-.907H11.766L7.213,5.048A.9.9,0,0,1,7.2,3.752Z" transform="translate(0 -2.647)" fill="#ff8f58"/>
+                </svg>                  
+              </span>
+            </li>
+          {% endif %}
+          </ul>
+        </div>
+      </div>
+      <div class="category__el has-content">
+        <div class="category__content">
+          <div class="category__content-inner">
+            <div class="category__content-item active">
+              <h3>{{ product.metafields.accentuate.accordion_title_one }}</h3>
+              {{ product.metafields.accentuate.accordion_copy_one }}
+            </div>
+
+            <div class="category__content-item">
+              <h3>{{ product.metafields.accentuate.accordion_title_two }}</h3>
+              {{ product.metafields.accentuate.accordion_copy_two }}
+            </div>
+
+            <div class="category__content-item">
+              <h3>{{ product.metafields.accentuate.accordion_title_three }}</h3>
+              {{ product.metafields.accentuate.accordion_copy_three }}
+            </div>
+
+
+            <div class="category__content-item">
+              <h3>{{ product.metafields.accentuate.accordion_title_four }}</h3>
+              {{ product.metafields.accentuate.accordion_copy_four }}
+            </div>
+
+            <div class="boxy-el">
+              <svg xmlns="http://www.w3.org/2000/svg" width="111" height="111" viewBox="0 0 111 111">
+                <g id="Group_38" data-name="Group 38" transform="translate(-1607 -2177)">
+                  <rect id="Rectangle_68" data-name="Rectangle 68" width="11" height="11" transform="translate(1607 2177)" fill="#dddddd"/>
+                  <rect id="Rectangle_68-2" data-name="Rectangle 68" width="11" height="11" transform="translate(1632 2177)" fill="#dddddd"/>
+                  <rect id="Rectangle_68-3" data-name="Rectangle 68" width="11" height="11" transform="translate(1657 2177)" fill="#dddddd"/>
+                  <rect id="Rectangle_68-4" data-name="Rectangle 68" width="11" height="11" transform="translate(1682 2177)" fill="#dddddd"/>
+                  <rect id="Rectangle_68-5" data-name="Rectangle 68" width="11" height="11" transform="translate(1707 2177)" fill="#dddddd"/>
+                  <rect id="Rectangle_68-6" data-name="Rectangle 68" width="11" height="11" transform="translate(1607 2202)" fill="#dddddd"/>
+                  <rect id="Rectangle_68-7" data-name="Rectangle 68" width="11" height="11" transform="translate(1632 2202)" fill="#dddddd"/>
+                  <rect id="Rectangle_68-8" data-name="Rectangle 68" width="11" height="11" transform="translate(1657 2202)" fill="#dddddd"/>
+                  <rect id="Rectangle_68-9" data-name="Rectangle 68" width="11" height="11" transform="translate(1682 2202)" fill="#dddddd"/>
+                  <rect id="Rectangle_68-10" data-name="Rectangle 68" width="11" height="11" transform="translate(1707 2202)" fill="#dddddd"/>
+                  <rect id="Rectangle_68-11" data-name="Rectangle 68" width="11" height="11" transform="translate(1607 2227)" fill="#dddddd"/>
+                  <rect id="Rectangle_68-12" data-name="Rectangle 68" width="11" height="11" transform="translate(1632 2227)" fill="#dddddd"/>
+                  <rect id="Rectangle_68-13" data-name="Rectangle 68" width="11" height="11" transform="translate(1657 2227)" fill="#dddddd"/>
+                  <rect id="Rectangle_68-14" data-name="Rectangle 68" width="11" height="11" transform="translate(1682 2227)" fill="#dddddd"/>
+                  <rect id="Rectangle_68-15" data-name="Rectangle 68" width="11" height="11" transform="translate(1707 2227)" fill="#dddddd"/>
+                  <rect id="Rectangle_68-16" data-name="Rectangle 68" width="11" height="11" transform="translate(1607 2252)" fill="#dddddd"/>
+                  <rect id="Rectangle_68-17" data-name="Rectangle 68" width="11" height="11" transform="translate(1632 2252)" fill="#dddddd"/>
+                  <rect id="Rectangle_68-18" data-name="Rectangle 68" width="11" height="11" transform="translate(1657 2252)" fill="#dddddd"/>
+                  <rect id="Rectangle_68-19" data-name="Rectangle 68" width="11" height="11" transform="translate(1682 2252)" fill="#dddddd"/>
+                  <rect id="Rectangle_68-20" data-name="Rectangle 68" width="11" height="11" transform="translate(1707 2252)" fill="#dddddd"/>
+                  <rect id="Rectangle_68-21" data-name="Rectangle 68" width="11" height="11" transform="translate(1607 2277)" fill="#dddddd"/>
+                  <rect id="Rectangle_68-22" data-name="Rectangle 68" width="11" height="11" transform="translate(1632 2277)" fill="#dddddd"/>
+                  <rect id="Rectangle_68-23" data-name="Rectangle 68" width="11" height="11" transform="translate(1657 2277)" fill="#dddddd"/>
+                  <rect id="Rectangle_68-24" data-name="Rectangle 68" width="11" height="11" transform="translate(1682 2277)" fill="#dddddd"/>
+                  <rect id="Rectangle_68-25" data-name="Rectangle 68" width="11" height="11" transform="translate(1707 2277)" fill="#dddddd"/>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
+<div class="product-hr"></div>
+
+
+<section>
+    <div class="inner center intro-content">
+    <h2 class="section-title orange">Other Related Products</h2>
+    <p>People who buy <strong>{{ product.title }}</strong> Also shop for:</p>
+  </div>
+
+  <div class="inner">
+    <div class="explore-product-grid">
+    {% for block in section.blocks %}
+      {% assign product_item = all_products[block.settings.featured_product] %}
+      {% assign featured_image = product_item | img_url: 'master' %}
+      <div class="explore-product-grid__item">
+        <a href="{{ product_item.url }}">
+          <div class="product-prev-img">
+            <img src="{{ featured_image }}" alt="">
+          </div>
+
+          <div class="product-content" >
+            <small>{{ product_item.type }}</small>
+            <h5 class="product-name">{{ product_item.title }}</h5>
+            <p>Starting at {{ product_item.price | money }} <strike>{{ product_item.compare_at_price | money }}</strike></p>
+            <div class="cta-el single-secondary-cta secondary-cta-parent">
+              <span class="cta-secondary">
+                <span class="link-text">View Product</span>
+                <span class="link-crt">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="8" height="11" viewBox="0 0 8 11">
+                    <path d="M5.17.479a.4.4,0,0,1,.659,0l4.74,6.894A.4.4,0,0,1,10.24,8H.76a.4.4,0,0,1-.33-.627Z" transform="translate(8) rotate(90)" fill="#da6227"/>
+                  </svg> 
+                </span>
+              </span>
+            </div>
+          </div>
+        </a>
+      </div>
+    {% endfor %}
+    </div>
+  </div>
+</div>
+</section>
 
 {% comment %} {% for image in product.images %}
         <a href="{{ image.src | img_url: 'large' }}" style="position: relative; height: 40px; width: 40px; display: inline-block;">

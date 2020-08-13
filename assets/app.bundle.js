@@ -12081,7 +12081,7 @@ const initCategorySlider = () => {
 
       setTimeout(() => $btn.text($btnCurrentText), 1200)
     } else {
-      alert('unable to add to cart. Exceeded limit (11) items')
+      alert('Unable to add to cart. Exceeded limit (10) items')
     }
 
   }
