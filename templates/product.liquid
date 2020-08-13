@@ -185,7 +185,7 @@
 <div class="product-hr"></div>
 
 
-<section>
+<section class="other-products">
     <div class="inner center intro-content">
     <h2 class="section-title orange">Other Related Products</h2>
     <p>People who buy <strong>{{ product.title }}</strong> Also shop for:</p>
@@ -193,10 +193,13 @@
 
   <div class="inner">
     <div class="explore-product-grid">
-    {% for block in section.blocks %}
-      {% assign product_item = all_products[block.settings.featured_product] %}
+
+    {% for block in product.metafields.accentuate.featured_product_one %}
+
+      {% assign product_item = all_products[block] %}
       {% assign featured_image = product_item | img_url: 'master' %}
       <div class="explore-product-grid__item">
+  
         <a href="{{ product_item.url }}">
           <div class="product-prev-img">
             <img src="{{ featured_image }}" alt="">
