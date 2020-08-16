@@ -1,7 +1,5 @@
 <div class="header-spacer"></div>
 
-{% paginate collection.products by 12 %}
-
 {{ collection.current_type }}
 
 <div class='collection'>
@@ -101,9 +99,5 @@
     </div>
   </section>
 
-  {% if paginate.pages > 1 %}
-    {{ paginate | default_pagination }}
-  {% endif %}
 </div>
 
-{% endpaginate %}
