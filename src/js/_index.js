@@ -5,6 +5,7 @@ import useCaseSlide from './use-case-slide';
 import {runAboutSlider, accordion} from './about';
 import initCategorySlider from './category-slider';
 import ajaxToCart from './ajax-to-cart';
+import _craftLogo from './_craft-logo';
 ajaxToCart();
 
 $(window).on({
@@ -16,6 +17,7 @@ $(window).on({
     runAboutSlider();
 
     setTimeout(() => initCategorySlider() , 200)
+    _craftLogo();
   }
 })
 

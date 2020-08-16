@@ -1064,16 +1064,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__about__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__category_slider__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ajax_to_cart__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__password_reset__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__nav__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__mobile_menu__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__three_col__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__footer__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__qty__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__scroll__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__search__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__batch__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__featured_blogs__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__craft_logo__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__password_reset__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__nav__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__mobile_menu__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__three_col__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__footer__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__qty__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__scroll__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__search__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__batch__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__featured_blogs__ = __webpack_require__(20);
+
 
 
 
@@ -1092,14 +1094,15 @@ __WEBPACK_IMPORTED_MODULE_0_jquery___default()(window).on({
     Object(__WEBPACK_IMPORTED_MODULE_4__about__["b" /* runAboutSlider */])();
 
     setTimeout(() => Object(__WEBPACK_IMPORTED_MODULE_5__category_slider__["a" /* default */])() , 200)
+    Object(__WEBPACK_IMPORTED_MODULE_7__craft_logo__["a" /* default */])();
   }
 })
 
 
-Object(__WEBPACK_IMPORTED_MODULE_7__password_reset__["b" /* showPasswordReset */])();
+Object(__WEBPACK_IMPORTED_MODULE_8__password_reset__["b" /* showPasswordReset */])();
 
 
-__WEBPACK_IMPORTED_MODULE_0_jquery___default()('#init-password-reset').on('click', __WEBPACK_IMPORTED_MODULE_7__password_reset__["a" /* justShowPassword */]);
+__WEBPACK_IMPORTED_MODULE_0_jquery___default()('#init-password-reset').on('click', __WEBPACK_IMPORTED_MODULE_8__password_reset__["a" /* justShowPassword */]);
 
 
 // if($('.product-single__el').length) {
@@ -1107,31 +1110,31 @@ __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#init-password-reset').on('click
 // }
 
 
-Object(__WEBPACK_IMPORTED_MODULE_8__nav__["a" /* default */])();
+Object(__WEBPACK_IMPORTED_MODULE_9__nav__["a" /* default */])();
 
 
-Object(__WEBPACK_IMPORTED_MODULE_9__mobile_menu__["a" /* default */])();
+Object(__WEBPACK_IMPORTED_MODULE_10__mobile_menu__["a" /* default */])();
 
 
-Object(__WEBPACK_IMPORTED_MODULE_10__three_col__["a" /* default */])();
+Object(__WEBPACK_IMPORTED_MODULE_11__three_col__["a" /* default */])();
 
 
 
-Object(__WEBPACK_IMPORTED_MODULE_11__footer__["a" /* default */])();
+Object(__WEBPACK_IMPORTED_MODULE_12__footer__["a" /* default */])();
 
 if(__WEBPACK_IMPORTED_MODULE_0_jquery___default()('.qty').length > 0) {
-  Object(__WEBPACK_IMPORTED_MODULE_12__qty__["a" /* default */])()
+  Object(__WEBPACK_IMPORTED_MODULE_13__qty__["a" /* default */])()
 }
 
 
 
 
 
-Object(__WEBPACK_IMPORTED_MODULE_13__scroll__["a" /* default */])();
+Object(__WEBPACK_IMPORTED_MODULE_14__scroll__["a" /* default */])();
 
-Object(__WEBPACK_IMPORTED_MODULE_14__search__["a" /* default */])();
-Object(__WEBPACK_IMPORTED_MODULE_15__batch__["a" /* default */])();
-Object(__WEBPACK_IMPORTED_MODULE_16__featured_blogs__["a" /* default */])();
+Object(__WEBPACK_IMPORTED_MODULE_15__search__["a" /* default */])();
+Object(__WEBPACK_IMPORTED_MODULE_16__batch__["a" /* default */])();
+Object(__WEBPACK_IMPORTED_MODULE_17__featured_blogs__["a" /* default */])();
 
 
 
@@ -12580,6 +12583,79 @@ const setFeaturedBlogMarkup = () => {
 
 
 /* harmony default export */ __webpack_exports__["a"] = (setFeaturedBlogMarkup);
+
+/***/ }),
+/* 21 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
+
+
+/* harmony default export */ __webpack_exports__["a"] = (function() {
+  let prod_item = $('.collection-grid__item');
+
+  const setCraftClass = () => {
+    if(prod_item) {
+      prod_item.each((index, element) => {
+        let title = $(element).find('.prod-des h4');
+        if(title.text().includes('craft') || title.text().includes('Craft')) {
+          $(element).addClass('is-craft')
+        }
+      })
+    }
+
+    if($('.is-craft').length > 0) {
+      $('.filter-parent').append(`
+      <div class="filter">
+        <div class="filter__el">
+          <h4>Series Type:</h4>
+        </div>
+        <div class="filter__el">
+          <ul class="filter__options">
+            <li class="filter-secondary"><a href="#0">Standard Series</a></li>
+            <li class="filter-secondary"><a href="#0">Craft Series</a></li>
+          </ul>
+        </div>
+      </div>
+      `)
+    }
+    $('.filter-secondary').on('click', event => filterCraftVsStandard(event))
+  }
+
+  const checkParams = () => {
+    let windowParam = new URLSearchParams(window.location.search);
+    console.log(windowParam.get('hi'))
+  }
+
+
+  const filterCraftVsStandard = (event) => {
+    event.preventDefault();
+    let value = $(event.currentTarget).text()
+    if(value.includes("Craft")) {
+      prod_item.show();
+      prod_item.each((index, element) => {
+        if(!$(element).hasClass('is-craft')) {
+          $(element).hide();
+        }
+      })
+    } else {
+      prod_item.show();
+      prod_item.each((index, element) => {
+        if($(element).hasClass('is-craft')) {
+          $(element).hide();
+        }
+      })
+    }
+  }
+
+
+  
+
+  checkParams();
+  setCraftClass();
+});
 
 /***/ })
 /******/ ]);
