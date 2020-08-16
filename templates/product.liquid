@@ -52,13 +52,17 @@
 
 </section>
 
+
+{% assign hasAccordion =  product.metafields.accentuate.show_accordion %}
+
+{% if hasAccordion %}
 <div class="product-hr"></div>
 
 <section class="default-block">
   <div class="inner product-section-content">
   <div class="inner intro-content center">
     <h2 class="section-title orange">Product Information</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate consequuntur iusto ad dolorum minus adipisci.</p>
+    <p>Get more information on {{product.title}}.</p>
   </div>
     <div class="category">
       <div class="category__el">
@@ -180,12 +184,12 @@
   </div>
 </section>
 
-
+{% endif %}
 
 <div class="product-hr"></div>
 
 
-<section>
+<section class="other-products">
     <div class="inner center intro-content">
     <h2 class="section-title orange">Other Related Products</h2>
     <p>People who buy <strong>{{ product.title }}</strong> Also shop for:</p>
@@ -193,10 +197,13 @@
 
   <div class="inner">
     <div class="explore-product-grid">
-    {% for block in section.blocks %}
-      {% assign product_item = all_products[block.settings.featured_product] %}
+
+    {% for block in product.metafields.accentuate.featured_product_one %}
+
+      {% assign product_item = all_products[block] %}
       {% assign featured_image = product_item | img_url: 'master' %}
       <div class="explore-product-grid__item">
+  
         <a href="{{ product_item.url }}">
           <div class="product-prev-img">
             <img src="{{ featured_image }}" alt="">
