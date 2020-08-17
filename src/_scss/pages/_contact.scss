@@ -52,6 +52,20 @@
 
   }
 
+  .contact__form {
+    width: 90%;
+    margin: auto;
+    margin-top: 1em;
+    padding-bottom: 2em;
+  }
+
+  .hbspt-form {
+    width: 100%;
+    * {
+      width: 100%;
+    }
+  }
+
   label {
     display: block;
     padding-bottom: 0.6em;

@@ -1,0 +1,46 @@
+
+.team-member-single {
+  padding-bottom: 2em;
+}
+
+.article-element {
+
+  &:first-of-type {
+    margin-bottom: 2em;
+  }
+
+  h4 {
+    color: $primary;
+    font-size: 18px;
+    margin-top: 0.5em;
+  }
+  
+  
+}
+
+#view-all {
+  color: $primary;
+  font-weight: 800;
+}
+
+
+@media(min-width: $bp-sm) {
+  .team-member-single {
+    display: flex;
+    // justify-content: space-between;
+  }
+
+  .article-element:first-of-type {
+    width: 20%;
+    margin-right: 4em;
+    margin-bottom: 0;
+  }
+
+  .article-element:last-of-type {
+    width: 65%;
+  }
+
+  .article-element__img {
+    width: 100%;
+  }
+}

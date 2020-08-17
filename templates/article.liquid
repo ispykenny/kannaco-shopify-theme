@@ -1,3 +1,29 @@
+
+{% assign team = article.handle | split : "/" | first  %}
+{% if team == "team" %}
+  <div class="header-spacer"></div>
+  <section>
+    <div class="inner team-member-single">
+      <div class="article-element">
+        <div class="article-element__img">
+          <img src="{{ article.image.src | img_url: '380x405', crop: 'center' }}" alt="">
+        </div>
+      </div>
+      <div class="article-element">
+        <h1 class="section-title">{{ article.title }}</h1>
+        <h4>{{ article.metafields.accentuate.job_title }}</h4>
+        <div class="hr"></div>
+          <article>
+            {{ article.content }}
+          </article>
+          <div style="padding-top: 1em;">
+            <a id="view-all" href="{{site.url}}/pages/about#team">View All Members</a>
+          </div>
+        </div>
+      </div>
+  </section>
+{% else %}
+
 <section id="hero">
   <div class="inner">
     <div id="hdr-content" class="article-single is-centered">
@@ -72,7 +98,8 @@
 
 </div>
 </section>
-
 {% include 'share-article' %}
 {% include 'subscribe-blog' %}
 {% include 'prev-next-blog' %}
+{% endif %}
+

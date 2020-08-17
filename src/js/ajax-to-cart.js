@@ -20,7 +20,6 @@ export default function() {
       bubble.text(total);
       
       $btn.text('Added!')
-
       $.post('/cart/add.js', 
           {
             quantity: $("#Quantity").val(),

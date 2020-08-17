@@ -33,12 +33,27 @@ export default function() {
 
   const checkParams = () => {
     let windowParam = new URLSearchParams(window.location.search);
-    console.log(windowParam.get('hi'))
+
+    if(windowParam.get('prod_type') && prod_item) {
+      if(windowParam.get('prod_type').includes("craft") || windowParam.get('prod_type').includes("Craft")) {
+        prod_item.show();
+        setTimeout(() => {
+          prod_item.each((index, element) => {
+            if(!$(element).hasClass('is-craft')) {
+              $(element).hide();
+            }
+            $('.filter-secondary').eq(1).addClass('active')
+          })
+        })
+      }
+    }
   }
 
 
   const filterCraftVsStandard = (event) => {
     event.preventDefault();
+    $('.filter-secondary').removeClass('active')
+    $(event.currentTarget).addClass('active')
     let value = $(event.currentTarget).text()
     if(value.includes("Craft")) {
       prod_item.show();
