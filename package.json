@@ -1,13 +1,10 @@
 {
-  "name": "shopifycompiler",
+  "name": "kannaco-shopify-theme",
   "version": "1.0.0",
-  "description": ":)",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Kenny Krosky",
-  "license": "ISC",
+  "repository": "https://github.com/ispykenny/kannaco-shopify-theme.git",
+  "author": "ispykenny <kenny.krosky@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "@shopify/theme-addresses": "^3.1.0",
     "animejs": "^2.2.0",
@@ -21,6 +18,7 @@
     "del": "^3.0.0",
     "dotenv": "^5.0.0",
     "flickity": "^2.1.2",
+    "graceful-fs": "^4.2.4",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.1.0",
     "gulp-clean-css": "^3.10.0",
@@ -41,5 +39,8 @@
     "select2": "^4.0.13",
     "tilt.js": "^1.2.1",
     "webpack": "^3.11.0"
+  },
+  "resolutions": {
+    "graceful-fs": "^4.2.4"
   }
 }

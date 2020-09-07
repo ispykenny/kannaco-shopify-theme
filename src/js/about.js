@@ -7,13 +7,12 @@ const runAboutSlider = () => {
       contain: true,
       cellSelector: '.about-slider__item',
       wrapAround: true,
-      prevNextButtons: false
+      prevNextButtons: true
     });
 
     $('.category__list ul').flickity({
       freeScroll: true,
       contain: true,
-      // disable previous & next buttons and dots
       prevNextButtons: false,
       pageDots: false,
       watchCSS: true
