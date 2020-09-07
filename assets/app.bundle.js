@@ -12112,23 +12112,6 @@ const initCategorySlider = () => {
         }
       })
     }
-
-    if($('.is-craft').length > 0) {
-      $('.filter-parent').append(`
-      <div class="filter">
-        <div class="filter__el">
-          <h4>Series Type:</h4>
-        </div>
-        <div class="filter__el">
-          <ul class="filter__options">
-            <li class="filter-secondary"><a href="#0">Standard Series</a></li>
-            <li class="filter-secondary"><a href="#0">Craft Series</a></li>
-          </ul>
-        </div>
-      </div>
-      `)
-    }
-    $('.filter-secondary').on('click', event => filterCraftVsStandard(event))
   }
 
   const checkParams = () => {
@@ -12148,32 +12131,6 @@ const initCategorySlider = () => {
       }
     }
   }
-
-
-  const filterCraftVsStandard = (event) => {
-    event.preventDefault();
-    $('.filter-secondary').removeClass('active')
-    $(event.currentTarget).addClass('active')
-    let value = $(event.currentTarget).text()
-    if(value.includes("Craft")) {
-      prod_item.show();
-      prod_item.each((index, element) => {
-        if(!$(element).hasClass('is-craft')) {
-          $(element).hide();
-        }
-      })
-    } else {
-      prod_item.show();
-      prod_item.each((index, element) => {
-        if($(element).hasClass('is-craft')) {
-          $(element).hide();
-        }
-      })
-    }
-  }
-
-
-  
 
   checkParams();
   setCraftClass();
