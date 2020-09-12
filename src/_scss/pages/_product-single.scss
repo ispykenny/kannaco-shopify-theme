@@ -36,15 +36,12 @@
 }
 
 .all-images {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-row-gap: 10px;
-  grid-gap: 10px;
-  padding-top: 1em;
+  padding-top: 0.5em;
+}
 
-  img {
-    background: #f2f2f2;
-  }
+
+.all-images__preview {
+  width: 25%;
 }
 
 #AddToCart {
@@ -82,6 +79,25 @@
 
 .other-products {
   padding-bottom: 4em;
+}
+
+.show-case-image {
+  width: 100%;
+}
+
+.show-case-image__inner {
+  padding-bottom: 100%;
+  position: relative;
+}
+
+.product-single__img {
+ .flickity-prev-next-button {
+   background-color: $primary;
+
+   svg {
+     fill: white;
+   }
+ }
 }
 
 @media(min-width: $bp-md) {

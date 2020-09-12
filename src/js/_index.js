@@ -6,6 +6,7 @@ import {runAboutSlider, accordion} from './about';
 import initCategorySlider from './category-slider';
 import ajaxToCart from './ajax-to-cart';
 import _craftLogo from './_craft-logo';
+import prodSliderInit from './single_product-slider';
 ajaxToCart();
 
 $(window).on({
@@ -18,6 +19,10 @@ $(window).on({
 
     setTimeout(() => initCategorySlider() , 200)
     _craftLogo();
+
+    if($('.product-single')) {
+      prodSliderInit()
+    }
   }
 })
 
@@ -53,6 +58,7 @@ import scroll from './scroll';
 import search from './search';
 import batch from './batch';
 import setFeaturedBlogMarkup from './featured-blogs';
+
 scroll();
 
 search();

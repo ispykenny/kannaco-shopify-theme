@@ -10,13 +10,27 @@
     
       <div class="product-single__el">
         <div class="product-single__img">
-          <img src="{{ featured_image | img_url: 'master' }}" alt="">
+          {% for img in product.images %}
+          <div class="show-case-image">
+           <div class="show-case-image__inner">
+           
+            <div class="section-bg">
+              <div class="section-bg__el" data-bg="{{ img  | img_url: 'master' }}"></div>
+            </div>
+           </div>
+          </div>
+          {% endfor %}
         </div>
 
         <div class="all-images">
           {% for img in product.images %}
           <div class="all-images__preview">
-            <img src="{{ img  | img_url: 'master' }}" alt="">
+            <div class="show-case-image__inner">
+           
+            <div class="section-bg">
+              <div class="section-bg__el" data-bg="{{ img  | img_url: 'master' }}"></div>
+            </div>
+           </div>
           </div>
           {% endfor %}
         </div>
