@@ -31,15 +31,6 @@ export default function() {
 
   window.onresize = () => doResizeHandler();
 
-  const slideMbSlider = event => {
-    let $t = $(event.currentTarget);
-
-    if($t.hasClass('prev')) {
-      $mobileSlider.flickity('previous');
-    } else {
-      $mobileSlider.flickity('next');
-    }
-  }
 
   const toggleSearch = event => {
     event.preventDefault();
@@ -56,23 +47,14 @@ export default function() {
     if(showingMobileMenu) {
       $('.mm-mega').hide();
       $body.removeClass('mobileShowing');
-      $mobileSlider.flickity('destroy');
       showingMobileMenu = false;
     } else {
       $('.mm-mega').slideDown(150);
       $body.addClass('mobileShowing');
-      $mobileSlider.flickity({
-        cellAlign: 'left',
-        wrapAround: true,
-        pageDots: false,
-        prevNextButtons: false,
-        freeScroll: true
-      });
       showingMobileMenu = true;
     }
   }
 
   $mobileTrigger.on('click', event => initMobileMenu(event));
-  $mobileSlideButtons.on('click', event => slideMbSlider(event));
   $mobileSearch.on('click', event => toggleSearch(event));
 }

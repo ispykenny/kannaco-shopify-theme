@@ -264,42 +264,6 @@
             </form>
           </div>
   
-          <div class="mm-products">
-            <h5>Featured Products</h5>
-            <div class="mm-slider__group">
-              <div class="mm-slider">
-                {% for block in section.blocks %}
-                  {% assign product_item = all_products[block.settings.featured_product] %}
-                    <a class="mm-slider__el" href="{{ product_item.url }}">
-                      <div class="mm-slider__el-image">
-                          <p>{{ product_item.title }}</p>
-                          <div class="section-bg">
-                            <div class="section-bg__el lazy-bg" data-bg="{{ product_item | image_url }}">
-                            
-                            </div>
-                          </div>  
-                      </div>
-                    </a>
-                {% endfor %}
-              </div>
-              <div class="mm-slider-btn align-right push-top">
-                <button class="slide-btn prev">
-                  <span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="8.414" height="14.828" viewBox="0 0 8.414 14.828">
-                      <path d="M2918.577,190.731l-6,6,6,6" transform="translate(2919.991 204.145) rotate(180)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                    </svg>                  
-                  </span>
-                </button>
-                <button class="slide-btn next">
-                  <span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="8.414" height="14.828" viewBox="0 0 8.414 14.828">
-                      <path d="M2918.577,190.731l-6,6,6,6" transform="translate(2919.991 204.145) rotate(180)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                    </svg>                  
-                  </span>
-                </button>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>

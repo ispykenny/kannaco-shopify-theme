@@ -38,6 +38,7 @@
 
 
       <div class="product-single__el">
+        <h4>{{ current_variant.price | money }}</h4>
         <h1 class="section-title">{{ product.title }}</h1>
         <div>{{ product.description }}</div>  
         <form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm">

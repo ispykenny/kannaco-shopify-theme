@@ -90,8 +90,4 @@ export default function() {
       showingMega = true;
     }
   }
-
-  $sliderButton.on('click', event => slideSlider(event));
-  $dropDownDesktop.on('click', event => initMegaMenu(event));
-  $megaContainer.on('mouseleave', event => initMegaMenu(event, true))
 }

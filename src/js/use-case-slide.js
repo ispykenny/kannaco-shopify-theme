@@ -1,19 +1,6 @@
 export default function() {
 
-
-  // $('.two-col-parent-slide').flickity({
-  //   autoPlay: true,
-  //   prevNextButtons: false,
-  //   pauseAutoPlayOnHover: false,
-  //   adaptiveHeight: true,
-  //   wrapAround: true,
-  //   percentPosition: false
-  // })
-
-  // $('.two-col-parent-slide').on('scroll', function() {
-  //   $('.two-col-parent-slide').
-  // })
-
+  if(!document.querySelector('.two-col-parent-slide')) return;
   var carousel = document.querySelector('.two-col-parent-slide');
   var flkty = new Flickity( carousel, {
     imagesLoaded: true,

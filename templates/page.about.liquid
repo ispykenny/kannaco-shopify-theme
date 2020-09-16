@@ -85,11 +85,17 @@
               <img src="{{ primary_image_one.src }}" alt="">
             </div>
 
+            {% assign imageOne = mini_image_one.src | size %}
+
+
+            {% if imageOne > 1 %}
             <div class="label-img">
               <div class="label-img__par">
                 <img src="{{ mini_image_one.src }}" alt="">
               </div>
             </div>
+
+            {% endif %}
             
           </div>
         </div>
@@ -125,11 +131,17 @@
               <img src="{{ primary_image_two.src }}" alt="">
             </div>
 
+            {% assign imageTwo = mini_image_two.src | size %}
+
+
+            {% if imageTwo > 1 %}
             <div class="label-img">
               <div class="label-img__par">
                 <img src="{{ mini_image_two.src }}" alt="">
               </div>
             </div>
+
+            {% endif %}
             
           </div>
         </div>

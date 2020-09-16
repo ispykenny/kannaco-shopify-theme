@@ -14094,20 +14094,7 @@ const initDomImages = (domImages) => {
 "use strict";
 /* harmony default export */ __webpack_exports__["a"] = (function() {
 
-
-  // $('.two-col-parent-slide').flickity({
-  //   autoPlay: true,
-  //   prevNextButtons: false,
-  //   pauseAutoPlayOnHover: false,
-  //   adaptiveHeight: true,
-  //   wrapAround: true,
-  //   percentPosition: false
-  // })
-
-  // $('.two-col-parent-slide').on('scroll', function() {
-  //   $('.two-col-parent-slide').
-  // })
-
+  if(!document.querySelector('.two-col-parent-slide')) return;
   var carousel = document.querySelector('.two-col-parent-slide');
   var flkty = new Flickity( carousel, {
     imagesLoaded: true,
@@ -16691,10 +16678,6 @@ const justShowPassword = () => {
       showingMega = true;
     }
   }
-
-  $sliderButton.on('click', event => slideSlider(event));
-  $dropDownDesktop.on('click', event => initMegaMenu(event));
-  $megaContainer.on('mouseleave', event => initMegaMenu(event, true))
 });
 
 /***/ }),
@@ -16735,15 +16718,6 @@ const justShowPassword = () => {
 
   window.onresize = () => doResizeHandler();
 
-  const slideMbSlider = event => {
-    let $t = $(event.currentTarget);
-
-    if($t.hasClass('prev')) {
-      $mobileSlider.flickity('previous');
-    } else {
-      $mobileSlider.flickity('next');
-    }
-  }
 
   const toggleSearch = event => {
     event.preventDefault();
@@ -16760,24 +16734,15 @@ const justShowPassword = () => {
     if(showingMobileMenu) {
       $('.mm-mega').hide();
       $body.removeClass('mobileShowing');
-      $mobileSlider.flickity('destroy');
       showingMobileMenu = false;
     } else {
       $('.mm-mega').slideDown(150);
       $body.addClass('mobileShowing');
-      $mobileSlider.flickity({
-        cellAlign: 'left',
-        wrapAround: true,
-        pageDots: false,
-        prevNextButtons: false,
-        freeScroll: true
-      });
       showingMobileMenu = true;
     }
   }
 
   $mobileTrigger.on('click', event => initMobileMenu(event));
-  $mobileSlideButtons.on('click', event => slideMbSlider(event));
   $mobileSearch.on('click', event => toggleSearch(event));
 });
 
