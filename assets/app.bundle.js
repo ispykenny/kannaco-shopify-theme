@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 8);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -323,7 +323,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// Flickity main
     // AMD
     !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
       __webpack_require__(2),
-      __webpack_require__(6),
+      __webpack_require__(7),
       __webpack_require__(0),
       __webpack_require__(20),
       __webpack_require__(21),
@@ -13547,6 +13547,57 @@ window.IntersectionObserverEntry = IntersectionObserverEntry;
 /* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+ * Flickity v2.2.1
+ * Touch, responsive, flickable carousels
+ *
+ * Licensed GPLv3 for open source use
+ * or Flickity Commercial License for commercial use
+ *
+ * https://flickity.metafizzy.co
+ * Copyright 2015-2019 Metafizzy
+ */
+
+( function( window, factory ) {
+  // universal module definition
+  /* jshint strict: false */
+  if ( true ) {
+    // AMD
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+      __webpack_require__(1),
+      __webpack_require__(23),
+      __webpack_require__(25),
+      __webpack_require__(26),
+      __webpack_require__(27),
+      __webpack_require__(28),
+      __webpack_require__(29)
+    ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else if ( typeof module == 'object' && module.exports ) {
+    // CommonJS
+    module.exports = factory(
+      require('./flickity'),
+      require('./drag'),
+      require('./prev-next-button'),
+      require('./page-dots'),
+      require('./player'),
+      require('./add-remove-cell'),
+      require('./lazyload')
+    );
+  }
+
+})( window, function factory( Flickity ) {
+  /*jshint strict: false*/
+  return Flickity;
+});
+
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
  * getSize v2.0.3
  * measure size of elements
@@ -13761,31 +13812,31 @@ return getSize;
 
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__lazy_load_index__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__drop_down__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__use_case_slide__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__about__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__category_slider__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ajax_to_cart__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__craft_logo__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__single_product_slider__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__password_reset__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__nav__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__mobile_menu__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__three_col__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__footer__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__qty__ = __webpack_require__(35);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__scroll__ = __webpack_require__(36);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__search__ = __webpack_require__(37);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__batch__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__featured_blogs__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__lazy_load_index__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__drop_down__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__use_case_slide__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__about__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__category_slider__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ajax_to_cart__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__craft_logo__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__single_product_slider__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__password_reset__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__nav__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__mobile_menu__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__three_col__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__footer__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__qty__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__scroll__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__search__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__batch__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__featured_blogs__ = __webpack_require__(40);
 
 
 
@@ -13872,12 +13923,12 @@ document.querySelectorAll('.address-delete-form').forEach(deleteForm => {
 __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.category__list li').on('click', event => Object(__WEBPACK_IMPORTED_MODULE_4__about__["a" /* accordion */])(event));
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__backgrounds__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__images__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__backgrounds__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__images__ = __webpack_require__(11);
 
 
 const all_images = document.querySelectorAll('img');
@@ -13894,7 +13945,7 @@ if(all_images.length) {
 
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13935,7 +13986,7 @@ const setBackgroundImages = () => {
 
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14028,7 +14079,7 @@ const initDomImages = (domImages) => {
 
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14037,7 +14088,7 @@ const initDomImages = (domImages) => {
 });
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14083,7 +14134,7 @@ const initDomImages = (domImages) => {
 });
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14130,7 +14181,7 @@ const accordion = event => {
 
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14156,7 +14207,7 @@ const initCategorySlider = () => {
 /* harmony default export */ __webpack_exports__["a"] = (initCategorySlider);
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14203,7 +14254,7 @@ const initCategorySlider = () => {
 });
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14248,13 +14299,13 @@ const initCategorySlider = () => {
 });
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_flickity__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_flickity__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_flickity___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_flickity__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_flickity_as_nav_for__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_flickity_as_nav_for__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_flickity_as_nav_for___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_flickity_as_nav_for__);
 
 
@@ -14277,57 +14328,6 @@ const prodSliderInit = () => {
 }
 
 /* harmony default export */ __webpack_exports__["a"] = (prodSliderInit);
-
-/***/ }),
-/* 18 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
- * Flickity v2.2.1
- * Touch, responsive, flickable carousels
- *
- * Licensed GPLv3 for open source use
- * or Flickity Commercial License for commercial use
- *
- * https://flickity.metafizzy.co
- * Copyright 2015-2019 Metafizzy
- */
-
-( function( window, factory ) {
-  // universal module definition
-  /* jshint strict: false */
-  if ( true ) {
-    // AMD
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-      __webpack_require__(1),
-      __webpack_require__(23),
-      __webpack_require__(25),
-      __webpack_require__(26),
-      __webpack_require__(27),
-      __webpack_require__(28),
-      __webpack_require__(29)
-    ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
-				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
-				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-  } else if ( typeof module == 'object' && module.exports ) {
-    // CommonJS
-    module.exports = factory(
-      require('./flickity'),
-      require('./drag'),
-      require('./prev-next-button'),
-      require('./page-dots'),
-      require('./player'),
-      require('./add-remove-cell'),
-      require('./lazyload')
-    );
-  }
-
-})( window, function factory( Flickity ) {
-  /*jshint strict: false*/
-  return Flickity;
-});
-
 
 /***/ }),
 /* 19 */
@@ -14403,7 +14403,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// Flickity.Cell
   if ( true ) {
     // AMD
     !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-      __webpack_require__(6)
+      __webpack_require__(7)
     ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( getSize ) {
       return factory( window, getSize );
     }).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
@@ -16405,498 +16405,6 @@ return Flickity;
 
 /***/ }),
 /* 30 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return showPasswordReset; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return justShowPassword; });
-const showPasswordReset = () => {
-  if(window.location.hash) {
-    console.log(window.location.hash)
-    if(window.location.hash === "#recover") {
-      $('.reset-password-form').fadeIn();
-
-      $('body, html').animate({
-        scrollTop: $(window.location.hash).offset().top - $('header').outerHeight() + 'px'
-      }, 700)
-    }
-  }
-}
-
-const justShowPassword = () => {
-  $('.reset-password-form').fadeIn();
-   setTimeout(() => {
-    $('body, html').animate({
-      scrollTop: $(window.location.hash).offset().top - $('header').outerHeight() + 'px'
-    }, 700)
-   }, 100)
-}
-
-
-
-
-/***/ }),
-/* 31 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony default export */ __webpack_exports__["a"] = (function() {
-  let $body = $('body');
-  
-
-  // mega nav slider
-
-  let $dropDownDesktop = $("#has-menu-dropdown");
-  let $sliderParent = $('.mega__slider');
-
-  let $sliderButton = $('#mega-slide-buttons button');
-  let $menuNavUl = $('.is-mega-nav__el');
-  let showingMega = false;
-  let userEnableTransition;
-  let clearAddedClass;
-  let $megaContainer = $('#mega-menu-container');
-
-
- 
-  const slideSlider = event => {
-    let $this = $(event.currentTarget);
-    if($this.hasClass('prev')) {
-      $sliderParent.flickity('previous');
-    } else {
-      $sliderParent.flickity('next');
-    }
-  }
-
-  $body.addClass('mega-showing');
-  $sliderParent.flickity({
-    cellAlign: 'left',
-    pageDots: false,
-    prevNextButtons: false,
-    wrapAround: true,
-    draggable: false,
-    bgLazyLoad: true
-  });
-  $body.addClass('mega-set');
-  $body.addClass('user-enabled');
-  
-  $menuNavUl.addClass('active')
-  showingMega = true;
-
-  $(window).on('load', () => {
-    clearTimeout(userEnableTransition);
-      clearTimeout(clearAddedClass);
-      $body
-        .removeClass('mega-showing')
-        .removeClass('mega-set')
-        .removeClass('user-enabled');
-      $menuNavUl.removeClass('active');
-      showingMega = false;
-      $sliderParent.flickity('destroy');
-  })
-
-  const initMegaMenu = (event, leftMobileMenu) => {
-    event.preventDefault();
-    
-    
-    if(showingMega || leftMobileMenu) {
-      clearTimeout(userEnableTransition);
-      clearTimeout(clearAddedClass);
-      $body
-        .removeClass('mega-showing')
-        .removeClass('mega-set')
-        .removeClass('user-enabled');
-      $menuNavUl.removeClass('active');
-      showingMega = false;
-      $sliderParent.flickity('destroy');
-    } else {
-      
-      $body.addClass('mega-showing');
-      $sliderParent.flickity({
-        cellAlign: 'left',
-        pageDots: false,
-        prevNextButtons: false,
-        wrapAround: true,
-        draggable: false,
-        bgLazyLoad: true
-      });
-      $body.addClass('mega-set');
-      userEnableTransition = setTimeout(() => {
-        $body.addClass('user-enabled');
-      }, 1100)
-      $menuNavUl.each((index, element) => {
-        let $this = $(element);
-        clearAddedClass = setTimeout(() => {
-          $this.addClass('active')
-        }, 80 * index)
-      })
-      showingMega = true;
-    }
-  }
-
-  $sliderButton.on('click', event => slideSlider(event));
-  $dropDownDesktop.on('click', event => initMegaMenu(event));
-  $megaContainer.on('mouseleave', event => initMegaMenu(event, true))
-});
-
-/***/ }),
-/* 32 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony default export */ __webpack_exports__["a"] = (function() {
-  let $body = $('body');
-  let $mobileSlider = $('.mm-slider');
-  let showingMobileMenu = false;
-  let showingSearch = false;
-  let $mobileSlideButtons = $('.mm-slider-btn button');
-  let $mobileSearch = $("#mobile-search");
-  let $mobileTrigger = $('[data-mobile-trigger]');
-
-  const checkScreenSize = () => {
-    if(!$('#mmenu').is(":visible") && showingMobileMenu) {
-      $('.mm-mega').hide();
-      $body.removeClass('mobileShowing');
-      $mobileSlider.flickity('destroy');
-      showingMobileMenu = false;
-    }
-  }
-
-  let resizeTimeout = null;
-  const doResizeTimeout = () => {
-    resizeTimeout = setTimeout(() => {
-      checkScreenSize()
-    }, 400);
-  },
-  doResizeHandler = () => {
-    if (resizeTimeout !== null) {
-    clearTimeout(resizeTimeout);
-    }
-    doResizeTimeout();
-  };
-
-  window.onresize = () => doResizeHandler();
-
-  const slideMbSlider = event => {
-    let $t = $(event.currentTarget);
-
-    if($t.hasClass('prev')) {
-      $mobileSlider.flickity('previous');
-    } else {
-      $mobileSlider.flickity('next');
-    }
-  }
-
-  const toggleSearch = event => {
-    event.preventDefault();
-    if(showingSearch) {
-      $('.mm-search').slideUp(150);
-      showingSearch = false;
-    } else {
-      $('.mm-search').slideDown(150);
-      showingSearch = true;
-    }
-  }
-
-  const initMobileMenu = event => {
-    if(showingMobileMenu) {
-      $('.mm-mega').hide();
-      $body.removeClass('mobileShowing');
-      $mobileSlider.flickity('destroy');
-      showingMobileMenu = false;
-    } else {
-      $('.mm-mega').slideDown(150);
-      $body.addClass('mobileShowing');
-      $mobileSlider.flickity({
-        cellAlign: 'left',
-        wrapAround: true,
-        pageDots: false,
-        prevNextButtons: false,
-        freeScroll: true
-      });
-      showingMobileMenu = true;
-    }
-  }
-
-  $mobileTrigger.on('click', event => initMobileMenu(event));
-  $mobileSlideButtons.on('click', event => slideMbSlider(event));
-  $mobileSearch.on('click', event => toggleSearch(event));
-});
-
-/***/ }),
-/* 33 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony default export */ __webpack_exports__["a"] = (function() {
-  let $threeColSlider = $('.three-col');
-
-  if($threeColSlider) {
-    $threeColSlider.flickity({
-      watchCSS: true,
-      wrapAround: true,
-      dragThreshold: 8
-    });
-  }
-});
-
-/***/ }),
-/* 34 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony default export */ __webpack_exports__["a"] = (function() {
-  const footerCategory = $('.footer-category');
-  const footerNav = $('.footer-li');
-  const navHamburger = $('[data-mobile-trigger]')
-  const speed = 150;
-
-  const toggleFooterNav = event => {
-    if(!navHamburger.is(':visible')) return;
-    let $this = $(event.currentTarget);
-
-    if($this.parent().hasClass('active')) {
-      $this.parent().find('.footer-li').slideUp(speed);
-      $this.parent().removeClass('active');
-    } else {
-      $this.parent().find('.footer-li').slideDown(speed);
-      $this.parent().addClass('active');
-    }
-  }
-
-
-  footerCategory.on('click', event => toggleFooterNav(event))
-});
-
-/***/ }),
-/* 35 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony default export */ __webpack_exports__["a"] = (function () {
-  const qty = document.querySelectorAll('.qty');
-  const change = document.querySelectorAll('.qty__change');
-
-  const setInitialValues = () => {
-    qty.forEach((element) => {
-      const value = element.querySelector('input').value;
-      element.querySelector('.qty__value').innerHTML = value;
-    })
-  }
-
-  const doTheMathStuff = (number, equation) => {
-    let newValue;
-    
-    if(equation === "add") {
-      newValue = number + 1;
-    } else { 
-      if (number === 0)  {
-        newValue = 0;
-      } else {
-        newValue = number - 1;
-      }
-    }
-    return newValue;
-  }
-
-  const changeValue = event => {
-    const currentInput = event.currentTarget;
-    const parent = currentInput.closest('.qty')
-    const currentValue = parent.querySelector('input').value;
-    if(currentInput.classList.contains('add')) {
-      
-      currentInput
-        .closest('.qty')
-        .querySelector('input')
-        .value = doTheMathStuff(parseInt(currentValue), 'add')
-      
-      parent
-        .querySelector('.qty__value')
-        .innerHTML = doTheMathStuff(parseInt(currentValue), 'add')
-      
-    } else {
-      currentInput
-        .closest('.qty')
-        .querySelector('input')
-        .value = doTheMathStuff(parseInt(currentValue))
-      
-      parent
-        .querySelector('.qty__value')
-        .innerHTML = doTheMathStuff(parseInt(currentValue))
-    }
-  }
-
-  change.forEach((element) => {
-    element.addEventListener('click', changeValue)
-  })
-
-  setInitialValues();
-});
-
-/***/ }),
-/* 36 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony default export */ __webpack_exports__["a"] = (function() {
-  let windowOffSet = $(window).scrollTop();
-  let didScroll = false;
-  let heroParalax = $('.label-img__par');
-
-  $.fn.inView = function(){
-    var win = $(window);
-    var obj = $(this);
-    var scrollPosition = win.scrollTop();
-    var visibleArea = win.scrollTop() + win.height() ;
-    var objEndPos = (obj.offset().top + obj.outerHeight());
-    return(visibleArea >= objEndPos && scrollPosition <= objEndPos ? true : false)
-  };
-
-  const initParalax = () => {
-    if(heroParalax && !$('.mmenu__el').is(":visible")) {
-      heroParalax.each((index, element) => {
-        let indicator = $(element).parents('.lazy-river-container').find('.indicator-strip')
-        if(indicator.inView()) {
-          $(element).css({
-            'transform': 'translateY('+ windowOffSet/50 +'%)'
-          })
-        }
-      })
-      $('.spaced-blob').css({
-        'transform': 'translate(-'+ windowOffSet/30 +'%)'
-      })
-    }
-  }
-
-  initParalax();
-
-  const updateDateScroll = () => {
-    didScroll = true;
-    windowOffSet = $(window).scrollTop();
-  }
-
-  const rafTicker = () => {
-    if(didScroll) {
-      initParalax();
-      didScroll = false;
-    }
-    requestAnimationFrame(rafTicker);
-  }
-
-  requestAnimationFrame(rafTicker);
-  $(window).on('scroll', updateDateScroll);
-});
-
-/***/ }),
-/* 37 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony default export */ __webpack_exports__["a"] = (function() {
-  
-  const showSearch = event => {
-    event.preventDefault();
-    
-    if($('body').hasClass('showing-search')) {
-      $('body').removeClass('showing-search');
-    } else {
-      $('body').addClass('showing-search');
-    }
-  }
-
-
-  $('#main-nav-dk li:last-of-type').on('click', event => showSearch(event))
-
-  $('.cancel').on('click', event => showSearch(event));
-});
-
-/***/ }),
-/* 38 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony default export */ __webpack_exports__["a"] = (function() {
-
-  let $form = $('.batch-search');
-  let $input = $('.batch-search__item');
-
-  const searchBatch = event => {
-    event.preventDefault();
-    let $searchQuery = $input.val();
-
-
-    if($searchQuery.length <= 0) return;
-
-    let $batch = `.batch-id-${$searchQuery}`;
-    console.log($batch)
-
-    console.log($($batch).length)
-
-    $('.batch__item').hide();
-
-    if($($batch).length > 0) {
-      setTimeout(() => $($batch).show())
-    } else {
-      $('.no-results').show();
-      $('.batch-search-query').html($searchQuery)
-    }
-  }
-
-  $form.on('submit', event => searchBatch(event));
-
-
-  const showAllBatch = () => {
-    $('.no-results').hide();
-    $('.batch__item').show();
-  }
-
-
-  $('.reset-batch').on('click', showAllBatch);
-
-});
-
-/***/ }),
-/* 39 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-const setFeaturedBlogMarkup = () => {
-  const blog_item = document.querySelectorAll('.blog-item');
-  if(!blog_item.length) return;
-  let setWrapper = ``;
-  let sideMain = ``;
-
-  if(blog_item.length < 4) {
-    blog_item[0].closest('section').remove();
-    return;
-  }
-
-  blog_item.forEach((blog, index) => {
-    if(index < 1) {
-      setWrapper = `
-        <div class="featured_main">
-          ${blog.outerHTML}
-        </div>
-      `
-    } 
-
-    if(index > 0) {
-      sideMain += `${blog.outerHTML}`
-    }
-
-  })
-
-  let sideMainParent = document.createElement('div');
-  sideMainParent.classList.add('side-features')
-  sideMainParent.innerHTML = sideMain;
-  document.querySelector('.blog-features').innerHTML = setWrapper;
-  document.querySelector('.blog-features').appendChild(sideMainParent)
-}
-
-
-/* harmony default export */ __webpack_exports__["a"] = (setFeaturedBlogMarkup);
-
-/***/ }),
-/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -16912,7 +16420,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   if ( true ) {
     // AMD
     !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-      __webpack_require__(18),
+      __webpack_require__(6),
       __webpack_require__(0)
     ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
@@ -17053,6 +16561,498 @@ return Flickity;
 
 }));
 
+
+/***/ }),
+/* 31 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return showPasswordReset; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return justShowPassword; });
+const showPasswordReset = () => {
+  if(window.location.hash) {
+    console.log(window.location.hash)
+    if(window.location.hash === "#recover") {
+      $('.reset-password-form').fadeIn();
+
+      $('body, html').animate({
+        scrollTop: $(window.location.hash).offset().top - $('header').outerHeight() + 'px'
+      }, 700)
+    }
+  }
+}
+
+const justShowPassword = () => {
+  $('.reset-password-form').fadeIn();
+   setTimeout(() => {
+    $('body, html').animate({
+      scrollTop: $(window.location.hash).offset().top - $('header').outerHeight() + 'px'
+    }, 700)
+   }, 100)
+}
+
+
+
+
+/***/ }),
+/* 32 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = (function() {
+  let $body = $('body');
+  
+
+  // mega nav slider
+
+  let $dropDownDesktop = $("#has-menu-dropdown");
+  let $sliderParent = $('.mega__slider');
+
+  let $sliderButton = $('#mega-slide-buttons button');
+  let $menuNavUl = $('.is-mega-nav__el');
+  let showingMega = false;
+  let userEnableTransition;
+  let clearAddedClass;
+  let $megaContainer = $('#mega-menu-container');
+
+
+ 
+  const slideSlider = event => {
+    let $this = $(event.currentTarget);
+    if($this.hasClass('prev')) {
+      $sliderParent.flickity('previous');
+    } else {
+      $sliderParent.flickity('next');
+    }
+  }
+
+  $body.addClass('mega-showing');
+  $sliderParent.flickity({
+    cellAlign: 'left',
+    pageDots: false,
+    prevNextButtons: false,
+    wrapAround: true,
+    draggable: false,
+    bgLazyLoad: true
+  });
+  $body.addClass('mega-set');
+  $body.addClass('user-enabled');
+  
+  $menuNavUl.addClass('active')
+  showingMega = true;
+
+  $(window).on('load', () => {
+    clearTimeout(userEnableTransition);
+      clearTimeout(clearAddedClass);
+      $body
+        .removeClass('mega-showing')
+        .removeClass('mega-set')
+        .removeClass('user-enabled');
+      $menuNavUl.removeClass('active');
+      showingMega = false;
+      $sliderParent.flickity('destroy');
+  })
+
+  const initMegaMenu = (event, leftMobileMenu) => {
+    event.preventDefault();
+    
+    
+    if(showingMega || leftMobileMenu) {
+      clearTimeout(userEnableTransition);
+      clearTimeout(clearAddedClass);
+      $body
+        .removeClass('mega-showing')
+        .removeClass('mega-set')
+        .removeClass('user-enabled');
+      $menuNavUl.removeClass('active');
+      showingMega = false;
+      $sliderParent.flickity('destroy');
+    } else {
+      
+      $body.addClass('mega-showing');
+      $sliderParent.flickity({
+        cellAlign: 'left',
+        pageDots: false,
+        prevNextButtons: false,
+        wrapAround: true,
+        draggable: false,
+        bgLazyLoad: true
+      });
+      $body.addClass('mega-set');
+      userEnableTransition = setTimeout(() => {
+        $body.addClass('user-enabled');
+      }, 1100)
+      $menuNavUl.each((index, element) => {
+        let $this = $(element);
+        clearAddedClass = setTimeout(() => {
+          $this.addClass('active')
+        }, 80 * index)
+      })
+      showingMega = true;
+    }
+  }
+
+  $sliderButton.on('click', event => slideSlider(event));
+  $dropDownDesktop.on('click', event => initMegaMenu(event));
+  $megaContainer.on('mouseleave', event => initMegaMenu(event, true))
+});
+
+/***/ }),
+/* 33 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = (function() {
+  let $body = $('body');
+  let $mobileSlider = $('.mm-slider');
+  let showingMobileMenu = false;
+  let showingSearch = false;
+  let $mobileSlideButtons = $('.mm-slider-btn button');
+  let $mobileSearch = $("#mobile-search");
+  let $mobileTrigger = $('[data-mobile-trigger]');
+
+  const checkScreenSize = () => {
+    if(!$('#mmenu').is(":visible") && showingMobileMenu) {
+      $('.mm-mega').hide();
+      $body.removeClass('mobileShowing');
+      $mobileSlider.flickity('destroy');
+      showingMobileMenu = false;
+    }
+  }
+
+  let resizeTimeout = null;
+  const doResizeTimeout = () => {
+    resizeTimeout = setTimeout(() => {
+      checkScreenSize()
+    }, 400);
+  },
+  doResizeHandler = () => {
+    if (resizeTimeout !== null) {
+    clearTimeout(resizeTimeout);
+    }
+    doResizeTimeout();
+  };
+
+  window.onresize = () => doResizeHandler();
+
+  const slideMbSlider = event => {
+    let $t = $(event.currentTarget);
+
+    if($t.hasClass('prev')) {
+      $mobileSlider.flickity('previous');
+    } else {
+      $mobileSlider.flickity('next');
+    }
+  }
+
+  const toggleSearch = event => {
+    event.preventDefault();
+    if(showingSearch) {
+      $('.mm-search').slideUp(150);
+      showingSearch = false;
+    } else {
+      $('.mm-search').slideDown(150);
+      showingSearch = true;
+    }
+  }
+
+  const initMobileMenu = event => {
+    if(showingMobileMenu) {
+      $('.mm-mega').hide();
+      $body.removeClass('mobileShowing');
+      $mobileSlider.flickity('destroy');
+      showingMobileMenu = false;
+    } else {
+      $('.mm-mega').slideDown(150);
+      $body.addClass('mobileShowing');
+      $mobileSlider.flickity({
+        cellAlign: 'left',
+        wrapAround: true,
+        pageDots: false,
+        prevNextButtons: false,
+        freeScroll: true
+      });
+      showingMobileMenu = true;
+    }
+  }
+
+  $mobileTrigger.on('click', event => initMobileMenu(event));
+  $mobileSlideButtons.on('click', event => slideMbSlider(event));
+  $mobileSearch.on('click', event => toggleSearch(event));
+});
+
+/***/ }),
+/* 34 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = (function() {
+  let $threeColSlider = $('.three-col');
+
+  if($threeColSlider) {
+    $threeColSlider.flickity({
+      watchCSS: true,
+      wrapAround: true,
+      dragThreshold: 8
+    });
+  }
+});
+
+/***/ }),
+/* 35 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = (function() {
+  const footerCategory = $('.footer-category');
+  const footerNav = $('.footer-li');
+  const navHamburger = $('[data-mobile-trigger]')
+  const speed = 150;
+
+  const toggleFooterNav = event => {
+    if(!navHamburger.is(':visible')) return;
+    let $this = $(event.currentTarget);
+
+    if($this.parent().hasClass('active')) {
+      $this.parent().find('.footer-li').slideUp(speed);
+      $this.parent().removeClass('active');
+    } else {
+      $this.parent().find('.footer-li').slideDown(speed);
+      $this.parent().addClass('active');
+    }
+  }
+
+
+  footerCategory.on('click', event => toggleFooterNav(event))
+});
+
+/***/ }),
+/* 36 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = (function () {
+  const qty = document.querySelectorAll('.qty');
+  const change = document.querySelectorAll('.qty__change');
+
+  const setInitialValues = () => {
+    qty.forEach((element) => {
+      const value = element.querySelector('input').value;
+      element.querySelector('.qty__value').innerHTML = value;
+    })
+  }
+
+  const doTheMathStuff = (number, equation) => {
+    let newValue;
+    
+    if(equation === "add") {
+      newValue = number + 1;
+    } else { 
+      if (number === 0)  {
+        newValue = 0;
+      } else {
+        newValue = number - 1;
+      }
+    }
+    return newValue;
+  }
+
+  const changeValue = event => {
+    const currentInput = event.currentTarget;
+    const parent = currentInput.closest('.qty')
+    const currentValue = parent.querySelector('input').value;
+    if(currentInput.classList.contains('add')) {
+      
+      currentInput
+        .closest('.qty')
+        .querySelector('input')
+        .value = doTheMathStuff(parseInt(currentValue), 'add')
+      
+      parent
+        .querySelector('.qty__value')
+        .innerHTML = doTheMathStuff(parseInt(currentValue), 'add')
+      
+    } else {
+      currentInput
+        .closest('.qty')
+        .querySelector('input')
+        .value = doTheMathStuff(parseInt(currentValue))
+      
+      parent
+        .querySelector('.qty__value')
+        .innerHTML = doTheMathStuff(parseInt(currentValue))
+    }
+  }
+
+  change.forEach((element) => {
+    element.addEventListener('click', changeValue)
+  })
+
+  setInitialValues();
+});
+
+/***/ }),
+/* 37 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = (function() {
+  let windowOffSet = $(window).scrollTop();
+  let didScroll = false;
+  let heroParalax = $('.label-img__par');
+
+  $.fn.inView = function(){
+    var win = $(window);
+    var obj = $(this);
+    var scrollPosition = win.scrollTop();
+    var visibleArea = win.scrollTop() + win.height() ;
+    var objEndPos = (obj.offset().top + obj.outerHeight());
+    return(visibleArea >= objEndPos && scrollPosition <= objEndPos ? true : false)
+  };
+
+  const initParalax = () => {
+    if(heroParalax && !$('.mmenu__el').is(":visible")) {
+      heroParalax.each((index, element) => {
+        let indicator = $(element).parents('.lazy-river-container').find('.indicator-strip')
+        if(indicator.inView()) {
+          $(element).css({
+            'transform': 'translateY('+ windowOffSet/50 +'%)'
+          })
+        }
+      })
+      $('.spaced-blob').css({
+        'transform': 'translate(-'+ windowOffSet/30 +'%)'
+      })
+    }
+  }
+
+  initParalax();
+
+  const updateDateScroll = () => {
+    didScroll = true;
+    windowOffSet = $(window).scrollTop();
+  }
+
+  const rafTicker = () => {
+    if(didScroll) {
+      initParalax();
+      didScroll = false;
+    }
+    requestAnimationFrame(rafTicker);
+  }
+
+  requestAnimationFrame(rafTicker);
+  $(window).on('scroll', updateDateScroll);
+});
+
+/***/ }),
+/* 38 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = (function() {
+  
+  const showSearch = event => {
+    event.preventDefault();
+    
+    if($('body').hasClass('showing-search')) {
+      $('body').removeClass('showing-search');
+    } else {
+      $('body').addClass('showing-search');
+    }
+  }
+
+
+  $('#main-nav-dk li:last-of-type').on('click', event => showSearch(event))
+
+  $('.cancel').on('click', event => showSearch(event));
+});
+
+/***/ }),
+/* 39 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = (function() {
+
+  let $form = $('.batch-search');
+  let $input = $('.batch-search__item');
+
+  const searchBatch = event => {
+    event.preventDefault();
+    let $searchQuery = $input.val();
+
+
+    if($searchQuery.length <= 0) return;
+
+    let $batch = `.batch-id-${$searchQuery}`;
+    console.log($batch)
+
+    console.log($($batch).length)
+
+    $('.batch__item').hide();
+
+    if($($batch).length > 0) {
+      setTimeout(() => $($batch).show())
+    } else {
+      $('.no-results').show();
+      $('.batch-search-query').html($searchQuery)
+    }
+  }
+
+  $form.on('submit', event => searchBatch(event));
+
+
+  const showAllBatch = () => {
+    $('.no-results').hide();
+    $('.batch__item').show();
+  }
+
+
+  $('.reset-batch').on('click', showAllBatch);
+
+});
+
+/***/ }),
+/* 40 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+const setFeaturedBlogMarkup = () => {
+  const blog_item = document.querySelectorAll('.blog-item');
+  if(!blog_item.length) return;
+  let setWrapper = ``;
+  let sideMain = ``;
+
+  if(blog_item.length < 4) {
+    blog_item[0].closest('section').remove();
+    return;
+  }
+
+  blog_item.forEach((blog, index) => {
+    if(index < 1) {
+      setWrapper = `
+        <div class="featured_main">
+          ${blog.outerHTML}
+        </div>
+      `
+    } 
+
+    if(index > 0) {
+      sideMain += `${blog.outerHTML}`
+    }
+
+  })
+
+  let sideMainParent = document.createElement('div');
+  sideMainParent.classList.add('side-features')
+  sideMainParent.innerHTML = sideMain;
+  document.querySelector('.blog-features').innerHTML = setWrapper;
+  document.querySelector('.blog-features').appendChild(sideMainParent)
+}
+
+
+/* harmony default export */ __webpack_exports__["a"] = (setFeaturedBlogMarkup);
 
 /***/ })
 /******/ ]);

@@ -19,7 +19,8 @@
           <div class="product-content" >
             <small>{{ product_item.type }}</small>
             <h5 class="product-name">{{ product_item.title }}</h5>
-            <p>Starting at {{ product_item.price | money }} <strike>{{ product_item.compare_at_price | money }}</strike></p>
+            <p class="mini-blurb">{{product_item.metafields.accentuate.mini_blurb}}</p>
+            <p>Price {{ product_item.price | money }} <strike>{{ product_item.compare_at_price | money }}</strike></p>
             <div class="cta-el single-secondary-cta secondary-cta-parent">
               <span class="cta-secondary">
                 <span class="link-text">View Product</span>
