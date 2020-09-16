@@ -75,7 +75,8 @@
             
               <div class="prod-des">
                 <h4>{{ product.title }}</h4>
-                <p class=''>
+                <p class="mini-blurb">{{ product.metafields.accentuate.mini_blurb }}</p>
+                <p class='price-cc'>
                   {% if comparePrice > price %}
                     {% if product.price_varies %}
                       from {{ price }}
@@ -83,7 +84,7 @@
                       {{ price }} <s>{{ comparePrice }}</s>
                     {% endif %}
                   {% else %}
-                    Starting at <strong>{{ price }}</strong>
+                    Price: <strong>{{ price }}</strong>
                   {% endif %}
 
                   {% unless product.available %}

@@ -49,5 +49,15 @@
         "label": "Youtube Link"
       }
     ]
+  },
+  {
+    "name": "FDA",
+    "settings": [
+      {
+        "id": "fda_section",
+        "type": "textarea",
+        "label": "FDA Section"
+      }
+    ]
   }
 ]

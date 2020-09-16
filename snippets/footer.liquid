@@ -11,13 +11,6 @@
           <li><a href="mailto:{{ settings.email }}">{{ settings.email }}</a></li>
         </ul>
       </nav>
-
-      <div id="payments" class="desktop">
-        <h5>Payment Methods</h5>
-        <div class="payment-container">
-         {% include 'payment-types' %}
-        </div>
-      </div>
     </div>
     <div class="footer-column__el">
       {% assign menuObj = linklists.customer-support %}
@@ -86,10 +79,25 @@
       </nav>
     </div>
 
+    <div id="payments" class="desktop">
+        <h5>Payment Methods</h5>
+        <div class="payments-fda">
+          <div class="payment-container">
+          {% include 'payment-types' %}
+          </div>
+          <div class="fda">
+            {{ settings.fda_section }}
+          </div>
+        </div>
+      </div>
+
     <div class="footer-column__el mobile">
       <h5>Payment Methods</h5>
       <div class="payment-container">
         {% include 'payment-types' %}
+      </div>
+      <div>
+        {{{ settings.fda_section }}}
       </div>
     </div>
   </div>
