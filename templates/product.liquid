@@ -204,6 +204,36 @@
 <div class="product-hr"></div>
 
 
+
+{% if product.metafields.accentuate.show_faq_accordion %}
+<section>
+  <div class="inner">
+
+  <div class="inner center intro-content">
+    <h2 class="section-title orange">Faq Section</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, asperiores?</p>
+  </div>
+
+    <div class="accordion-k">
+      {% for accordion in product.metafields.accentuate.title %}
+
+      <div class="accordion-k__item">
+        <div class="accordion-k__item-inner">
+          <div class="accordion-k__question">
+            <h3>{{ accordion }}</h3>
+          </div>
+          <div class="accordion-k__answer">
+            {{product.metafields.accentuate.answer[forloop.index0]}}
+          </div>
+        </div>	
+      </div>
+      {% endfor %}      
+    </div>
+  </div>
+</section>
+
+{% endif %}
+
 <section class="other-products">
     <div class="inner center intro-content">
     <h2 class="section-title orange">Other Related Products</h2>
@@ -246,6 +276,7 @@
   </div>
 </div>
 </section>
+
 
 {% comment %} {% for image in product.images %}
         <a href="{{ image.src | img_url: 'large' }}" style="position: relative; height: 40px; width: 40px; display: inline-block;">

@@ -100,6 +100,43 @@
  }
 }
 
+
+.accordion-k {
+  max-width: 900px;
+  width: 90%;
+  margin: auto;
+  padding-top: 2em;
+  padding-bottom: 5em;
+  
+  &__item {
+    padding: 1.5em 0em;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+.accordion-k__question {
+  h3 {
+    width: 90%;
+    color: $primary;
+  }
+}
+
+
+.accordion-k__answer {
+  display: none;
+  padding-bottom: 1em;
+  
+  p {
+    margin: 0;
+  }
+}
+
 @media(min-width: $bp-md) {
   .product-single {
     flex-direction: row;

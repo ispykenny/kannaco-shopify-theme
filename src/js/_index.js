@@ -7,6 +7,7 @@ import initCategorySlider from './category-slider';
 import ajaxToCart from './ajax-to-cart';
 import _craftLogo from './_craft-logo';
 import prodSliderInit from './single_product-slider';
+import productAccordion from './accordion.js';
 ajaxToCart();
 
 $(window).on({
@@ -21,7 +22,8 @@ $(window).on({
     _craftLogo();
 
     if($('.product-single')) {
-      prodSliderInit()
+      prodSliderInit();
+      productAccordion();
     }
   }
 })
