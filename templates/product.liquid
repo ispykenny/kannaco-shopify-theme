@@ -76,8 +76,8 @@
 <section class="default-block">
   <div class="inner product-section-content">
   <div class="inner intro-content center">
-    <h2 class="section-title orange">Product Information</h2>
-    <p>Get more information on {{product.title}}.</p>
+    <h2 class="section-title orange">{{ product.metafields.accentuate.product_info_title }}</h2>
+    {{ product.metafields.accentuate.product_info_blurb }}
   </div>
     <div class="category">
       <div class="category__el">
@@ -210,8 +210,8 @@
   <div class="inner">
 
   <div class="inner center intro-content">
-    <h2 class="section-title orange">Faq Section</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, asperiores?</p>
+    <h2 class="section-title orange">{{ product.metafields.accentuate.faq_title }}</h2>
+    <p>{{ product.metafields.accentuate.faq_blurb }}</p>
   </div>
 
     <div class="accordion-k">
@@ -236,8 +236,8 @@
 
 <section class="other-products">
     <div class="inner center intro-content">
-    <h2 class="section-title orange">Other Related Products</h2>
-    <p>People who buy <strong>{{ product.title }}</strong> Also shop for:</p>
+    <h2 class="section-title orange">{{ product.metafields.accentuate.related_products_title }}</h2>
+    {{ product.metafields.accentuate.related_products_blurb }}
   </div>
 
   <div class="inner">
