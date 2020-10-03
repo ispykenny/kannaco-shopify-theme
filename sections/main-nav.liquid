@@ -194,11 +194,11 @@
       </div>
     </div>  </div>
   <div id="mmenu">
-    <div id="mmenu-banner">
+    {% comment %} <div id="mmenu-banner">
       <div class="inner">
         <a href=""><span>Some promotional code banner text</span></a>
       </div>
-    </div>
+    </div> {% endcomment %}
     <div class="inner mmenu">
       <div class="mmenu__el">
         <button data-mobile-trigger>
@@ -209,7 +209,7 @@
         </button>
       </div>
       <div class="mmenu__el">
-        <a href="" id="mobile-logo">
+        <a href="{{shop.url}}/" id="mobile-logo">
           <svg  xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 300 22.696">
             <path d="M1.62,435.257H2.94a4.925,4.925,0,0,0,.521-.024,1.712,1.712,0,0,0,.4-.089,1.064,1.064,0,0,0,.331-.181c.1-.081.206-.177.323-.29l8.983-9.208a1.344,1.344,0,0,1,.464-.362,1.385,1.385,0,0,1,.541-.093h1.288l-9.726,9.961a4.851,4.851,0,0,1-.525.487,2.038,2.038,0,0,1-.513.282,1.831,1.831,0,0,1,.6.29,3.3,3.3,0,0,1,.537.511l10.243,10.665h-1.3a1.258,1.258,0,0,1-.59-.1,1.234,1.234,0,0,1-.355-.322l-9.411-9.6c-.117-.117-.222-.213-.323-.3a1.661,1.661,0,0,0-.331-.213,1.543,1.543,0,0,0-.424-.125,3.787,3.787,0,0,0-.622-.04H1.62v10.7H0V425.014H1.62Z" transform="translate(0 -424.76)" fill="#2e2e2e"/>
             <path d="M124.479,447.223h-1.244a.57.57,0,0,1-.364-.117.822.822,0,0,1-.222-.306l-2.613-6.446H109.1l-2.613,6.446a.66.66,0,0,1-.222.3.579.579,0,0,1-.376.125H104.66l9.112-22.193h1.587Zm-4.928-8.065-4.532-11.213a10.939,10.939,0,0,1-.456-1.317q-.1.374-.206.713c-.073.225-.153.431-.234.62l-4.532,11.2h9.96Z" transform="translate(-62.388 -424.772)" fill="#2e2e2e"/>
@@ -243,7 +243,7 @@
               <h5>Main Menu</h5>
               <nav id="mobile-nav">
                 <ul>
-                  <li><a href="">Products</a></li>
+                  <li><a href="{{shop.url}}/collections/all">Products</a></li>
                   {% assign menuObj = linklists.main-menu %}
                   {% for link in menuObj.links %}
                     <li><a href="{{ link.url }}">{{ link.title }}</a></li>
