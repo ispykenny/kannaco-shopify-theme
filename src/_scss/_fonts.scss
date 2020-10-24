@@ -9,6 +9,7 @@
        url('FuturaPRO-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
        url('FuturaPRO-Medium.svg#kannaco') format('svg'); /* Legacy iOS */
   font-weight: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -19,6 +20,7 @@
        url('FuturaPRO-Book.ttf')  format('truetype'), /* Safari, Android, iOS */
        url('FuturaPRO-Book.svg#kannaco') format('svg'); /* Legacy iOS */
   font-weight: medium;
+  font-display: swap;
 }
 
 @font-face {
@@ -29,6 +31,7 @@
        url('FuturaPRO-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
        url('FuturaPRO-Bold.svg#kannaco') format('svg'); /* Legacy iOS */
   font-weight: bold;
+  font-display: swap;
 }
 
 $body : 'Roboto', sans-serif;

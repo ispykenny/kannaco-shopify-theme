@@ -7,7 +7,7 @@
 
   <div class="inner">
     <div class="product-single">
-    
+      
       <div class="product-single__el">
         <div class="product-single__img">
           {% for img in product.images %}
@@ -16,6 +16,9 @@
            
             <div class="section-bg">
               <div class="section-bg__el" data-bg="{{ img  | img_url: 'master' }}"></div>
+            </div>
+            <div>
+              <img src="{{ img  | img_url: 'master' }}" style="opacity: 0; display: none;">
             </div>
            </div>
           </div>
@@ -43,8 +46,25 @@
         <div>{{ product.description }}</div>  
         <form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm">
           {% assign tags =  product.tags %}
+          {% assign varSize = product.variants | size %}
+          {% if varSize >= 2 %}
+            <h5 style="margin-bottom: 1em;">Choose your fix:</h5>
+            <select name="id" id="ProductSelect-{{ section.id }}" class="product-form__variants no-js" style="height: 40px;">
+              {% for variant in product.variants %}
+                {% if variant.available %}
+                  <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}">
+                    {{ variant.title }}
+                  </option>
+                {% else %}
+                  <option disabled="disabled">{{ variant.title }}</option>
+                {% endif %}
+              {% endfor %}
+            </select> 
+            {% else %}
+              <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+          {% endif %}
+            
          
-          <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
           
           {% comment %} {{ current_variant.price | money }} {% endcomment %}
           <div class="qty-parent">

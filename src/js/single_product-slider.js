@@ -1,8 +1,8 @@
-import Flickity from 'flickity';
 import asNavFor from 'flickity-as-nav-for';
 
 const prodSliderInit = () => {
-  let flickity = new Flickity();
+  let productSingleImage = document.querySelector('.product-single__img')
+  
   $('.product-single__img').flickity({
     pageDots: false
   });

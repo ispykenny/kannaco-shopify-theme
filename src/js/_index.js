@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import lazyLoad from './lazy-load/index';
 import _dropDown from './_drop-down';
 import useCaseSlide from './use-case-slide';
@@ -8,6 +7,9 @@ import ajaxToCart from './ajax-to-cart';
 import _craftLogo from './_craft-logo';
 import prodSliderInit from './single_product-slider';
 import productAccordion from './accordion.js';
+
+
+
 ajaxToCart();
 
 $(window).on({
@@ -18,10 +20,11 @@ $(window).on({
     }
     runAboutSlider();
 
-    setTimeout(() => initCategorySlider() , 200)
+    // setTimeout(() => initCategorySlider() , 200)
     _craftLogo();
 
     if($('.product-single')) {
+      console.log('here')
       prodSliderInit();
       productAccordion();
     }
@@ -34,13 +37,6 @@ showPasswordReset();
 
 $('#init-password-reset').on('click', justShowPassword);
 
-
-// if($('.product-single__el').length) {
-//   _dropDown();
-// }
-
-import nav from './_nav';
-nav();
 
 import mobileMenu from './_mobile-menu';
 mobileMenu();

@@ -1,5 +1,7 @@
 <div class="header-spacer"></div>
-{% assign img = page.metafields.accentuate.about_image | first  %}
+{% assign img = page.metafields.accentuate.hero_image | first %}
+
+
   <section id="hero">
     <div class="inner">
       
@@ -17,11 +19,13 @@
     </div>
   
     <div class="section-bg fade-overlay" id="hero_paralax">
-      <div class="section-bg__el" data-bg="{{ img.src }}">
+      <div class="section-bg__el" data-bg="{{img.src}}">
       </div>
     </div>
   </section>
-
+  
+  <div style="display: none;"><img src="{{img.src}}" alt="">
+</div>
   
   <section class="batch-nav">
     <div class="inner">

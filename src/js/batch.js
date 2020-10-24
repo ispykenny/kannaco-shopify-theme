@@ -11,9 +11,7 @@ export default function() {
     if($searchQuery.length <= 0) return;
 
     let $batch = `.batch-id-${$searchQuery}`;
-    console.log($batch)
 
-    console.log($($batch).length)
 
     $('.batch__item').hide();
 

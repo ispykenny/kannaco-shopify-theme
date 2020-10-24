@@ -1,5 +1,5 @@
 export default function() {
-
+  
   if(!document.querySelector('.two-col-parent-slide')) return;
   var carousel = document.querySelector('.two-col-parent-slide');
   var flkty = new Flickity( carousel, {
@@ -22,6 +22,5 @@ export default function() {
       img.style[ transformProp ] = 'translateX(' + x  + 'px)';
     });
   });
-
 
 }
