@@ -24,7 +24,6 @@ $(window).on({
     _craftLogo();
 
     if($('.product-single')) {
-      console.log('here')
       prodSliderInit();
       productAccordion();
     }

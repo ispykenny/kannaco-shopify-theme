@@ -7,6 +7,7 @@ export default function() {
     wrapAround: true,
     prevNextButtons: false,
     percentPosition: false,
+    adaptiveHeight: true
   });
 
   var imgs = carousel.querySelectorAll('.floating-img__el');

@@ -1,12 +1,12 @@
 export default function() {
-  let prod_item = $('.collection-grid__item');
+  let prod_item = document.querySelectorAll('.collection-grid__item');
 
   const setCraftClass = () => {
     if(prod_item) {
-      prod_item.each((index, element) => {
-        let title = $(element).find('.prod-des h4');
-        if(title.text().includes('craft') || title.text().includes('Craft')) {
-          $(element).addClass('is-craft')
+      prod_item.forEach((element, index) => {
+        let title = element.querySelector('.prod-des h4').innerText;
+        if(title.includes('craft') || title.includes('Craft')) {
+          element.classList.add('is-craft')
         }
       })
     }
@@ -17,13 +17,12 @@ export default function() {
 
     if(windowParam.get('prod_type') && prod_item) {
       if(windowParam.get('prod_type').includes("craft") || windowParam.get('prod_type').includes("Craft")) {
-        prod_item.show();
+        prod_item.forEach((element) => element.style.display = 'block');
         setTimeout(() => {
-          prod_item.each((index, element) => {
-            if(!$(element).hasClass('is-craft')) {
-              $(element).hide();
+          prod_item.forEach((element, index) => {
+            if(!element.classList.contains('is-craft')) {
+              element.style.display = 'none';
             }
-            $('.filter-secondary').eq(1).addClass('active')
           })
         })
       }
@@ -32,11 +31,11 @@ export default function() {
   
   const checkBoxes = () => {
     if(prod_item) {
-      prod_item.each((index, element) => {
-        let currentBoxes = $(element);  
-        let text = currentBoxes.find('h4').text()
+      prod_item.forEach((element, index) => {
+        let currentBoxes = element;  
+        let text = currentBoxes.querySelector('h4').innerText;
           if(text.includes('Bundle') || text.includes('Box')) {
-            $('.collection-grid__row').prepend(currentBoxes) 
+            document.querySelector('.collection-grid__row').prepend(currentBoxes)
           }
       })
     }
