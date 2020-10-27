@@ -7,9 +7,10 @@ import ajaxToCart from './ajax-to-cart';
 import _craftLogo from './_craft-logo';
 import prodSliderInit from './single_product-slider';
 import productAccordion from './accordion.js';
+import byob from './_byob';
 
 
-
+byob();
 ajaxToCart();
 
 $(window).on({
