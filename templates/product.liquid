@@ -243,8 +243,14 @@
         <div>{{ product.description }}</div>  
         <form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm">
           {% assign tags =  product.tags %}
+          {% assign variantItem = product.variants %}
           {% assign varSize = product.variants | size %}
-          {% if varSize >= 2 %}
+          
+          
+          {% for option in variantItem %}
+            - {{ option.title }} hi
+          {% endfor %}
+          {% comment %} {% if varSize >= 2 %}
             <h5 style="margin-bottom: 1em;">Choose your fix:</h5>
             <select name="id" id="ProductSelect-{{ section.id }}" class="product-form__variants no-js" style="height: 40px;">
               {% for variant in product.variants %}
@@ -259,7 +265,7 @@
             </select> 
             {% else %}
               <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
-          {% endif %}
+          {% endif %} {% endcomment %}
             
          
           
