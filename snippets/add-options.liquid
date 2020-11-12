@@ -1,0 +1,26 @@
+{%-for option in product.metafields.options.data-%}
+	<div class="selector-wrapper js product-form__item extra-option">
+      <label>{{ option.title }}</label>
+	
+	{%-if option.type == "text" -%}
+		<input type="text" name="properties[{{ option.title }}]">
+
+	{%-elsif option.type == "number" -%}
+		<input type="number" name="properties[{{ option.title }}]">
+	{%-elsif option.type == "select" -%}
+		<select name="properties[{{ option.title }}">
+          {%-for value in option.values -%}
+          	<option value="{{ value | escape }}">{{ value }}</option>
+          {%-endfor-%}
+		</select>
+    {%-elsif option.type == "radio" -%}
+          {%-for value in option.values -%}
+          	<input type="radio" value="{{value}}" name="properties[{{ option.title }}]">{{value}}
+          {%-endfor-%}
+    {%-elsif option.type == "checkbox" -%}
+          {%-for value in option.values -%}
+          	<input type="checkbox" value="{{value}}" name="properties[{{ option.title |append: " " |append:forloop.index}}]">{{value}}
+          {%-endfor-%}
+	{%-endif-%}
+   </div>
+{%-endfor-%}
