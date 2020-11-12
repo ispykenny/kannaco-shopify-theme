@@ -1,0 +1,75 @@
+<div class="inner center intro-content">
+	<div class="page-title" style="margin-bottom: 0; padding-bottom: 0;">
+		<h2 class="section-title"> {{ section.settings.featured_title }}</h2>
+	</div>
+	<p>{{ section.settings.featured_content }}</p>
+</div>
+
+<div class="inner">
+	<div class="explore-product-grid" style="margin-bottom: 3em;">
+	{% for block in section.blocks %}
+		{% assign product_item = all_products[block.settings.featured_product] %}
+		{% assign featured_image = product_item | img_url: 'master' %}
+		<div class="explore-product-grid__item">
+			<a href="{{ product_item.url }}">
+				<div class="product-prev-img">
+					<img src="{{ featured_image }}" alt="">
+				</div>
+
+				<div class="product-content" >
+					<small>{{ product_item.type }}</small>
+					<h5 class="product-name">{{ product_item.title }}</h5>
+					<p class="mini-blurb">{{product_item.metafields.accentuate.mini_blurb}}</p>
+					<p>Price {{ product_item.price | money }} <strike>{{ product_item.compare_at_price | money }}</strike></p>
+					<div class="cta-el single-secondary-cta secondary-cta-parent">
+						<span class="cta-secondary">
+							<span class="link-text">View Product</span>
+							<span class="link-crt">
+								<svg xmlns="http://www.w3.org/2000/svg" width="8" height="11" viewBox="0 0 8 11">
+									<path d="M5.17.479a.4.4,0,0,1,.659,0l4.74,6.894A.4.4,0,0,1,10.24,8H.76a.4.4,0,0,1-.33-.627Z" transform="translate(8) rotate(90)" fill="#da6227"/>
+								</svg> 
+							</span>
+						</span>
+					</div>
+				</div>
+			</a>
+		</div>
+	{% endfor %}
+	</div>
+</div>
+</div>
+
+
+
+{% schema %}
+{
+	"tag": "section",
+	"class": "featured-products reduce-bottom",
+	"settings": [
+		{
+			"type": "text",
+			"id": "featured_title",
+			"label": "Featured Title"
+		},
+		{
+			"type": "text",
+			"id": "featured_content",
+			"label": "Featured content"
+		}
+	],
+	"blocks": [
+		{
+			"type": "featured_product",
+			"name": "Featured Product",
+			"limit": 4,
+			"settings": [
+				{
+					"id": "featured_product",
+					"type": "product",
+					"label": "Product"
+				}
+			]
+		}
+	]
+}
+{% endschema %}
