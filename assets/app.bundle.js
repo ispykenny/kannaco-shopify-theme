@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 7);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -81,7 +81,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
   if ( true ) {
     // AMD
     !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-      __webpack_require__(19)
+      __webpack_require__(16)
     ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( matchesSelector ) {
       return factory( window, matchesSelector );
     }).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
@@ -323,11 +323,11 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// Flickity main
     // AMD
     !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
       __webpack_require__(2),
-      __webpack_require__(5),
+      __webpack_require__(6),
       __webpack_require__(0),
-      __webpack_require__(20),
-      __webpack_require__(21),
-      __webpack_require__(22)
+      __webpack_require__(17),
+      __webpack_require__(18),
+      __webpack_require__(19)
     ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( EvEmitter, getSize, utils, Cell, Slide, animatePrototype ) {
       return factory( window, EvEmitter, getSize, utils, Cell, Slide, animatePrototype );
     }).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
@@ -2668,6 +2668,57 @@ window.IntersectionObserverEntry = IntersectionObserverEntry;
 /* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+ * Flickity v2.2.1
+ * Touch, responsive, flickable carousels
+ *
+ * Licensed GPLv3 for open source use
+ * or Flickity Commercial License for commercial use
+ *
+ * https://flickity.metafizzy.co
+ * Copyright 2015-2019 Metafizzy
+ */
+
+( function( window, factory ) {
+  // universal module definition
+  /* jshint strict: false */
+  if ( true ) {
+    // AMD
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+      __webpack_require__(1),
+      __webpack_require__(20),
+      __webpack_require__(22),
+      __webpack_require__(23),
+      __webpack_require__(24),
+      __webpack_require__(25),
+      __webpack_require__(26)
+    ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else if ( typeof module == 'object' && module.exports ) {
+    // CommonJS
+    module.exports = factory(
+      require('./flickity'),
+      require('./drag'),
+      require('./prev-next-button'),
+      require('./page-dots'),
+      require('./player'),
+      require('./add-remove-cell'),
+      require('./lazyload')
+    );
+  }
+
+})( window, function factory( Flickity ) {
+  /*jshint strict: false*/
+  return Flickity;
+});
+
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
  * getSize v2.0.3
  * measure size of elements
@@ -2882,29 +2933,31 @@ return getSize;
 
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__lazy_load_index__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__drop_down__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__use_case_slide__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__about__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__category_slider__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ajax_to_cart__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__craft_logo__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__single_product_slider__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__lazy_load_index__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__drop_down__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__use_case_slide__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__about__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__category_slider__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ajax_to_cart__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__craft_logo__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__single_product_slider__ = __webpack_require__(28);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__accordion_js__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__password_reset__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__mobile_menu__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__three_col__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__footer__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__qty__ = __webpack_require__(35);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__scroll__ = __webpack_require__(36);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__search__ = __webpack_require__(37);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__batch__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__featured_blogs__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__byob__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__testimonial_slide__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__password_reset__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__mobile_menu__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__three_col__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__footer__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__qty__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__scroll__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__search__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__batch__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__featured_blogs__ = __webpack_require__(41);
 
 
 
@@ -2917,12 +2970,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
+Object(__WEBPACK_IMPORTED_MODULE_9__byob__["a" /* default */])();
 Object(__WEBPACK_IMPORTED_MODULE_5__ajax_to_cart__["a" /* default */])();
 
 $(window).on({
-  'load': () => {
-    $('body').addClass('loaded');
-    if($('.two-col-offset').length >= 2) {
+  load: () => {
+    $("body").addClass("loaded");
+    if ($(".two-col-offset").length >= 2) {
       Object(__WEBPACK_IMPORTED_MODULE_2__use_case_slide__["a" /* default */])();
     }
     Object(__WEBPACK_IMPORTED_MODULE_3__about__["b" /* runAboutSlider */])();
@@ -2930,33 +2984,32 @@ $(window).on({
     // setTimeout(() => initCategorySlider() , 200)
     Object(__WEBPACK_IMPORTED_MODULE_6__craft_logo__["a" /* default */])();
 
-    if($('.product-single')) {
-      console.log('here')
+    if ($(".product-single")) {
       Object(__WEBPACK_IMPORTED_MODULE_7__single_product_slider__["a" /* default */])();
       Object(__WEBPACK_IMPORTED_MODULE_8__accordion_js__["a" /* default */])();
     }
-  }
-})
+
+    Object(__WEBPACK_IMPORTED_MODULE_10__testimonial_slide__["a" /* default */])();
+  },
+});
 
 
-Object(__WEBPACK_IMPORTED_MODULE_9__password_reset__["b" /* showPasswordReset */])();
+Object(__WEBPACK_IMPORTED_MODULE_11__password_reset__["b" /* showPasswordReset */])();
+
+$("#init-password-reset").on("click", __WEBPACK_IMPORTED_MODULE_11__password_reset__["a" /* justShowPassword */]);
 
 
-$('#init-password-reset').on('click', __WEBPACK_IMPORTED_MODULE_9__password_reset__["a" /* justShowPassword */]);
+Object(__WEBPACK_IMPORTED_MODULE_12__mobile_menu__["a" /* default */])();
 
 
-
-Object(__WEBPACK_IMPORTED_MODULE_10__mobile_menu__["a" /* default */])();
-
-
-Object(__WEBPACK_IMPORTED_MODULE_11__three_col__["a" /* default */])();
+Object(__WEBPACK_IMPORTED_MODULE_13__three_col__["a" /* default */])();
 
 
 
-Object(__WEBPACK_IMPORTED_MODULE_12__footer__["a" /* default */])();
+Object(__WEBPACK_IMPORTED_MODULE_14__footer__["a" /* default */])();
 
-if($('.qty').length > 0) {
-  Object(__WEBPACK_IMPORTED_MODULE_13__qty__["a" /* default */])()
+if ($(".qty").length > 0) {
+  Object(__WEBPACK_IMPORTED_MODULE_15__qty__["a" /* default */])();
 }
 
 
@@ -2964,21 +3017,19 @@ if($('.qty').length > 0) {
 
 
 
-Object(__WEBPACK_IMPORTED_MODULE_14__scroll__["a" /* default */])();
+Object(__WEBPACK_IMPORTED_MODULE_16__scroll__["a" /* default */])();
 
-Object(__WEBPACK_IMPORTED_MODULE_15__search__["a" /* default */])();
-Object(__WEBPACK_IMPORTED_MODULE_16__batch__["a" /* default */])();
-Object(__WEBPACK_IMPORTED_MODULE_17__featured_blogs__["a" /* default */])();
+Object(__WEBPACK_IMPORTED_MODULE_17__search__["a" /* default */])();
+Object(__WEBPACK_IMPORTED_MODULE_18__batch__["a" /* default */])();
+Object(__WEBPACK_IMPORTED_MODULE_19__featured_blogs__["a" /* default */])();
 
-
-
-document.querySelectorAll('.address-delete-form').forEach(deleteForm => {
-  deleteForm.addEventListener('submit', event => {
-    const confirmMessage = event.target.getAttribute('data-confirm-message');
+document.querySelectorAll(".address-delete-form").forEach((deleteForm) => {
+  deleteForm.addEventListener("submit", (event) => {
+    const confirmMessage = event.target.getAttribute("data-confirm-message");
 
     if (
       !window.confirm(
-        confirmMessage || 'Are you sure you wish to delete this address?'
+        confirmMessage || "Are you sure you wish to delete this address?"
       )
     ) {
       event.preventDefault();
@@ -2986,15 +3037,16 @@ document.querySelectorAll('.address-delete-form').forEach(deleteForm => {
   });
 });
 
-$('.category__list li').on('click', event => Object(__WEBPACK_IMPORTED_MODULE_3__about__["a" /* accordion */])(event));
+$(".category__list li").on("click", (event) => Object(__WEBPACK_IMPORTED_MODULE_3__about__["a" /* accordion */])(event));
+
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__backgrounds__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__images__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__backgrounds__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__images__ = __webpack_require__(10);
 
 
 const all_images = document.querySelectorAll('img');
@@ -3011,7 +3063,7 @@ if(all_images.length) {
 
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3052,7 +3104,7 @@ const setBackgroundImages = () => {
 
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3145,7 +3197,7 @@ const initDomImages = (domImages) => {
 
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3154,7 +3206,7 @@ const initDomImages = (domImages) => {
 });
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3167,6 +3219,7 @@ const initDomImages = (domImages) => {
     wrapAround: true,
     prevNextButtons: false,
     percentPosition: false,
+    adaptiveHeight: true
   });
 
   var imgs = carousel.querySelectorAll('.floating-img__el');
@@ -3186,7 +3239,7 @@ const initDomImages = (domImages) => {
 });
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3233,7 +3286,7 @@ const accordion = event => {
 
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3259,347 +3312,92 @@ const initCategorySlider = () => {
 /* unused harmony default export */ var _unused_webpack_default_export = (initCategorySlider);
 
 /***/ }),
-/* 14 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony default export */ __webpack_exports__["a"] = (function() {
-  let $btn = $('#AddToCart');
-  let $btnCurrentText = $btn.text();
-
-
-  const addToCart = event => {
-    let bubble = $('#cart-element__qty span');
-    let total;    
-    event.preventDefault();
-    
-    if(bubble.text().length > 0) {
-      let bubbleValue = parseInt(bubble.text());
-       total = bubbleValue + parseInt($("#Quantity").val());
-    } else {
-      total = parseInt($("#Quantity").val());
-    }
-    
-    if(total <= 10) {
-      $("#cart-element__qty").fadeIn();
-      bubble.text(total);
-      
-      $btn.text('Added!')
-      $.post('/cart/add.js', 
-          {
-            quantity: $("#Quantity").val(),
-            id: $('[name="id"]').val()
-          },
-          null,
-          'json'
-        
-      );
-
-      setTimeout(() => $btn.text($btnCurrentText), 1200)
-    } else {
-      alert('Unable to add to cart. Exceeded limit (10) items')
-    }
-
-  }
-  
-  $("#AddToCartForm").on('submit', event => addToCart(event))
-});
-
-/***/ }),
 /* 15 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony default export */ __webpack_exports__["a"] = (function() {
-  let prod_item = $('.collection-grid__item');
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_flickity__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_flickity___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_flickity__);
 
-  const setCraftClass = () => {
-    if(prod_item) {
-      prod_item.each((index, element) => {
-        let title = $(element).find('.prod-des h4');
-        if(title.text().includes('craft') || title.text().includes('Craft')) {
-          $(element).addClass('is-craft')
-        }
-      })
+
+/* harmony default export */ __webpack_exports__["a"] = (function () {
+  let $btn = $("#AddToCart");
+  let $btnCurrentText = $btn.text();
+
+  const addToCart = (event) => {
+    let bubble = $("#cart-element__qty span");
+    let total;
+    event.preventDefault();
+
+    if (bubble.text().length > 0) {
+      let bubbleValue = parseInt(bubble.text());
+      total = bubbleValue + parseInt($("#Quantity").val());
+    } else {
+      total = parseInt($("#Quantity").val());
     }
-  }
 
-  const checkParams = () => {
-    let windowParam = new URLSearchParams(window.location.search);
+    if (total <= 10) {
+      $("#cart-element__qty").fadeIn();
+      bubble.text(total);
 
-    if(windowParam.get('prod_type') && prod_item) {
-      if(windowParam.get('prod_type').includes("craft") || windowParam.get('prod_type').includes("Craft")) {
-        prod_item.show();
-        setTimeout(() => {
-          prod_item.each((index, element) => {
-            if(!$(element).hasClass('is-craft')) {
-              $(element).hide();
-            }
-            $('.filter-secondary').eq(1).addClass('active')
-          })
-        })
-      }
-    }
-  }
-  
-  const checkBoxes = () => {
-    if(prod_item) {
-      prod_item.each((index, element) => {
-        let currentBoxes = $(element);  
-        let text = currentBoxes.find('h4').text()
-          if(text.includes('Bundle') || text.includes('Box')) {
-            $('.collection-grid__row').prepend(currentBoxes) 
+      $btn.text("Added!");
+
+      let data = {
+        quantity: $("#Quantity").val(),
+        id: $('[name="id"]').val(),
+        options_with_values: [
+          {
+            name: "Cream",
+            value: "Cream 2"
+          },
+          {
+            name: "Tincture",
+            value: "Tincture 2"
+          },
+          {
+            name: "Softgel",
+            value: "Softgel 1"
           }
+        ],
+        variant_options: [
+          'Cream 2', 'Tincture 2', 'Softgel 1'
+        ]
+      }
+
+      $.ajax({
+        type: 'POST',
+        url: '/cart/add.js',
+        data: data,
+        dataType: 'json',
+        success: function(data) {
+          console.log(data)
+          setTimeout(() => $btn.text($btnCurrentText), 1200);
+        }
+
       })
+      // $.post(
+      //   "/cart/add.js",
+      //   {
+      //     quantity: $("#Quantity").val(),
+      //     id: $('[name="id"]').val(),
+
+      //   },
+      //   null,
+      //   "json"
+      // );
+
+      
+    } else {
+      alert("Unable to add to cart. Exceeded limit (10) items");
     }
-  }
-  
-  checkBoxes();
-  checkParams();
-  setCraftClass();
+  };
+
+  // $("#AddToCartForm").on('submit', event => addToCart(event))
 });
+
 
 /***/ }),
 /* 16 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_flickity_as_nav_for__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_flickity_as_nav_for___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_flickity_as_nav_for__);
-
-
-const prodSliderInit = () => {
-  let productSingleImage = document.querySelector('.product-single__img')
-  
-  $('.product-single__img').flickity({
-    pageDots: false
-  });
-
-
-  $('.all-images').flickity({
-    asNavFor: '.product-single__img',
-    cellAlign: 'left',
-    contain: true,
-    prevNextButtons: false,
-    pageDots: false
-  });
-
-}
-
-/* harmony default export */ __webpack_exports__["a"] = (prodSliderInit);
-
-/***/ }),
-/* 17 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
- * Flickity asNavFor v2.0.1
- * enable asNavFor for Flickity
- */
-
-/*jshint browser: true, undef: true, unused: true, strict: true*/
-
-( function( window, factory ) {
-  // universal module definition
-  /*jshint strict: false */ /*globals define, module, require */
-  if ( true ) {
-    // AMD
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-      __webpack_require__(18),
-      __webpack_require__(0)
-    ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
-				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
-				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-  } else if ( typeof module == 'object' && module.exports ) {
-    // CommonJS
-    module.exports = factory(
-      require('flickity'),
-      require('fizzy-ui-utils')
-    );
-  } else {
-    // browser global
-    window.Flickity = factory(
-      window.Flickity,
-      window.fizzyUIUtils
-    );
-  }
-
-}( window, function factory( Flickity, utils ) {
-
-'use strict';
-
-// -------------------------- asNavFor prototype -------------------------- //
-
-// Flickity.defaults.asNavFor = null;
-
-Flickity.createMethods.push('_createAsNavFor');
-
-var proto = Flickity.prototype;
-
-proto._createAsNavFor = function() {
-  this.on( 'activate', this.activateAsNavFor );
-  this.on( 'deactivate', this.deactivateAsNavFor );
-  this.on( 'destroy', this.destroyAsNavFor );
-
-  var asNavForOption = this.options.asNavFor;
-  if ( !asNavForOption ) {
-    return;
-  }
-  // HACK do async, give time for other flickity to be initalized
-  var _this = this;
-  setTimeout( function initNavCompanion() {
-    _this.setNavCompanion( asNavForOption );
-  });
-};
-
-proto.setNavCompanion = function( elem ) {
-  elem = utils.getQueryElement( elem );
-  var companion = Flickity.data( elem );
-  // stop if no companion or companion is self
-  if ( !companion || companion == this ) {
-    return;
-  }
-
-  this.navCompanion = companion;
-  // companion select
-  var _this = this;
-  this.onNavCompanionSelect = function() {
-    _this.navCompanionSelect();
-  };
-  companion.on( 'select', this.onNavCompanionSelect );
-  // click
-  this.on( 'staticClick', this.onNavStaticClick );
-
-  this.navCompanionSelect( true );
-};
-
-proto.navCompanionSelect = function( isInstant ) {
-  if ( !this.navCompanion ) {
-    return;
-  }
-  // select slide that matches first cell of slide
-  var selectedCell = this.navCompanion.selectedCells[0];
-  var firstIndex = this.navCompanion.cells.indexOf( selectedCell );
-  var lastIndex = firstIndex + this.navCompanion.selectedCells.length - 1;
-  var selectIndex = Math.floor( lerp( firstIndex, lastIndex,
-    this.navCompanion.cellAlign ) );
-  this.selectCell( selectIndex, false, isInstant );
-  // set nav selected class
-  this.removeNavSelectedElements();
-  // stop if companion has more cells than this one
-  if ( selectIndex >= this.cells.length ) {
-    return;
-  }
-
-  var selectedCells = this.cells.slice( firstIndex, lastIndex + 1 );
-  this.navSelectedElements = selectedCells.map( function( cell ) {
-    return cell.element;
-  });
-  this.changeNavSelectedClass('add');
-};
-
-function lerp( a, b, t ) {
-  return ( b - a ) * t + a;
-}
-
-proto.changeNavSelectedClass = function( method ) {
-  this.navSelectedElements.forEach( function( navElem ) {
-    navElem.classList[ method ]('is-nav-selected');
-  });
-};
-
-proto.activateAsNavFor = function() {
-  this.navCompanionSelect( true );
-};
-
-proto.removeNavSelectedElements = function() {
-  if ( !this.navSelectedElements ) {
-    return;
-  }
-  this.changeNavSelectedClass('remove');
-  delete this.navSelectedElements;
-};
-
-proto.onNavStaticClick = function( event, pointer, cellElement, cellIndex ) {
-  if ( typeof cellIndex == 'number' ) {
-    this.navCompanion.selectCell( cellIndex );
-  }
-};
-
-proto.deactivateAsNavFor = function() {
-  this.removeNavSelectedElements();
-};
-
-proto.destroyAsNavFor = function() {
-  if ( !this.navCompanion ) {
-    return;
-  }
-  this.navCompanion.off( 'select', this.onNavCompanionSelect );
-  this.off( 'staticClick', this.onNavStaticClick );
-  delete this.navCompanion;
-};
-
-// -----  ----- //
-
-return Flickity;
-
-}));
-
-
-/***/ }),
-/* 18 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
- * Flickity v2.2.1
- * Touch, responsive, flickable carousels
- *
- * Licensed GPLv3 for open source use
- * or Flickity Commercial License for commercial use
- *
- * https://flickity.metafizzy.co
- * Copyright 2015-2019 Metafizzy
- */
-
-( function( window, factory ) {
-  // universal module definition
-  /* jshint strict: false */
-  if ( true ) {
-    // AMD
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-      __webpack_require__(1),
-      __webpack_require__(23),
-      __webpack_require__(25),
-      __webpack_require__(26),
-      __webpack_require__(27),
-      __webpack_require__(28),
-      __webpack_require__(29)
-    ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
-				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
-				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-  } else if ( typeof module == 'object' && module.exports ) {
-    // CommonJS
-    module.exports = factory(
-      require('./flickity'),
-      require('./drag'),
-      require('./prev-next-button'),
-      require('./page-dots'),
-      require('./player'),
-      require('./add-remove-cell'),
-      require('./lazyload')
-    );
-  }
-
-})( window, function factory( Flickity ) {
-  /*jshint strict: false*/
-  return Flickity;
-});
-
-
-/***/ }),
-/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -3662,7 +3460,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
 
 
 /***/ }),
-/* 20 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// Flickity.Cell
@@ -3672,7 +3470,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// Flickity.Cell
   if ( true ) {
     // AMD
     !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-      __webpack_require__(5)
+      __webpack_require__(6)
     ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( getSize ) {
       return factory( window, getSize );
     }).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
@@ -3771,7 +3569,7 @@ return Cell;
 
 
 /***/ }),
-/* 21 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;// slide
@@ -3855,7 +3653,7 @@ return Slide;
 
 
 /***/ }),
-/* 22 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// animate
@@ -4063,7 +3861,7 @@ return proto;
 
 
 /***/ }),
-/* 23 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// drag
@@ -4074,7 +3872,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// drag
     // AMD
     !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
       __webpack_require__(1),
-      __webpack_require__(24),
+      __webpack_require__(21),
       __webpack_require__(0)
     ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( Flickity, Unidragger, utils ) {
       return factory( window, Flickity, Unidragger, utils );
@@ -4463,7 +4261,7 @@ return Flickity;
 
 
 /***/ }),
-/* 24 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -4753,7 +4551,7 @@ return Unidragger;
 
 
 /***/ }),
-/* 25 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// prev/next buttons
@@ -4971,7 +4769,7 @@ return Flickity;
 
 
 /***/ }),
-/* 26 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// page dots
@@ -5166,7 +4964,7 @@ return Flickity;
 
 
 /***/ }),
-/* 27 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// player & autoPlay
@@ -5364,7 +5162,7 @@ return Flickity;
 
 
 /***/ }),
-/* 28 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// add, remove cell
@@ -5532,7 +5330,7 @@ return Flickity;
 
 
 /***/ }),
-/* 29 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// lazyload
@@ -5673,6 +5471,247 @@ return Flickity;
 
 
 /***/ }),
+/* 27 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = (function() {
+  let prod_item = document.querySelectorAll('.collection-grid__item');
+
+  const setCraftClass = () => {
+    if(prod_item) {
+      prod_item.forEach((element, index) => {
+        let title = element.querySelector('.prod-des h4').innerText;
+        if(title.includes('craft') || title.includes('Craft')) {
+          element.classList.add('is-craft')
+        }
+      })
+    }
+  }
+
+  const checkParams = () => {
+    let windowParam = new URLSearchParams(window.location.search);
+
+    if(windowParam.get('prod_type') && prod_item) {
+      if(windowParam.get('prod_type').includes("craft") || windowParam.get('prod_type').includes("Craft")) {
+        prod_item.forEach((element) => element.style.display = 'block');
+        setTimeout(() => {
+          prod_item.forEach((element, index) => {
+            if(!element.classList.contains('is-craft')) {
+              element.style.display = 'none';
+            }
+          })
+        })
+      }
+    }
+  }
+  
+  const checkBoxes = () => {
+    if(prod_item) {
+      prod_item.forEach((element, index) => {
+        let currentBoxes = element;  
+        let text = currentBoxes.querySelector('h4').innerText;
+          if(text.includes('Bundle') || text.includes('Box')) {
+            document.querySelector('.collection-grid__row').prepend(currentBoxes)
+          }
+      })
+    }
+  }
+  
+  checkBoxes();
+  checkParams();
+  setCraftClass();
+});
+
+/***/ }),
+/* 28 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_flickity_as_nav_for__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_flickity_as_nav_for___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_flickity_as_nav_for__);
+
+
+const prodSliderInit = () => {
+  let productSingleImage = document.querySelector('.product-single__img')
+  
+  $('.product-single__img').flickity({
+    pageDots: false
+  });
+
+
+  $('.all-images').flickity({
+    asNavFor: '.product-single__img',
+    cellAlign: 'left',
+    contain: true,
+    prevNextButtons: false,
+    pageDots: false
+  });
+
+}
+
+/* harmony default export */ __webpack_exports__["a"] = (prodSliderInit);
+
+/***/ }),
+/* 29 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+ * Flickity asNavFor v2.0.1
+ * enable asNavFor for Flickity
+ */
+
+/*jshint browser: true, undef: true, unused: true, strict: true*/
+
+( function( window, factory ) {
+  // universal module definition
+  /*jshint strict: false */ /*globals define, module, require */
+  if ( true ) {
+    // AMD
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+      __webpack_require__(5),
+      __webpack_require__(0)
+    ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else if ( typeof module == 'object' && module.exports ) {
+    // CommonJS
+    module.exports = factory(
+      require('flickity'),
+      require('fizzy-ui-utils')
+    );
+  } else {
+    // browser global
+    window.Flickity = factory(
+      window.Flickity,
+      window.fizzyUIUtils
+    );
+  }
+
+}( window, function factory( Flickity, utils ) {
+
+'use strict';
+
+// -------------------------- asNavFor prototype -------------------------- //
+
+// Flickity.defaults.asNavFor = null;
+
+Flickity.createMethods.push('_createAsNavFor');
+
+var proto = Flickity.prototype;
+
+proto._createAsNavFor = function() {
+  this.on( 'activate', this.activateAsNavFor );
+  this.on( 'deactivate', this.deactivateAsNavFor );
+  this.on( 'destroy', this.destroyAsNavFor );
+
+  var asNavForOption = this.options.asNavFor;
+  if ( !asNavForOption ) {
+    return;
+  }
+  // HACK do async, give time for other flickity to be initalized
+  var _this = this;
+  setTimeout( function initNavCompanion() {
+    _this.setNavCompanion( asNavForOption );
+  });
+};
+
+proto.setNavCompanion = function( elem ) {
+  elem = utils.getQueryElement( elem );
+  var companion = Flickity.data( elem );
+  // stop if no companion or companion is self
+  if ( !companion || companion == this ) {
+    return;
+  }
+
+  this.navCompanion = companion;
+  // companion select
+  var _this = this;
+  this.onNavCompanionSelect = function() {
+    _this.navCompanionSelect();
+  };
+  companion.on( 'select', this.onNavCompanionSelect );
+  // click
+  this.on( 'staticClick', this.onNavStaticClick );
+
+  this.navCompanionSelect( true );
+};
+
+proto.navCompanionSelect = function( isInstant ) {
+  if ( !this.navCompanion ) {
+    return;
+  }
+  // select slide that matches first cell of slide
+  var selectedCell = this.navCompanion.selectedCells[0];
+  var firstIndex = this.navCompanion.cells.indexOf( selectedCell );
+  var lastIndex = firstIndex + this.navCompanion.selectedCells.length - 1;
+  var selectIndex = Math.floor( lerp( firstIndex, lastIndex,
+    this.navCompanion.cellAlign ) );
+  this.selectCell( selectIndex, false, isInstant );
+  // set nav selected class
+  this.removeNavSelectedElements();
+  // stop if companion has more cells than this one
+  if ( selectIndex >= this.cells.length ) {
+    return;
+  }
+
+  var selectedCells = this.cells.slice( firstIndex, lastIndex + 1 );
+  this.navSelectedElements = selectedCells.map( function( cell ) {
+    return cell.element;
+  });
+  this.changeNavSelectedClass('add');
+};
+
+function lerp( a, b, t ) {
+  return ( b - a ) * t + a;
+}
+
+proto.changeNavSelectedClass = function( method ) {
+  this.navSelectedElements.forEach( function( navElem ) {
+    navElem.classList[ method ]('is-nav-selected');
+  });
+};
+
+proto.activateAsNavFor = function() {
+  this.navCompanionSelect( true );
+};
+
+proto.removeNavSelectedElements = function() {
+  if ( !this.navSelectedElements ) {
+    return;
+  }
+  this.changeNavSelectedClass('remove');
+  delete this.navSelectedElements;
+};
+
+proto.onNavStaticClick = function( event, pointer, cellElement, cellIndex ) {
+  if ( typeof cellIndex == 'number' ) {
+    this.navCompanion.selectCell( cellIndex );
+  }
+};
+
+proto.deactivateAsNavFor = function() {
+  this.removeNavSelectedElements();
+};
+
+proto.destroyAsNavFor = function() {
+  if ( !this.navCompanion ) {
+    return;
+  }
+  this.navCompanion.off( 'select', this.onNavCompanionSelect );
+  this.off( 'staticClick', this.onNavStaticClick );
+  delete this.navCompanion;
+};
+
+// -----  ----- //
+
+return Flickity;
+
+}));
+
+
+/***/ }),
 /* 30 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -5695,6 +5734,131 @@ return Flickity;
 
 /***/ }),
 /* 31 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = (function() {
+  let drop_downs = document.querySelectorAll('.dropdown__name');
+  let dropDowns = document.querySelectorAll('.dropdown-parent')
+  let product_options = document.querySelectorAll('.dropdown input[type="checkbox"]');
+  let selected_products = [];
+  let allowed_selection = 3;
+
+  const showCounter = () => {
+    dropDowns.forEach((dropDown) => {
+      let indy_checkboxes = dropDown.querySelectorAll('input[type="checkbox"]');
+      let numberElement = dropDown.querySelector('.count');
+      let groupedChecked = [];
+      for(let i = 0; i < indy_checkboxes.length; i++) {
+        if(indy_checkboxes[i].checked == true) {
+          groupedChecked.push(indy_checkboxes[i])
+        }
+        numberElement.innerHTML = `(${groupedChecked.length})`;
+      }
+    })
+  }
+
+
+
+  const showSelected = selected_products => {
+    let selected = '';
+    selected_products.forEach((product, index) => {
+      selected += index == selected_products.length - 1 ? `${product}` : `${product}, `
+    })
+    document.querySelector('.showing-selected').innerHTML = selected;
+  }
+
+  const updateSelection = event => {
+      let checkbox = event.currentTarget;
+      let checkBoxValue = checkbox.getAttribute('name');
+      let checkboxValueIndex = selected_products.indexOf(checkBoxValue);
+    
+    if(checkbox.checked == true) {
+      if(selected_products.length >= allowed_selection) {
+        alert('You can only select three')
+        checkbox.checked = false;
+        return;
+      } else {
+        if(!selected_products.includes(checkBoxValue)) {
+          selected_products.push(checkBoxValue);
+        }	
+      }
+      
+    } else {
+      selected_products.splice(selected_products.indexOf(checkBoxValue), 1)
+    }
+    showSelected(selected_products);
+    
+    showCounter();
+  }
+
+
+  const toggleDropDown = event => {
+    let selectedItem = event.currentTarget;
+    let parent = event.currentTarget.closest('.dropdown-parent');
+    
+    
+    if(parent.classList.contains('active')) {
+        parent.classList.remove('active')
+    } else {
+        dropDowns.forEach((dropDownItem) => {
+          dropDownItem.classList.remove('active')
+        })
+        parent.classList.add('active')
+    }
+  }
+
+  const closeDropDown = event => {
+    let isDropDown = event.target.closest('.dropdown-parent');
+    
+    if(!isDropDown) {
+      dropDowns.forEach((dropDownItem) => {
+        dropDownItem.classList.remove('active')
+      })
+    } 
+  }
+
+
+  drop_downs.forEach((dropdown) => {
+    dropdown.addEventListener('click', event => toggleDropDown(event))
+  })
+
+  product_options.forEach((checkbox) => {
+    checkbox.addEventListener('change', event => updateSelection(event))
+  })
+
+  document.addEventListener('click', event => closeDropDown(event))
+});
+
+/***/ }),
+/* 32 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = (function () {
+  const createTestimonialSlide = () => {
+    let selector = $(".has-slider-full-width-banner");
+
+    if (selector.find(".content-container").length > 1) {
+      selector.flickity({
+        pageDots: false,
+        autoPlay: 3000,
+        prevNextButtons: false,
+        pauseAutoPlayOnHover: false,
+        wrapAround: true,
+        adaptiveHeight: true,
+      });
+    }
+  };
+
+  if (document.querySelector(".has-slider-full-width-banner")) {
+    createTestimonialSlide();
+  }
+});
+
+
+/***/ }),
+/* 33 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5726,7 +5890,7 @@ const justShowPassword = () => {
 
 
 /***/ }),
-/* 32 */
+/* 34 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5792,7 +5956,7 @@ const justShowPassword = () => {
 });
 
 /***/ }),
-/* 33 */
+/* 35 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5809,7 +5973,7 @@ const justShowPassword = () => {
 });
 
 /***/ }),
-/* 34 */
+/* 36 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5837,7 +6001,7 @@ const justShowPassword = () => {
 });
 
 /***/ }),
-/* 35 */
+/* 37 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5902,7 +6066,7 @@ const justShowPassword = () => {
 });
 
 /***/ }),
-/* 36 */
+/* 38 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5956,7 +6120,7 @@ const justShowPassword = () => {
 });
 
 /***/ }),
-/* 37 */
+/* 39 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5979,7 +6143,7 @@ const justShowPassword = () => {
 });
 
 /***/ }),
-/* 38 */
+/* 40 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6022,7 +6186,7 @@ const justShowPassword = () => {
 });
 
 /***/ }),
-/* 39 */
+/* 41 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

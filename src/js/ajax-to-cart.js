@@ -72,5 +72,5 @@ export default function () {
     }
   };
 
-  $("#AddToCartForm").on('submit', event => addToCart(event))
+  // $("#AddToCartForm").on('submit', event => addToCart(event))
 }

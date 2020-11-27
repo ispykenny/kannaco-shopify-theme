@@ -15,6 +15,10 @@
   padding-bottom: 4em;
 }
 
+.remove-item {
+  font-size: 15px;
+}
+
 @media(min-width: $bp-md) {
 
   .cart__column {
@@ -60,6 +64,20 @@
     button {
       border : none;
       outline : none;
+    }
+  }
+
+  .cart__image {
+    display: flex;
+
+    > div:first-of-type {
+      width: 50%;
+      margin-right: 5%;
+    }
+
+    > div:last-of-type {
+      font-size: 14px;
+      text-align: left;
     }
   }
 }
