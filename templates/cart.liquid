@@ -15,7 +15,7 @@
                   <div>
                     <img src="{{ item | img_url : 'master' }}" alt="{{ item.title | escape }}">
                   </div>
-                  <div class="item-details">
+                  <div class="item-details"> 
                     {{item.product.title}}
                     {{item.variant.title}}
                   </div>
@@ -32,9 +32,19 @@
                 <h4>Update</h4>
                 <div class="qty">
                   <div class="qty__ui">
-                    <button class="qty__change subtract">-</button>
-                    <div class="qty__value">0</div>
-                    <button class="qty__change add">+</button>
+                    <button  class="qty__change subtract">
+                  <div class="qty-icon">
+                  <span class="sr-only">Subtract from quantity</span>
+                    {% include 'minus-icon' %}
+                  </div>
+                </button>
+                <div class="qty__value">0</div>
+                <button  class="qty__change add">
+                  <div class="qty-icon">
+                    <span class="sr-only">Add to quantity</span>
+                    {% include 'plus-icon' %}
+                  </div>
+                </button>
                   </div>
                   <input type="number" name="updates[]" id="updates_{{ item.key }}" value="{{ item.quantity }}" min="0">
                 </div>
@@ -56,6 +66,7 @@
           <div class="total check-out">
             <p>Sub total:</p><p><strong>{{ cart.total_price | money }}</strong></p>
             {% comment %} <button type="submit" name="update">Update</button> {% endcomment %}
+            <a class="cta secondary" href="{{ site.url }}/collections/all">Continue Shopping</a>
             <button class="cta" type="submit" name="checkout">Checkout</button>
           </div>
       </form>

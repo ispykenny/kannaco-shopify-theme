@@ -22,7 +22,7 @@
           <div class="blog-article-container__el">
 
             <div>
-              <img src="{{ article.image.src | img_url : 'master'}}" alt="">
+              <img src="{{ article.image.src | img_url : 'master'}}" alt=""> 
             </div>
 
             <div class="blog-article-header">
@@ -52,9 +52,9 @@
               </a>
             </div>
 
-            {% if blog.comments_enabled? %}
+            {% comment %} {% if blog.comments_enabled? %}
               <p><a href="{{article.url}}#comments">{{ article.comments_count }} comments</a></p>
-            {% endif %}
+            {% endif %} {% endcomment %}
           </div>
         {% endfor %}
       </div>

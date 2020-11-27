@@ -27,7 +27,7 @@
 		border: none;
 		border-radius: 100%;
 		position: relative;
-		cursor: $primary;
+		cursor: pointer;
 		font-size: 1em;
 		
 		&:active {
@@ -50,3 +50,4 @@
 .product-single .qty-parent {
 	padding-top: 1em;
 }
+
