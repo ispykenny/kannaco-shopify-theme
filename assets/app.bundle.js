@@ -3023,6 +3023,7 @@ Object(__WEBPACK_IMPORTED_MODULE_17__search__["a" /* default */])();
 Object(__WEBPACK_IMPORTED_MODULE_18__batch__["a" /* default */])();
 Object(__WEBPACK_IMPORTED_MODULE_19__featured_blogs__["a" /* default */])();
 
+
 document.querySelectorAll(".address-delete-form").forEach((deleteForm) => {
   deleteForm.addEventListener("submit", (event) => {
     const confirmMessage = event.target.getAttribute("data-confirm-message");

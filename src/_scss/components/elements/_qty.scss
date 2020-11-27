@@ -26,13 +26,27 @@
 		text-align: center;
 		border: none;
 		border-radius: 100%;
-		outline: none;
 		position: relative;
-		cursor: pointer;
+		cursor: $primary;
 		font-size: 1em;
 		
 		&:active {
 			top: 1px;
 		}
 	}
+}
+
+.qty-icon {
+	position: absolute;
+	top: 50%; left: 50%;
+	width: 50%;
+	transform: translate(-50%, -50%);
+
+	svg {
+		width: 100%;
+	}
+}
+
+.product-single .qty-parent {
+	padding-top: 1em;
 }

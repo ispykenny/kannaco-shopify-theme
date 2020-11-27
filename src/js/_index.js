@@ -63,6 +63,7 @@ search();
 batch();
 setFeaturedBlogMarkup();
 
+
 document.querySelectorAll(".address-delete-form").forEach((deleteForm) => {
   deleteForm.addEventListener("submit", (event) => {
     const confirmMessage = event.target.getAttribute("data-confirm-message");
