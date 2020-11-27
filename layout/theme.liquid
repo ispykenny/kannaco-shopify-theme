@@ -6,7 +6,9 @@
   <meta name="description" content="{{ page_description | escape }}">
   <link rel="canonical" href="{{ canonical_url }}">
   <link rel="icon" type="image/png" href="https://cdn.shopify.com/s/files/1/0266/9782/6383/files/favicon.png">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/7850704.js"></script>
+<!-- End of HubSpot Embed Code -->
   <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
   {{ content_for_header }}
   {{ 'style.css' | asset_url | stylesheet_tag | }}
@@ -22,10 +24,9 @@
   </main>
 {% comment %} {% include 'footer' %} {% endcomment %}
 
-  {{ 'option_selection.js' | shopify_asset_url | script_tag }}
-
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   {{ 'app.bundle.js' | asset_url | script_tag }}
+  <script type="text/javascript" src="https://s.skimresources.com/js/175796X1644637.skimlinks.js"></script>
 </body>
 </html>

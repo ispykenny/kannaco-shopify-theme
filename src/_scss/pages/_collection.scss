@@ -33,7 +33,7 @@
 
 .filter {
   text-align: center;
-  display: inline-flex;
+  // display: inline-flex;
   align-items: center;
   justify-content: center;
   margin: auto;
@@ -48,10 +48,12 @@
   &__options {
     list-style-type: none;
     margin: 0; padding: 0;
-    display: flex;
+    // display: flex;
+    text-align: center;
 
     li {
-      margin: 0px 0.7em;
+      // margin: 0px 0.7em;
+      margin: 1em 0em;
 
       &.active {
         
@@ -76,4 +78,35 @@
 
 .price-cc {
   margin-top: 0.3em;
+}
+
+
+@media(min-width: $bp-md) {
+  .filter {
+    text-align: center;
+    // display: inline-flex;
+  
+    &__options {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+  
+      li {
+        margin: 0px 0.7em;
+      }
+
+    }
+  }
+} 
+
+@media(min-width: $bp-xl) {
+  .filter {
+    text-align: left;
+    display: inline-flex;
+    
+    
+    &__options {
+      text-align: left;
+    }
+  }
 }

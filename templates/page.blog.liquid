@@ -21,10 +21,8 @@
 
           <div class="blog-article-container__el">
 
-            <div class="blog-image-container">
-              <div class="section-bg">
-                <div class="section-bg__el lazy-bg" data-bg="{{ article.image.src | img_url : 'master'}}"></div>
-              </div>
+            <div>
+              <img src="{{ article.image.src | img_url : 'master'}}" alt="">
             </div>
 
             <div class="blog-article-header">
