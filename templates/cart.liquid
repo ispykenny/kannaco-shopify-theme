@@ -3,7 +3,7 @@
   <div class="inner">
 
     {% if cart.item_count > 0 %}
-      <h1>Cart</h1>
+      <h1 style="text-align: center;">Your Cart</h1>
       <form action="/cart" method="post" novalidate>
         <div class="cart">
           {% for item in cart.items %}
@@ -12,10 +12,14 @@
                 <h4>Product</h4>
                 <a href="{{ item.url }}">
                 <div class="cart__image">
-                  <img src="{{ item | img_url : 'master' }}" alt="{{ item.title | escape }}">
+                  <div>
+                    <img src="{{ item | img_url : 'master' }}" alt="{{ item.title | escape }}">
+                  </div>
+                  <div class="item-details">
+                    {{item.product.title}}
+                    {{item.variant.title}}
+                  </div>
                 </div>
-                {{item.product.title}}
-                {{item.variant.title}}
                 </a>
               </div>
 
@@ -35,7 +39,7 @@
                   <input type="number" name="updates[]" id="updates_{{ item.key }}" value="{{ item.quantity }}" min="0">
                 </div>
                 <div>
-                  <a href="/cart/change?line={{ forloop.index }}&quantity=0">Remove</a>
+                  <a class="remove-item" href="/cart/change?line={{ forloop.index }}&quantity=0">Remove</a>
                 </div>
               </div>
 
@@ -50,7 +54,7 @@
 
           </div>
           <div class="total check-out">
-            <p>sub total:</p><p><strong>{{ cart.total_price | money }}</strong></p>
+            <p>Sub total:</p><p><strong>{{ cart.total_price | money }}</strong></p>
             {% comment %} <button type="submit" name="update">Update</button> {% endcomment %}
             <button class="cta" type="submit" name="checkout">Checkout</button>
           </div>

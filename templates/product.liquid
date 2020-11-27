@@ -70,10 +70,20 @@
           <div class="qty-parent">
             <label for="Quantity">Qty:</label>
             <div class="qty">
-              <div class="qty__ui">
-                <div class="qty__change subtract">-</div>
+              <div class="qty__ui"> 
+                <button type="button" class="qty__change subtract">
+                  <div class="qty-icon">
+                  <span class="sr-only">Subtract from quantity</span>
+                    {% include 'minus-icon' %}
+                  </div>
+                </button>
                 <div class="qty__value">0</div>
-                <div class="qty__change add">+</div>
+                <button type="button" class="qty__change add">
+                  <div class="qty-icon">
+                    <span class="sr-only">Add to quantity</span>
+                    {% include 'plus-icon' %}
+                  </div>
+                </button>
               </div>
               <input type="number" id="Quantity" name="quantity" value="1" min="1">
             </div>
