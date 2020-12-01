@@ -59,14 +59,14 @@
 <section class="section-block reduce-bottom">
   <div class="inner content-area">
   {% assign number_of_comments = article.comments_count %}
-  {% if comment and comment.created_at %}
+  {% comment %} {% if comment and comment.created_at %}
     {% assign number_of_comments = article.comments_count %}
   {% endif %}
-  
+   {% endcomment %}
 
   <div>{{ article.content }}</div>
   {% if blog.comments_enabled? %}
-    <h2>{{ number_of_comments }} comments</h2>
+    {% comment %} <h2>{{ number_of_comments }} comments</h2>
     {% paginate article.comments by 5 %}
       {% for comment in article.comments %}
         <div>
@@ -77,9 +77,9 @@
       {% if paginate.pages > 1 %}
         {{ paginate | default_pagination }}
       {% endif %}
-    {% endpaginate %}
+    {% endpaginate %} {% endcomment %}
 
-    <div>
+    {% comment %} <div>
       {% form 'new_comment', article %}
         {{ form.errors | default_errors }}
         <label for="CommentAuthor">name</label>
@@ -93,13 +93,13 @@
 
         <input type="submit" value="post">
       {% endform %}
-    </div>
+    </div> {% endcomment %}
   {% endif %}
 
 </div>
 </section>
 {% include 'share-article' %}
-{% include 'subscribe-blog' %}
+{% comment %} {% include 'subscribe-blog' %} {% endcomment %}
 {% include 'prev-next-blog' %}
 {% endif %}
 

@@ -2968,7 +2968,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-
+ 
 
 Object(__WEBPACK_IMPORTED_MODULE_9__byob__["a" /* default */])();
 Object(__WEBPACK_IMPORTED_MODULE_5__ajax_to_cart__["a" /* default */])();
@@ -3256,15 +3256,6 @@ const runAboutSlider = () => {
       cellSelector: '.about-slider__item',
       wrapAround: true,
       prevNextButtons: true
-    });
-
-    $('.category__list ul').flickity({
-      freeScroll: true,
-      contain: true,
-      prevNextButtons: false,
-      pageDots: false,
-      watchCSS: true
-
     });
   }
   
@@ -5838,12 +5829,12 @@ return Flickity;
 "use strict";
 /* harmony default export */ __webpack_exports__["a"] = (function () {
   const createTestimonialSlide = () => {
-    let selector = $(".has-slider-full-width-banner");
+    let selector = $(".has-slider-full-width-banner"); 
 
     if (selector.find(".content-container").length > 1) {
       selector.flickity({
         pageDots: false,
-        autoPlay: 3000,
+        autoPlay: 3000, 
         prevNextButtons: false,
         pauseAutoPlayOnHover: false,
         wrapAround: true,

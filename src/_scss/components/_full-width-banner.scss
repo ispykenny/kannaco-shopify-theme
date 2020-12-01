@@ -1,5 +1,9 @@
 .full-width-banner-parent {
   background: #ddd;
+
+  .section-bg__el {
+    background-position: bottom;
+  }
 }
 
 .full-width-banner {
@@ -11,7 +15,7 @@
     max-width: 700px;
     margin: auto;
     text-align: center;
-    position: relative;
+    position: relative; 
   }
 
   .content-container {
