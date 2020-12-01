@@ -3257,15 +3257,6 @@ const runAboutSlider = () => {
       wrapAround: true,
       prevNextButtons: true
     });
-
-    $('.category__list ul').flickity({
-      freeScroll: true,
-      contain: true,
-      prevNextButtons: false,
-      pageDots: false,
-      watchCSS: true
-
-    });
   }
   
 }

@@ -22,6 +22,7 @@
   padding-bottom: 4em;
 
   &.dark-header {
+    
     h3 {
       color: black;
     }
@@ -232,11 +233,8 @@
       box-shadow: 0px 0px 40px rgba(black, 0.2);
       border-radius: 10px;
     }
-  }
-
-  
+  } 
 }
-
 
 .faq-parent {
   background: #FAF7F7;
@@ -245,30 +243,20 @@
 }
 .category-parent {
   background: #FAF7F7;
-  // padding: 8em 0em;
   padding: 4em 0em;
 }
 
 .category {
-  display: flex;
   flex-direction: column;
   align-content: stretch;
 
 
   &__el {
-    // width: 50%;
     width: 100%;
-
-    &.has-content {
-      // width: calc(50% + 90px);
-    }
   }
 
   &__list {
-    // background: white;
-    // padding: 8em 3em;
     padding: 2em 1em;
-    // box-shadow: 0px 0px 40px rgba(black, 0.1);
     border-radius: 10px;
 
     ul {
@@ -278,28 +266,27 @@
       font-size: 1.4em;
       font-weight: 700;
       width: 100%;
+      display: inline-flex;
+      flex-direction: column;
 
       &:after {
         content: 'flickity';
         display: none;
       }
-
-      // mobile
-      // display: flex;
     }
     
     li {
-      margin-bottom: 1em;
+      margin-bottom: 2em;
       position: relative;
       cursor: pointer;
-      // display: flex;
       color: #aaa;
-      display: inline-block;
-      
-      // mobile
       margin-right: 10px;
       min-width: 120px;
-      font-size: 14px;
+      font-size: 18px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
       svg {
         display: none;
       }
@@ -343,15 +330,16 @@
 .category__content {
   background: $primary;
   position: relative;
-  // margin-top: 90px;
-  // left: -90px;
   color: white;
   border-radius: 10px;
 
   &-inner {
-    // padding: 6em 3em;
     padding: 3em 1.5em;
     position: relative;
+  }
+
+  a {
+    color: white;
   }
 
  &-item {
@@ -404,22 +392,17 @@
       border-radius: 10px;
   
       ul {
+        display: block;
   
         &:after {
           content: '';
         }
-  
-        // mobile
-        // display: flex;
       }
       
       li {
         display: flex;
         color: #aaa;
         align-items: center;
-        // display: inline-block;
-        
-        // mobile
         margin-right: 0px;
         min-width: auto;
         font-size: 1em;
