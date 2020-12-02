@@ -4,6 +4,10 @@
   grid-row-gap: 40px;
   padding-top: 2em;
 
+  .product-name {
+    padding-left: 0;
+  }
+
   @media(min-width: $bp-md) {
     grid-template-columns: 1fr 1fr;
     grid-gap: 80px;
