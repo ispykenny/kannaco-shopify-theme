@@ -41,7 +41,7 @@
 
 
       <div class="product-single__el">
-        <h4>{{ current_variant.price | money }}</h4>
+        <h4 class="product__price">{{ current_variant.price | money }}</h4>
         <h1 class="section-title">{{ product.title }}</h1>
         <div>{{ product.description }}</div>  
         <form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm">
@@ -49,11 +49,12 @@
           {% assign varSize = product.variants | size %}
           {% if varSize >= 2 %}
             <h5 style="margin-bottom: 1em;">Choose your fix:</h5>
+            <span class="product__option" style="margin-right: 10px;">{{ product.options }}</span>
             <select name="id" id="ProductSelect-{{ section.id }}" class="product-form__variants no-js" style="height: 40px;">
               {% for variant in product.variants %}
                 {% if variant.available %}
-                  <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}">
-                    {{ variant.title }}
+                  <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}" data-price="{{variant.price | money }}">
+                    {{ variant.title }} | {{variant.price | money }}
                   </option>
                 {% else %}
                   <option disabled="disabled">{{ variant.title }}</option>
@@ -64,6 +65,17 @@
               <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
           {% endif %}
             
+
+            <script>
+              document.querySelector('.product-form__variants').addEventListener('change', function(event) {
+                let price = event.currentTarget.value;
+
+                let newPrice = document.querySelector(`[value="${price}"`).getAttribute('data-price')
+                
+                document.querySelector('.product__price').innerHTML = newPrice;
+                console.log(newPrice)
+              })
+            </script>
          
           
           {% comment %} {{ current_variant.price | money }} {% endcomment %}
