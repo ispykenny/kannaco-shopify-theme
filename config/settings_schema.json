@@ -22,6 +22,11 @@
         "id": "email",
         "type": "text",
         "label": "Email"
+      },
+      {
+        "id": "newsletter_form",
+        "type": "textarea",
+        "label": "Newsletter Form"
       }
     ]
   },
