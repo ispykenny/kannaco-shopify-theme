@@ -10,20 +10,22 @@
 <body>
 <div class="header-spacer"></div>
   <div class="qr-parent inner" style="margin: auto; text-align: center;">
-    <div id="qr-code" style="max-width: 200px; margin: auto"></div><br/>
+    <div class="gift_card_image" style="margin: auto; max-width: 600px;">
+      <img src="https://cdn.shopify.com/s/files/1/0266/9782/6383/files/Kannaco_Gift_Card.png?v=1608780694" alt="Kannaco Gift Card" width="100%"><br/>
+    </div>
     <div>
-      <h4>Your gift card Number: <span class="orange">{{ gift_card.code }}</span><h4><br/>
+      <br/><h4>Your gift card Number: <span class="orange">{{ gift_card.code }}</span><h4><br/>
       <h4>Your gift card Available balance: <span class="orange">{{ gift_card.balance | money_with_currency }}</span><h4><br/>
       <h4>Your gift card Initial balance: <span class="orange">{{ gift_card.initial_value | money_with_currency }}</span><h4><br/>
     </div>
   </div>
-  <script>
+  {% comment %} <script>
     new QRCode(document.getElementById("qr-code"), {
       text: "{{ gift_card.qr_identifier }}",
       width: 120,
       height: 120
     });
-  </script>
+  </script> {% endcomment %}
   <footer>
     {% if gift_card.pass_url %}
     <a href="{{ gift_card.pass_url }}">
