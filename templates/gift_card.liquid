@@ -1,4 +1,4 @@
-{% layout none %}
+
 <!doctype html>
 <head>
   <meta charset="utf-8">
@@ -8,7 +8,15 @@
   {{ 'vendor/qrcode.js' | shopify_asset_url | script_tag }}
 </head>
 <body>
-  <div id="qr-code"></div>
+<div class="header-spacer"></div>
+  <div class="qr-parent inner" style="margin: auto; text-align: center;">
+    <div id="qr-code" style="max-width: 200px; margin: auto"></div><br/>
+    <div>
+      <h4>Your gift card Number: <span class="orange">{{ gift_card.code }}</span><h4><br/>
+      <h4>Your gift card Available balance: <span class="orange">{{ gift_card.balance | money_with_currency }}</span><h4><br/>
+      <h4>Your gift card Initial balance: <span class="orange">{{ gift_card.initial_value | money_with_currency }}</span><h4><br/>
+    </div>
+  </div>
   <script>
     new QRCode(document.getElementById("qr-code"), {
       text: "{{ gift_card.qr_identifier }}",
