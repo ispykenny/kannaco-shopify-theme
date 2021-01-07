@@ -41,6 +41,19 @@
 
 
       <div class="product-single__el">
+        <div class="product__reviews" style="margin-bottom: 1em;">
+          <div class="yotpo bottomLine"
+              data-appkey="Xjkf3iy8VzFuxqQxLMiYM1Gis06Gv4fUS3WpkTqm"
+              data-domain="{{shop.permanent_domain | escape }}"
+              data-product-id="{{ product.id }}"
+              data-product-models="{{ product.id }}"
+              data-name="{{ product.title | escape }}"
+              data-url="{{ shop.url }}{{ product.url }}"
+              data-image-url="{{ product.featured_image | product_img_url: 'large' |replace: '?', '%3F' | replace: '&','%26'}}"
+              data-description="{{ product.description | escape }}"
+              data-bread-crumbs="{% for tag in product.tags %}{{ tag | escape }};{% endfor %}">
+          </div>
+        </div>
         <h4 class="product__price">{{ current_variant.price | money }}</h4>
         <h1 class="section-title">{{ product.title }}</h1>
         <div>{{ product.description }}</div>  
@@ -76,7 +89,6 @@
                 console.log(newPrice)
               })
             </script>
-         
           
           {% comment %} {{ current_variant.price | money }} {% endcomment %}
           <div class="qty-parent">
