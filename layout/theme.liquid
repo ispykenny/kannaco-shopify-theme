@@ -12,10 +12,21 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
   {{ content_for_header }}
   {{ 'style.css' | asset_url | stylesheet_tag | }}
-  
+  {% if shop.name contains 'Try Kannaco' %}
+    <meta name="robots" content="noindex">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D3F2KE1W6B"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-D3F2KE1W6B');
+    </script>
+  {% endif %}
+
 </head>
 <body>
-
 {% comment %} {% include 'main-nav' %} {% endcomment %}
   <main role="main">
     {% section  'main-nav' %}
