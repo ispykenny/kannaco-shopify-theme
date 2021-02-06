@@ -3051,13 +3051,27 @@ $(".category__list li").on("click", (event) => Object(__WEBPACK_IMPORTED_MODULE_
 
 
 const all_images = document.querySelectorAll('img');
+const article = document.querySelector('.article');
 
-Object(__WEBPACK_IMPORTED_MODULE_1__images__["a" /* getImageRatio */])(all_images);
+if(article) {
+  console.log('didnt init lazy load')
+}else {
+  Object(__WEBPACK_IMPORTED_MODULE_1__images__["a" /* getImageRatio */])(all_images);
+}
 if(all_images.length) {
   
   window.onload = () => {
     let allImages = document.querySelectorAll('img');
-    Object(__WEBPACK_IMPORTED_MODULE_1__images__["b" /* initDomImages */])(allImages)
+    if(article) {
+      allImages.forEach((img) =>  {
+        img.style.opacity = 1
+        img.style.width = 'auto'
+        img.style.maxWidth = '100%'
+      })
+    } else {
+      Object(__WEBPACK_IMPORTED_MODULE_1__images__["b" /* initDomImages */])(allImages)
+    }
+
     Object(__WEBPACK_IMPORTED_MODULE_0__backgrounds__["a" /* setBackgroundImages */])();
   };
 }
