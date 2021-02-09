@@ -1,6 +1,6 @@
 <div class="inner center intro-content">
 	<div class="page-title" style="margin-bottom: 0; padding-bottom: 0;">
-		<h2 class="section-title"> {{ section.settings.featured_title }}</h2>
+		<h2 class="section-title">{{ section.settings.featured_title }}</h2>
 	</div>
 	<p>{{ section.settings.featured_content }}</p>
 </div>
@@ -18,7 +18,7 @@
 
 				<div class="product-content" >
 					<small>{{ product_item.type }}</small>
-					<h5 class="product-name">{{ product_item.title }}</h5>
+					<h5 class="product-name">{{ product_item.title  | strip }}</h5>
 					<p class="mini-blurb">{{product_item.metafields.accentuate.mini_blurb}}</p>
 					<p>Price {{ product_item.price | money }} <strike>{{ product_item.compare_at_price | money }}</strike></p>
 					<div class="cta-el single-secondary-cta secondary-cta-parent">
