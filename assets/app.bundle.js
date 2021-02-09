@@ -5848,8 +5848,8 @@ return Flickity;
     if (selector.find(".content-container").length > 1) {
       selector.flickity({
         pageDots: false,
-        autoPlay: 3000, 
-        prevNextButtons: false,
+        autoPlay: 6000, 
+        prevNextButtons: true,
         pauseAutoPlayOnHover: false,
         wrapAround: true,
         adaptiveHeight: true,
