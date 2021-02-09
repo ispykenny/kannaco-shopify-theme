@@ -45,8 +45,10 @@ footer {
 }
 
 #footer-link {
-  padding-bottom: 1.4em;
+  padding-bottom: 0em;
   display: inline-block;
+  max-width: 200px;
+  width: 100%;
 }
 
 .footer-category {

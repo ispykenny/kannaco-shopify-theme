@@ -1,0 +1,17 @@
+.has-slider-full-width-banner p {
+  padding: 0em 4em;
+}
+
+.has-slider-full-width-banner {
+  button {
+    background: transparent;
+
+    &:hover {
+      background: transparent;
+    }
+  }
+
+  svg {
+    fill: $primary;
+  }
+}
