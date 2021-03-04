@@ -1,7 +1,7 @@
 
+<div class="header-spacer"></div>
 {% assign team = article.handle | split : "/" | first  %}
 {% if team == "team" %}
-  <div class="header-spacer"></div>
   <section>
     <div class="inner team-member-single">
       <div class="article-element">
@@ -24,11 +24,37 @@
   </section>
 {% else %}
 
-<section id="hero">
+<section>
+  <div class="inner blog-hero">
+    <div class="blog-hero__el">
+      <h1>{{ article.title }}</h1>
+      <div class="blog-hero__info">
+        <div>
+          Written by: <strong>{{ article.author }}</strong> <span> |&nbsp; </span>
+        </div>
+        <div>
+          Posted on <span class="posted-date">{{ article.published_at | date: '%m'}}/{{ article.published_at | date: '%d'}}/{{ article.published_at | date: '%y'}}</span>
+        </div>
+      </div>
+    </div>
+    <div class="blog-hero__el">
+      <div>
+        <img src="{{ article.image.src | img_url: 'master' }}">
+      </div>
+    </div>
+  </div>
+</section>
+
+{% comment %} <section id="hero">
   <div class="inner">
     <div id="hdr-content" class="article-single is-centered">
       <h1>{{ article.title }}</h1>
-      
+      <div class="blog-info__el">
+          By: <strong>{{ article.author }}</strong> <span> |&nbsp; </span>
+        </div>
+        <div class="blog-info__el">
+           Posted on <span class="posted-date">{{ article.published_at | date: '%m'}}/{{ article.published_at | date: '%d'}}/{{ article.published_at | date: '%y'}}</span>
+        </div>
       <div class="blog-info">
         <div class="blog-info__el">
           By: <strong>{{ article.author }}</strong> <span> |&nbsp; </span>
@@ -52,8 +78,8 @@
     <div class="section-bg__el lazy-bg" data-bg="{{ article.image.src | img_url: 'master' }}">
     </div>
     <div class="in-view-indicator-bg"></div>
-  </div>
 </section>
+  </div> {% endcomment %}
 
 
 <section class="section-block reduce-bottom article">
