@@ -54,14 +54,16 @@
 </section>
 
 
-<section class="section-block reduce-bottom article">
-    <div class="inner content-area">
+<section class="section-block padding-bottom article">
+    <div class="inner content-area" style="padding-bottom: 3em;">
     {% assign number_of_comments = article.comments_count %}
-    <article>{{ article.content }}</article>
+    {{ article.content }}
   </div>
 </section>
 {% include 'share-article' %}
+
+{% include 'related-articles' %}
 {% comment %} {% include 'subscribe-blog' %} {% endcomment %}
-{% include 'prev-next-blog' %}
+{% comment %} {% include 'prev-next-blog' %} {% endcomment %}
 
 {% endif %}

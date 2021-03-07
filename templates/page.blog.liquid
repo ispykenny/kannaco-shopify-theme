@@ -20,41 +20,41 @@
         {% for article in blog.articles %}
 
           <div class="blog-article-container__el">
-
+            
             <div>
               <img src="{{ article.image.src | img_url : 'master'}}" alt=""> 
             </div>
-
-            <div class="blog-article-header">
-              <div class="blog-article-posted">
-                <span class="day">Posted on: {{ article.published_at | date: '%m'}}-{{ article.published_at | date: '%d'}}-{{ article.published_at | date: '%y'}}</span>
+            
+            <div class="blog-article-container__inner">
+              <div class="blog-article-header">
+                <div class="blog-article-posted">
+                  <span class="day">Posted on: {{ article.published_at | date: "%b %d, %Y"}}</span>
+                </div>
+                <div class="blog-categories">
+                  {% for tags in article.tags %}
+                    <small><span>{{ tags }} </span></small>
+                  {% endfor %}
+                </div>
+                <h4 class="section-title blog-grid-element-title"><a href="{{article.url}}">{{ article.title }}</a></h4>
               </div>
-              <div class="blog-categories">
-                {% for tags in article.tags %}
-                  <small><span>{{ tags }} </span></small>
-                {% endfor %}
+  
+              <div class="content-general">
+                <p>{{ article.excerpt | truncatewords: 30 }} </p>
               </div>
-              <h4 class="section-title blog-grid-element-title"><a href="{{article.url}}">{{ article.title }}</a></h4>
-            </div>
+  
+              <div class="secondary-cta-parent">
+                <a class="cta-secondary" href="{{ article.url }}">
+                  <span class="link-text">Read More</span>
+                  <span class="link-crt">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="11" viewBox="0 0 8 11">
+                      <path id="Polygon_3" data-name="Polygon 3" d="M5.17.479a.4.4,0,0,1,.659,0l4.74,6.894A.4.4,0,0,1,10.24,8H.76a.4.4,0,0,1-.33-.627Z" transform="translate(8) rotate(90)" fill="#da6227"/>
+                    </svg> 
+                  </span>
+                </a>
+              </div>
+              
+            </div> 
 
-            <div class="content-general">
-              {{ article.content | truncatewords: 30 }}
-            </div>
-
-            <div class="secondary-cta-parent">
-              <a class="cta-secondary" href="{{ article.url }}">
-                <span class="link-text">Read More</span>
-                <span class="link-crt">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="8" height="11" viewBox="0 0 8 11">
-                    <path id="Polygon_3" data-name="Polygon 3" d="M5.17.479a.4.4,0,0,1,.659,0l4.74,6.894A.4.4,0,0,1,10.24,8H.76a.4.4,0,0,1-.33-.627Z" transform="translate(8) rotate(90)" fill="#da6227"/>
-                  </svg> 
-                </span>
-              </a>
-            </div>
-
-            {% comment %} {% if blog.comments_enabled? %}
-              <p><a href="{{article.url}}#comments">{{ article.comments_count }} comments</a></p>
-            {% endif %} {% endcomment %}
           </div>
         {% endfor %}
       </div>

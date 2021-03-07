@@ -1,0 +1,55 @@
+{% assign selected_handles = article.metafields.accentuate.related_article | split: '|' %}
+{% if selected_handles.size > 0 %}
+<section>
+	<div class="inner related-articles">
+		
+		<div class="related-articles-title">
+			<h4>Related Articles</h4>
+		</div>
+		
+		<div class="blog-article-container three">
+			{% for selected_handle in selected_handles %}
+		
+				<div class="blog-article-container__el">
+					
+					<div>
+						<img src="{{ articles[selected_handle].image.src | img_url : 'master'}}" alt=""> 
+					</div>
+					
+					<div class="blog-article-container__inner">
+						<div class="blog-article-header">
+							<div class="blog-article-posted">
+								<span class="day">Posted on: {{ articles[selected_handle].published_at | date: "%b %d, %Y"}} </span>
+							</div>
+							<div class="blog-categories">
+								{% for tags in articles[selected_handle].tags %}
+									<small><span>{{ tags }} </span></small>
+								{% endfor %}
+							</div>
+							<h4 class="section-title blog-grid-element-title"><a href="{{articles[selected_handle].url}}">{{ articles[selected_handle].title }}</a></h4>
+						</div>
+		
+						<div class="content-general">
+							<p>{{ articles[selected_handle].excerpt | truncatewords: 30 }}</p>
+						</div>
+		
+						<div class="secondary-cta-parent">
+							<a class="cta-secondary" href="{{ articles[selected_handle].url }}">
+								<span class="link-text">Read More</span>
+								<span class="link-crt">
+									<svg xmlns="http://www.w3.org/2000/svg" width="8" height="11" viewBox="0 0 8 11">
+										<path id="Polygon_3" data-name="Polygon 3" d="M5.17.479a.4.4,0,0,1,.659,0l4.74,6.894A.4.4,0,0,1,10.24,8H.76a.4.4,0,0,1-.33-.627Z" transform="translate(8) rotate(90)" fill="#da6227"/>
+									</svg> 
+								</span>
+							</a>
+						</div>
+						
+					</div> 
+		
+				</div>
+			{% endfor %}
+		</div>
+
+	</div>
+</section>
+{% endif %}
