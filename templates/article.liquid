@@ -23,25 +23,22 @@
       </div>
   </section>
 {% else %}
-
+{% assign time = article.metafields.accentuate.read_time.count > 2 ? article.metafields.accentuate.read_time : '23'%}
 <section>
   <div class="inner blog-hero">
     <div class="blog-hero__el">
       <div class="blog-hero__intro">
         <ul class="blog-hero__tags">
           {% for tag in article.tags %}
-            <li><a href="{{site.url}}/blogs/article/tagged/{{ tag }}"> {{ tag }}<span class="comma">,</span></a></li>
+            <li><a hthemeref="{{site.url}}/blogs/article/tagged/{{ tag }}"> {{ tag }}<span class="comma">,</span></a></li>
           {% endfor %}
         </ul>
-        <span>| 22 Min Read</span>
+        <span>| {{time}} Min Read</span>
       </div>
       <h1>{{ article.title }}</h1>
       <div class="blog-hero__info">
         <div>
-          Written by: <strong>{{ article.author }}</strong> <span> |&nbsp; </span>
-        </div>
-        <div>
-          Posted on <span class="posted-date">{{ article.published_at | date: '%m'}}/{{ article.published_at | date: '%d'}}/{{ article.published_at | date: '%y'}}</span>
+          Written by: <strong>{{ article.metafields.accentuate.author_name }}</strong> <span> | Posted on <span class="posted-date">{{ article.published_at | date: '%m'}}/{{ article.published_at | date: '%d'}}/{{ article.published_at | date: '%y'}}</span> </span>
         </div>
       </div>
     </div>

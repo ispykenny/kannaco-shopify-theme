@@ -10,14 +10,14 @@
         {% if collection.tags.size > 1%}
           <div class="inner center intro-content">
             <h3 class="section-subtitle">The Goods</h3>
-            <h1 class="section-title">View Our Lineup</h1>
+            <h1 class="section-title">{{collection.title }}</h1>
             
             {% comment %} <p>{{ section.settings.content }}</p> {% endcomment %}
           </div>
         {% else %}
         <div class="inner center intro-content">
           <h3 class="section-subtitle">The Goods</h3>
-          <h1 class="section-title">Our {{collection.tags[0] | capitalize }} Lineup</h1>
+          <h1 class="section-title">{{collection.title }}</h1>
           {% comment %} <p>{{ section.settings.content }}</p> {% endcomment %}
         </div>
         {% endif %}
@@ -33,7 +33,7 @@
               <h4>Filter by:</h4>
             </div>
             <div class="filter__el">
-              {% if collection.all_tags.size > 0 %}
+              {% comment %} {% if collection.all_tags.size > 0 %}
                 <ul class="filter__options">
                 {% assign cSize = collection.tags | size  %}
                   <li {% if cSize > 1 %} class="active" {% endif %}><a href="{{site.url}}/collections/all">All</a></li>
@@ -42,14 +42,17 @@
                       <li class="active">
                         {{ tag | link_to_remove_tag: tag }}
                       </li>
-                    {% else %}
-                      <li>
-                        {{ tag | link_to_tag: tag }}
-                      </li>
                     {% endif %}
                   {% endfor %}
                 </ul>
-              {% endif %}
+              {% endif %} {% endcomment %}
+               {% assign prodLinks = linklists.product-collection %}
+               <ul class="filter__options">
+                <a href="{{site.url}}/collections/all">All</a></li>
+                {% for link in prodLinks.links %}
+                  <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                {% endfor %}
+                </ul>
             </div>
           </div>
         </div>

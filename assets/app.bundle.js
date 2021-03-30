@@ -2949,15 +2949,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__accordion_js__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__byob__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__testimonial_slide__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__password_reset__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__mobile_menu__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__three_col__ = __webpack_require__(35);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__footer__ = __webpack_require__(36);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__qty__ = __webpack_require__(37);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__scroll__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__search__ = __webpack_require__(39);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__batch__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__featured_blogs__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__new_hero__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__password_reset__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__mobile_menu__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__three_col__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__footer__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__qty__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__scroll__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__search__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__batch__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__featured_blogs__ = __webpack_require__(42);
 
 
 
@@ -2969,8 +2970,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
  
+ 
 
-
+Object(__WEBPACK_IMPORTED_MODULE_11__new_hero__["b" /* setHero */])();
+Object(__WEBPACK_IMPORTED_MODULE_11__new_hero__["a" /* setActiveHeader */])();
 Object(__WEBPACK_IMPORTED_MODULE_9__byob__["a" /* default */])();
 Object(__WEBPACK_IMPORTED_MODULE_5__ajax_to_cart__["a" /* default */])();
 
@@ -2995,22 +2998,22 @@ $(window).on({
 });
 
 
-Object(__WEBPACK_IMPORTED_MODULE_11__password_reset__["b" /* showPasswordReset */])();
+Object(__WEBPACK_IMPORTED_MODULE_12__password_reset__["b" /* showPasswordReset */])();
 
-$("#init-password-reset").on("click", __WEBPACK_IMPORTED_MODULE_11__password_reset__["a" /* justShowPassword */]);
-
-
-Object(__WEBPACK_IMPORTED_MODULE_12__mobile_menu__["a" /* default */])();
+$("#init-password-reset").on("click", __WEBPACK_IMPORTED_MODULE_12__password_reset__["a" /* justShowPassword */]);
 
 
-Object(__WEBPACK_IMPORTED_MODULE_13__three_col__["a" /* default */])();
+Object(__WEBPACK_IMPORTED_MODULE_13__mobile_menu__["a" /* default */])();
+
+
+Object(__WEBPACK_IMPORTED_MODULE_14__three_col__["a" /* default */])();
 
 
 
-Object(__WEBPACK_IMPORTED_MODULE_14__footer__["a" /* default */])();
+Object(__WEBPACK_IMPORTED_MODULE_15__footer__["a" /* default */])();
 
 if ($(".qty").length > 0) {
-  Object(__WEBPACK_IMPORTED_MODULE_15__qty__["a" /* default */])();
+  Object(__WEBPACK_IMPORTED_MODULE_16__qty__["a" /* default */])();
 }
 
 
@@ -3018,11 +3021,11 @@ if ($(".qty").length > 0) {
 
 
 
-Object(__WEBPACK_IMPORTED_MODULE_16__scroll__["a" /* default */])();
+Object(__WEBPACK_IMPORTED_MODULE_17__scroll__["a" /* default */])();
 
-Object(__WEBPACK_IMPORTED_MODULE_17__search__["a" /* default */])();
-Object(__WEBPACK_IMPORTED_MODULE_18__batch__["a" /* default */])();
-Object(__WEBPACK_IMPORTED_MODULE_19__featured_blogs__["a" /* default */])();
+Object(__WEBPACK_IMPORTED_MODULE_18__search__["a" /* default */])();
+Object(__WEBPACK_IMPORTED_MODULE_19__batch__["a" /* default */])();
+Object(__WEBPACK_IMPORTED_MODULE_20__featured_blogs__["a" /* default */])();
 
 
 document.querySelectorAll(".address-delete-form").forEach((deleteForm) => {
@@ -5869,6 +5872,35 @@ return Flickity;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return setHero; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return setActiveHeader; });
+const setHero = () => {
+  $('.k-hero').flickity({
+    prevNextButtons: false,
+    pageDots: true,
+    watchCSS: true,
+    wrapAround: true,
+    dragThreshold: 10
+  })
+  $('.k-hero__column').eq(0).addClass('active')
+}
+
+const setActiveHeader = () => {
+  $('.k-hero__column').on('mouseenter', function() {
+    $('.k-hero__column').each((index, $el) => {
+      $($el).removeClass('active')
+    })
+    $(this).addClass('active')
+  })
+}
+
+
+
+/***/ }),
+/* 34 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return showPasswordReset; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return justShowPassword; });
 const showPasswordReset = () => {
@@ -5897,7 +5929,7 @@ const justShowPassword = () => {
 
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5963,7 +5995,7 @@ const justShowPassword = () => {
 });
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5980,7 +6012,7 @@ const justShowPassword = () => {
 });
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6008,7 +6040,7 @@ const justShowPassword = () => {
 });
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6073,7 +6105,7 @@ const justShowPassword = () => {
 });
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6127,7 +6159,7 @@ const justShowPassword = () => {
 });
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6150,7 +6182,7 @@ const justShowPassword = () => {
 });
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6193,7 +6225,7 @@ const justShowPassword = () => {
 });
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
