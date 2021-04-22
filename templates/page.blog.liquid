@@ -1,4 +1,5 @@
 {% section 'blog-hero' %}
+{% assign blog = blogs.article %}
 
 <section class="section-block reduce-bottom">
   <div class="inner center intro-content">
@@ -8,7 +9,14 @@
   </div>
 
   <div class="inner">
-  {% assign blog = blogs.article %}
+    <div class="category-el">
+      <h3>Categories</h3>
+      <ul class="blog-filter">
+        {% for tag in blog.all_tags %}
+          <li><a href="{{site.url}}/blogs/article/tagged/{{ tag }}"> {{ tag }}<span>,</span></a></li>
+        {% endfor %}
+      </ul>
+    </div>
     {% comment %}<ul>
       {% for tags in blog.tags %}
       <li><a href="{{blog.url}}/{{ tags }}">{{ tags }}</a></li>

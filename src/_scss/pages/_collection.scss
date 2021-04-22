@@ -20,7 +20,7 @@
 }
 
 .collection-grid__inner {
-  padding: 2em 1em;
+  padding: 0em 0em 2em 0em;
 }
 
 .collection-grid__item {
@@ -29,11 +29,11 @@
 
 .prod-des {
   text-align: center;
+  padding: 2em 2em 0em 2em;
 }
 
 .filter {
   text-align: center;
-  // display: inline-flex;
   align-items: center;
   justify-content: center;
   margin: auto;
@@ -48,11 +48,9 @@
   &__options {
     list-style-type: none;
     margin: 0; padding: 0;
-    // display: flex;
     text-align: center;
 
     li {
-      // margin: 0px 0.7em;
       margin: 1em 0em;
 
       &.active {
@@ -84,7 +82,6 @@
 @media(min-width: $bp-md) {
   .filter {
     text-align: center;
-    // display: inline-flex;
   
     &__options {
       display: flex;
