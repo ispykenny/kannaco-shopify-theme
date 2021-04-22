@@ -1,4 +1,35 @@
-<section id="hero">
+<section class="k-hero">
+  {% for block in section.blocks %}
+  {% assign product_image = block.settings.hero_product_image  | img_url: 'master' %}
+  {% assign background_image = block.settings.background  | img_url: 'master' %}
+    <div class="k-hero__column">
+      <div class="k-hero__copy">
+        <div class="k-hero__animate">
+          <h1>{{block.settings.column_title}}</h1>
+        </div>
+        <div class="k-hero__animate">
+          <p>{{block.settings.column_copy}}</p>
+        </div>
+        <div class="k-hero__animate">
+          <div class="k-hero__cta">
+            <a href="{{block.settings.column_link}}" class="cta">Shop This</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="k-hero__product">
+        <div class="k-hero__product--img">
+          <img src="{{ product_image }}" alt="">
+        </div>
+      </div>
+      <div class="section-bg has-overlay">
+        <div class="section-bg__el lazy-bg" data-bg="{{ background_image }}">
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </section>
+{% comment %} <section id="hero">
   <div class="inner">
     <div id="hdr-content">
       <h1>{{section.settings.headline}}</h1>
@@ -20,50 +51,44 @@
     <div class="section-bg__el lazy-bg" data-bg="{{section.settings.section_bg | img_url: 'master'}}">
     </div>
   </div>
-</section>
-
-
+</section> {% endcomment %}
 
 {% schema %}
-  {
-    "tag": "section",
-    "name": "Home Hero",
-    "settings": [
-      {
-        "id": "headline",
-        "type": "text",
-        "label": "Headline"
-      },
-      {
-        "id": "content",
-        "type": "html",
-        "label": "content"
-      },
-      {
-        "id": "primaryText",
-        "type": "text",
-        "label": "Primary Link Text"
-      },
-      {
-        "id": "primaryLink",
-        "type": "url",
-        "label": "Primary Link"
-      },
-      {
-        "id": "secondaryText",
-        "type": "text",
-        "label": "Secondary Link Text"
-      },
-      {
-        "id": "secondaryLink",
-        "type": "url",
-        "label": "Secondary Link"
-      },
-      {
-        "id": "section_bg",
-        "type": "image_picker",
-        "label": "Section Background"
-      }
-    ]
-  }
+{
+  "tag": "section",
+  "blocks": [
+    {
+      "type": "hero_columns",
+      "name": "Hero Columns",
+      "settings": [
+        {
+          "id": "column_title",
+          "type": "text",
+          "label": "Column Title"
+        },
+        {
+          "id": "column_copy",
+          "type": "text",
+          "label": "Column Copy"
+        },
+        {
+          "id": "column_link",
+          "type": "url",
+          "label": "Column Link"
+        },
+        {
+          "id": "hero_product_image",
+          "type": "image_picker",
+          "label": "Product Preview"
+        },
+        {
+          "id": "background",
+          "type": "image_picker",
+          "label": "Background Image"
+        }
+      ]
+    }
+  ]
+}
+
 {% endschema %}

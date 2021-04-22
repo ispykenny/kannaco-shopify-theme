@@ -23,17 +23,22 @@
       </div>
   </section>
 {% else %}
-
+{% assign time = article.metafields.accentuate.read_time.count > 2 ? article.metafields.accentuate.read_time : '23'%}
 <section>
   <div class="inner blog-hero">
     <div class="blog-hero__el">
+      <div class="blog-hero__intro">
+        <ul class="blog-hero__tags">
+          {% for tag in article.tags %}
+            <li><a hthemeref="{{site.url}}/blogs/article/tagged/{{ tag }}"> {{ tag }}<span class="comma">,</span></a></li>
+          {% endfor %}
+        </ul>
+        <span>| {{time}} Min Read</span>
+      </div>
       <h1>{{ article.title }}</h1>
       <div class="blog-hero__info">
         <div>
-          Written by: <strong>{{ article.author }}</strong> <span> |&nbsp; </span>
-        </div>
-        <div>
-          Posted on <span class="posted-date">{{ article.published_at | date: '%m'}}/{{ article.published_at | date: '%d'}}/{{ article.published_at | date: '%y'}}</span>
+          Written by: <strong>{{ article.metafields.accentuate.author_name }}</strong> <span> | Posted on <span class="posted-date">{{ article.published_at | date: '%m'}}/{{ article.published_at | date: '%d'}}/{{ article.published_at | date: '%y'}}</span> </span>
         </div>
       </div>
     </div>
@@ -45,87 +50,17 @@
   </div>
 </section>
 
-{% comment %} <section id="hero">
-  <div class="inner">
-    <div id="hdr-content" class="article-single is-centered">
-      <h1>{{ article.title }}</h1>
-      <div class="blog-info__el">
-          By: <strong>{{ article.author }}</strong> <span> |&nbsp; </span>
-        </div>
-        <div class="blog-info__el">
-           Posted on <span class="posted-date">{{ article.published_at | date: '%m'}}/{{ article.published_at | date: '%d'}}/{{ article.published_at | date: '%y'}}</span>
-        </div>
-      <div class="blog-info">
-        <div class="blog-info__el">
-          By: <strong>{{ article.author }}</strong> <span> |&nbsp; </span>
-        </div>
-        <div class="blog-info__el">
-           Posted on <span class="posted-date">{{ article.published_at | date: '%m'}}/{{ article.published_at | date: '%d'}}/{{ article.published_at | date: '%y'}}</span>
-        </div>
-      </div>
-      {% assign tagCount = article.tags | size %}
-      {% if tagCount > 0 %}
-      <div class="blog-tags">
-       Category: 
-       {% for tag in article.tags %}
-        {{ tag }}
-       {% endfor %}
-      </div>
-      {% endif %}
-    </div>
-  </div>
-  <div class="section-bg has-overlay" id="hero_paralax">
-    <div class="section-bg__el lazy-bg" data-bg="{{ article.image.src | img_url: 'master' }}">
-    </div>
-    <div class="in-view-indicator-bg"></div>
-</section>
-  </div> {% endcomment %}
 
-
-<section class="section-block reduce-bottom article">
-  <div class="inner content-area">
-  {% assign number_of_comments = article.comments_count %}
-  {% comment %} {% if comment and comment.created_at %}
+<section class="section-block padding-bottom article">
+    <div class="inner content-area" style="padding-bottom: 3em;">
     {% assign number_of_comments = article.comments_count %}
-  {% endif %}
-   {% endcomment %}
-
-  <div>{{ article.content }}</div>
-  {% if blog.comments_enabled? %}
-    {% comment %} <h2>{{ number_of_comments }} comments</h2>
-    {% paginate article.comments by 5 %}
-      {% for comment in article.comments %}
-        <div>
-          <div>{{ comment.content }}</div>
-          {{ comment.author }} @ {{ comment.created_at }}
-        </div>
-      {% endfor %}
-      {% if paginate.pages > 1 %}
-        {{ paginate | default_pagination }}
-      {% endif %}
-    {% endpaginate %} {% endcomment %}
-
-    {% comment %} <div>
-      {% form 'new_comment', article %}
-        {{ form.errors | default_errors }}
-        <label for="CommentAuthor">name</label>
-        <input type="text" name="comment[author]" id="CommentAuthor" placeholder="name" value="{{ form.author }}" autocapitalize="words">
-
-        <label for="CommentEmail">email</label>
-        <input type="email" name="comment[email]" id="CommentEmail" placeholder="email" value="{{ form.email }}" autocorrect="off" autocapitalize="off">
-
-        <label for="CommentBody">message</label>
-        <textarea name="comment[body]" id="CommentBody" placeholder="message">{{ form.body }}</textarea>
-
-        <input type="submit" value="post">
-      {% endform %}
-    </div> {% endcomment %}
-  {% endif %}
-
-</div>
+    {{ article.content }}
+  </div>
 </section>
 {% include 'share-article' %}
-{% comment %} {% include 'subscribe-blog' %} {% endcomment %}
-{% include 'prev-next-blog' %}
-{% endif %}
 
+{% include 'related-articles' %}
+{% comment %} {% include 'subscribe-blog' %} {% endcomment %}
+{% comment %} {% include 'prev-next-blog' %} {% endcomment %}
+
+{% endif %}

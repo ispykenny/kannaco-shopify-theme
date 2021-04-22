@@ -9,8 +9,10 @@ import prodSliderInit from "./single_product-slider";
 import productAccordion from "./accordion.js";
 import byob from "./_byob";
 import createTestimonialSlide from "./testimonial-slide"; 
+import {setHero, setActiveHeader} from './new_hero'; 
 
-
+setHero();
+setActiveHeader();
 byob();
 ajaxToCart();
 

@@ -1,4 +1,4 @@
-{% paginate blog.articles by 5 %}
+{% comment %} {% paginate blog.articles by 5 %}
 
 <h1>{{ blog.title }}</h1>
 {% for article in blog.articles %}
@@ -19,4 +19,82 @@
   {{ paginate | default_pagination }}
 {% endif %}
 
-{% endpaginate %}
+{% endpaginate %} {% endcomment %}
+
+
+<div class="header-spacer"></div>
+<section class="section-block reduce-bottom">
+  <div class="inner center intro-content">
+    <div class="section-title-spacing">
+      <h1>Reading articles in</h1>
+      <h5 style="margin: 1em 0em 1em 0em;">{% for tags in blog.tags %}
+      <span class="orange primary">{{ tags }} </span>
+      {% endfor %}</h5>
+    </div>
+  </div>
+
+  <div class="inner">
+    {% comment %}<ul>
+      {% for tags in blog.tags %}
+      <li><a href="{{blog.url}}/{{ tags }}">{{ tags }}</a></li>
+      {% endfor %}
+    </ul>
+    {% endcomment %}
+      {% paginate blog.articles by 9 %}
+      <div class="blog-article-container">
+        {% for article in blog.articles %}
+
+          <div class="blog-article-container__el">
+            
+            <div>
+              <img src="{{ article.image.src | img_url : 'master'}}" alt=""> 
+            </div>
+            
+            <div class="blog-article-container__inner">
+              <div class="blog-article-header">
+                <div class="blog-article-posted">
+                  <span class="day">Posted on: {{ article.published_at | date: "%b %d, %Y"}}</span>
+                </div>
+                <div class="blog-categories">
+                  {% for tags in article.tags %}
+                    <small><span>{{ tags }} </span></small>
+                  {% endfor %}
+                </div>
+                <h4 class="section-title blog-grid-element-title"><a href="{{article.url}}">{{ article.title }}</a></h4>
+              </div>
+  
+              <div class="content-general">
+                <p>{{ article.excerpt | truncatewords: 30 }}</p>
+              </div>
+  
+              <div class="secondary-cta-parent">
+                <a class="cta-secondary" href="{{ article.url }}">
+                  <span class="link-text">Read More</span>
+                  <span class="link-crt">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="11" viewBox="0 0 8 11">
+                      <path id="Polygon_3" data-name="Polygon 3" d="M5.17.479a.4.4,0,0,1,.659,0l4.74,6.894A.4.4,0,0,1,10.24,8H.76a.4.4,0,0,1-.33-.627Z" transform="translate(8) rotate(90)" fill="#da6227"/>
+                    </svg> 
+                  </span>
+                </a>
+              </div>
+              
+            </div> 
+
+          </div>
+        {% endfor %}
+      </div>
+      {% if paginate.next.is_link %}
+        <a href="{{ paginate.next.url }}">{{ paginate.next.title }}</a>
+      {% endif %}
+      {% if paginate.previous.is_link %}
+        <a href="{{ paginate.previous.url }}">{{ paginate.previous.title }}</a>
+      {% endif %}
+    </div>
+      
+  	  {% endpaginate %}
+</section>
+
+
+{% section 'full-banner' %}
+{% section 'pre-footer' %}
+
