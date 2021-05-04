@@ -9,7 +9,9 @@ import prodSliderInit from "./single_product-slider";
 import productAccordion from "./accordion.js";
 import byob from "./_byob";
 import createTestimonialSlide from "./testimonial-slide"; 
-import {setHero, setActiveHeader} from './new_hero'; 
+import {setHero, setActiveHeader} from './new_hero';
+import promo from "./promo";
+promo()
 
 setHero();
 setActiveHeader();
@@ -59,6 +61,7 @@ import scroll from "./scroll";
 import search from "./search";
 import batch from "./batch";
 import setFeaturedBlogMarkup from "./featured-blogs";
+
 
 scroll();
 

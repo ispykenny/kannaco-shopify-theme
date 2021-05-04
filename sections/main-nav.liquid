@@ -1,5 +1,31 @@
 <header>
   <div class="ko-wrapper">
+  {% assign has_promo_bar = section.settings.has_promo_bar  %}
+  
+  {% if has_promo_bar %}
+    <div class="promo" data-expiration={{section.settings.promo_bar_expiration}}>
+      <div class="inner">
+        <div class="promo__el">
+          <p>{{section.settings.promo_bar_message}}</p>
+          <div>
+            <a href="" class="hide-promo--btn">{{section.settings.promo_bar_button_one}}</a>
+            <a href="" class="promo__cta cta">
+              <span class="promo__swap">
+                <span class="promo__current">{{section.settings.promo_bar_button_two}}</span>
+                <span class="promo__code">{{section.settings.promo_bar_button_two_b}}</span>
+                <div class="copy-code__parent">
+                  <input type="text" class="copy_code" value="{{section.settings.promo_code}}}">
+                </div>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <button class="hide-promo hide-promo--btn">
+        X
+      </button>
+    </div>
+    {% endif %}
     <div id="ko-banner" class="inner ko-banner-grid">
       <div class="ko-banner-grid__item">
         <nav id="ko-banner__social">
@@ -11,7 +37,10 @@
               </svg>              
             </a>
             </li>
-            <li><a href="{{ settings.facebook_link }}" rel="noopener">
+            <li><a href="
+            
+            
+            " rel="noopener">
               <span class="sr-only">Facebook</span>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>           
             </a></li>
@@ -309,7 +338,42 @@
       "id": "banner_link",
       "type": "url",
       "label": "Banner Link"
+    },
+    {
+      "id": "has_promo_bar",
+      "type": "checkbox",
+      "label": "Show Promo Bar?"
+    },
+    {
+      "id": "promo_bar_expiration",
+      "type": "text",
+      "label": "Show again in X amount of days"
+    },
+    {
+      "id": "promo_bar_message",
+      "type": "text",
+      "label": "Promo Bar Message"
+    },
+    {
+      "id": "promo_bar_button_one",
+      "type": "text",
+      "label": "Cancel Button Text"
+    },
+    {
+      "id": "promo_bar_button_two",
+      "type": "text",
+      "label": "Promo Button Text (Before clicked)"
+    },
+    {
+      "id": "promo_bar_button_two_b",
+      "type": "text",
+      "label": "Promo Button Text (Promo Code)"
+    },{
+      "id": "promo_code",
+      "type": "text",
+      "label": "Promo Code Only"
     }
+
   ],
   "name": "Featured Products",
   "blocks": [

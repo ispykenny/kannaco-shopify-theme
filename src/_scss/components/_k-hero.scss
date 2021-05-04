@@ -2,6 +2,7 @@
   height: 650px;
   max-width: 1800px;
   margin: auto;
+  padding-top: 55px;
   position: relative;
   overflow: hidden;
 
@@ -74,7 +75,7 @@
 
 @media(min-width: $bp-md) {
   .k-hero {
-    height: 800px;
+    height: 900px;
     max-width: 1800px;
     margin: auto;
     position: relative;
@@ -174,7 +175,7 @@
     max-width: 400px;
   }
   .k-hero__product {
-    width: 280px;
+    width: 300px;
   }
 }
 
@@ -182,6 +183,6 @@
 @media(min-width: $bp-xl) {
 
   .k-hero__product {
-    width: 280px;
+    width: 320px;
   }
 }
