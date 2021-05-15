@@ -1,76 +1,57 @@
 import { data } from "flickity";
 
 export default function () {
-  let $btn = $("#AddToCart");
-  let $btnCurrentText = $btn.text();
+  // let $btn = $("#AddToCart");
+  // let $btnCurrentText = $btn.text();
 
   const addToCart = (event) => {
-    let bubble = $("#cart-element__qty span");
-    let total;
-    event.preventDefault();
+    // event.preventDefault();
+    let $current = $(event.currentTarget);
+    let currentValue = parseInt($('#cart-element__qty span').text())
+    
 
-    if (bubble.text().length > 0) {
-      let bubbleValue = parseInt(bubble.text());
-      total = bubbleValue + parseInt($("#Quantity").val());
-    } else {
-      total = parseInt($("#Quantity").val());
-    }
+    let newValue = currentValue + 1;
 
-    if (total <= 10) {
-      $("#cart-element__qty").fadeIn();
-      bubble.text(total);
+    console.log(newValue + 1)
+    
 
-      $btn.text("Added!");
+    $('#cart-element__qty span').text(newValue)
+    $('#cart-element__qty span').parent().removeClass('hide')
 
-      let data = {
-        quantity: $("#Quantity").val(),
-        id: $('[name="id"]').val(),
-        options_with_values: [
-          {
-            name: "Cream",
-            value: "Cream 2"
-          },
-          {
-            name: "Tincture",
-            value: "Tincture 2"
-          },
-          {
-            name: "Softgel",
-            value: "Softgel 1"
-          }
-        ],
-        variant_options: [
-          'Cream 2', 'Tincture 2', 'Softgel 1'
-        ]
-      }
 
-      $.ajax({
-        type: 'POST',
-        url: '/cart/add.js',
-        data: data,
-        dataType: 'json',
-        success: function(data) {
-          console.log(data)
-          setTimeout(() => $btn.text($btnCurrentText), 1200);
-        }
+    console.log($current.find('.variant-prod').val())
 
-      })
-      // $.post(
-      //   "/cart/add.js",
-      //   {
-      //     quantity: $("#Quantity").val(),
-      //     id: $('[name="id"]').val(),
+    
+      // $.ajax({
+      //   type: 'POST',
+      //   url: '/cart/add.js',
+      //   data: data,
+      //   dataType: 'json',
+      //   success: function(data) {
+      //     console.log(data)
+      //     setTimeout(() => $btn.text($btnCurrentText), 1200);
+      //   }
 
-      //   },
-      //   null,
-      //   "json"
-      // );
+      // })
+      $.post(
+        "/cart/add.js",
+        {
+          quantity: 1,
+          id: $current.find('.variant-prod').val()
 
-      
-    } else {
-      alert("Unable to add to cart. Exceeded limit (10) items");
-    }
+        },
+        null,
+        "json"
+      );
+
+      $current.find('button').text('Added to cart!')
+
+      setTimeout(() => {
+        $current.find('button').text('Add to cart')
+      }, 1000)
+
+      console.log('working')
   };
 
-  // $("#AddToCartForm").on('submit', event => addToCart(event))
+  $(".inf-btn").on('submit', event => addToCart(event))
 }

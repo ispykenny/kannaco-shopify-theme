@@ -4,6 +4,9 @@
 
     {% if cart.item_count > 0 %}
       <h1 style="text-align: center;">Your Cart</h1>
+      <div class="go-back">
+        <button class="cta go-back">Go Back</button>
+      </div>
       <form action="/cart" method="post" novalidate>
         <div class="cart">
           {% for item in cart.items %}
@@ -17,7 +20,7 @@
                   </div>
                   <div class="item-details"> 
                     {{item.product.title}}
-                    {{item.variant.title}}
+                    {% comment %} {{item.variant.title}} {% endcomment %}
                   </div>
                 </div>
                 </a>
@@ -78,3 +81,14 @@
     {% endif %}
   </div>
 </section>
+
+<script>
+
+
+if(document.querySelector('.go-back')) {
+  document.querySelector('.go-back').addEventListener('click', function(event) {
+  event.preventDefault();
+  history.back();
+})
+}
+</script>

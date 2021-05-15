@@ -1,0 +1,289 @@
+.in-hero {
+  background: white;
+  padding-bottom: 4em;
+}
+.in-hero .inner {
+  max-width: 1000px;
+  width: 90%;
+  
+}
+.collab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 0em;
+
+  p {
+    font-weight: 800;
+    font-size: 2.5em;
+    margin: 0.4em 0em;
+    letter-spacing: 6px;
+  }
+}
+
+.cross {
+  margin: 0em 4em;
+  position: relative;
+  width: 20px;
+  height: 50px;
+
+
+  span {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: $primary;
+    
+    
+    &:first-of-type {
+      left: 0;
+      transform: rotate(45deg);
+    }
+    &:last-child {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.influencer-image {
+  // margin-top: 3em;
+}
+
+.influencer-image__el {
+  margin: 3em auto;
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  top: -15px; left: 0px;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  width: 30px;
+  height: 30px;
+  
+  &__el {
+    width: 100%;
+    height: 100%;
+    border: 4px solid $primary;
+    border-radius: 100%;
+    position: absolute;
+    animation: animateIcon 2200ms infinite alternate;
+  }
+}
+
+.inf-el {
+  background: #333;
+}
+
+.overlay-sheet {
+  @include fill-parent();
+  width: 100%;
+  height: 100%;
+  left: auto;
+  right: 0;
+  top: auto;
+  bottom: 0;
+  // transform: translate(10%, 10%);
+  z-index: 5;
+  background:#DD5715;
+  mix-blend-mode: multiply;
+  
+}
+
+.cta-overlay {
+  position: absolute;
+  width: 100%; height: 100%;
+  z-index: 9; left: 0;
+  text-align: center;
+
+  .cta-white {
+    position: absolute;
+    padding: 1em 3em;
+    border-radius: 5px;
+    box-shadow: 0px 0px 40px rgba(black, 0.2);
+    font-weight: 800;
+    font-size: 1em;
+    white-space: nowrap;
+    text-decoration: none;
+    color: black;
+    transform: translate(-50%, -50%);
+    background: white;
+  }
+}
+
+.influencer-blurb {
+  max-width: 800px;
+  margin: auto;
+  padding-top: 3em;
+  text-align: center;
+  
+  .hr {
+    height: 6px;
+  }
+}
+
+.hr.centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.influencer-favorites {
+  background: #f5f5f5;
+  padding-top: 3em;
+  padding-bottom: 4em;
+}
+
+.inf-btn button {
+  @include btn-reset();
+  display: inline-block;
+  padding: 0.8em 2em ;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1;
+  text-decoration: none;
+  background: $primary;
+  color: white;
+  border: 2px solid $primary !important;
+
+  &:hover {
+    transition: background 500ms ease;
+    background: darken($primary, 10%);
+  }
+}
+@keyframes animateIcon {
+  from {
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(10px);
+  }
+}
+
+
+.influencer-products {
+  display: flex;
+  flex-wrap: wrap;
+  // justify-content: space-between;
+  justify-content: center;
+  padding-top: 3em;
+
+  &__item {
+    width: 80%;
+    margin-bottom: 2em;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  &__content {
+    width: 90%;
+    margin: auto;
+    padding: 2em 0em;
+  }
+
+  &__img {
+    position: relative;
+  }
+
+  h4 {
+    font-size: 1em;
+    color: #aaa;
+  }
+
+  h3 {
+    font-size: 1.2em;
+    line-height: 1.3;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+  }
+
+  @media(min-width: $bp-md) {
+    justify-content: space-between;
+
+    &__item {
+      width: 32%;
+
+      h4 {
+        font-size: 0.8em;
+      }
+
+      h3 {
+        font-size: 0.9em;
+      }
+    }
+  }
+
+  @media(min-width: $bp-lg) {
+  
+    &__item {
+
+      h4 {
+        font-size: 1em;
+      }
+
+      h3 {
+        font-size: 1.2em;
+      }
+    }
+  }
+  &__content {
+    width: 85%;
+  }
+
+}
+
+.in-price {
+  position: absolute;
+  top: 20px; left: 20px;
+  z-index: 9;
+}
+
+@media(min-width: $bp-md) {
+  .collab {
+    flex-direction: row;
+    padding-top: 3em;
+  
+    p {
+      font-size: 2.5em;
+    }
+  }
+  
+  .cross {
+    width: 40px;
+    height: 100px;
+  
+  
+    span {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: $primary;
+      
+      
+      &:first-of-type {
+        left: 0;
+        transform: rotate(45deg);
+      }
+      &:last-child {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  
+  .icon {
+    width: 60px;
+    height: 60px;
+    top: -10px;
+  }
+  
+
+  
+  .overlay-sheet {
+    transform: translate(10%, 10%);
+  }
+}

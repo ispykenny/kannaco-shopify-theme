@@ -11,12 +11,22 @@ import byob from "./_byob";
 import createTestimonialSlide from "./testimonial-slide"; 
 import {setHero, setActiveHeader} from './new_hero';
 import promo from "./promo";
+import influencer from "./influencer";
 promo()
-
 setHero();
 setActiveHeader();
 byob();
 ajaxToCart();
+influencer()
+
+var paramsString = window.location.search
+var searchParams = new URLSearchParams(paramsString);
+// console.log(paramsString)
+// console.log(searchParams.get('afmc'))
+
+if(searchParams.get('afmc') === "NYLE") {
+  window.location.href = "https://kannacocbd.com/collections/all"
+}
 
 $(window).on({
   load: () => {
@@ -56,6 +66,7 @@ footer();
 if ($(".qty").length > 0) {
   qty();
 }
+
 
 import scroll from "./scroll";
 import search from "./search";
