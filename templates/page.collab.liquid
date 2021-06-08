@@ -2,14 +2,14 @@
     <div class="inner">
       <div class="collab">
         <div class="collab__el">
-          <p>Kannaco</p>
+          <p>{{page.title}}</p>
         </div>
         <div class="collab__el cross">
           <span></span>
           <span></span>
         </div>
         <div class="collab__el">
-          <p>{{page.title}}</p>
+          <p>Kannaco</p>
         </div>
       </div>
 
@@ -48,85 +48,34 @@
       </div>
 
       <div class="influencer-products">
-
-      {% comment %} {{page.metafields.accentuate.products}} {% endcomment %}
-
-      {% assign selected_handles = page.metafields.accentuate.products | split: '|' %}
-
-
-          
-
-      
-
-      
-      {% for block in page.metafields.accentuate.products %}
+          {% assign selected_handles = page.metafields.accentuate.products | split: '|' %}
+          {% for block in page.metafields.accentuate.products %}
           {% assign product_item = all_products[block] %}
           {% assign featured_image = product_item | img_url: 'master' %}
         <div class="influencer-products__item">
+
           <div class="influencer-products__img">
             <div>
               <img src="{{featured_image}}" alt="">
             </div>
-            <div class="in-price">Price: {{ product_item.price | money }}</div>
+            <div class="in-price">
+              <p style="margin: 0;">{{ product_item.metafields.accentuate.product_promo_price }}</p>
+              <p style="margin: 0;">{{product_item.metafields.accentuate.product_previous_price}}</p>
+            </div>
           </div>
           <div class="influencer-products__content">
             <div class="influencer-products__container">
               <h4>{{ product_item.metafields.accentuate.mini_blurb }}</h4>
               <h3>{{product_item.title}}</h3>
+              <div class="influencer-products__content--item">
+                {{ product_item.metafields.accentuate.product_mini_details }} 
+              </div>
               <div class="go-to-product">
-              
-                {% comment %} <a href="{{ product_item.url }}" class="cta inf-btn">Shop This</a> {% endcomment %}
-
-                {% comment %} {{product_item.variants.first.id}}
-                
-                  <form action="/cart/add" method="post" id="product-form-{{ product_item.id }} inf-form">
-
-                      <input type="submit" name="add" value="Add to Cart" class="action_button" onclick="return false; Shopify.addItem({{product_item.variants.first.id}}, 1, 'okay')"/>
-                  </form> {% endcomment %}
-
-
-
-
-                  {% comment %} <form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm">
-                {% assign tags =  product.tags %}
-              
-                <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
-                
-                {% comment %} {{ current_variant.price | money }} {% endcomment %}
-                {% comment %} <div class="qty-parent">
-                  <label for="Quantity">Qty:</label>
-                  <div class="qty">
-                    <div class="qty__ui">
-                      <div class="qty__change subtract">-</div>
-                      <div class="qty__value">0</div>
-                      <div class="qty__change add">+</div>
-                    </div>
-                    <input type="number" id="Quantity" name="quantity" value="1" min="1">
-                  </div>
-                </div>
-                <button type="submit" name="add" id="AddToCart" class="cta">Add to cart</button>
-              </form>
-                {% endcomment %}
-{% endcomment %}
-              <form action="/cart/add" method="post" enctype="multipart/form-data" class="inf-btn">
-                    
-                      <input type="hidden" name="id" value="{{ product_item.variants.first.id }}" class="variant-prod" />
+                <form action="/cart/add" method="post" enctype="multipart/form-data" class="inf-btn">
                       
-                      {% comment %} {{ current_variant.price | money }} {% endcomment %}
-                      {% comment %} <div class="qty-parent">
-                        <label for="Quantity">Qty:</label>
-                        <div class="qty">
-                          <div class="qty__ui">
-                            <div class="qty__change subtract">-</div>
-                            <div class="qty__value">0</div>
-                            <div class="qty__change add">+</div>
-                          </div>
-                          <input type="number" id="Quantity" name="quantity" value="1" min="1">
-                        </div>
-                      </div> {% endcomment %}
-                      <button type="submit" name="add cta" >Add to cart</button>
-                    </form>
-                
+                  <input type="hidden" name="id" value="{{ product_item.variants.first.id }}" class="variant-prod" />
+                  <button type="submit" name="add cta" >Add to cart</button>
+                </form>      
               </div>
             </div>
           </div>

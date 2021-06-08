@@ -62,6 +62,7 @@ const initDomImages = (domImages) => {
   let observer = new IntersectionObserver((element) => {
 
     element.forEach((domImage) => {
+      if(!domImage.isIntersecting) return;
       if (domImage.intersectionRatio > 0) {
         if(domImage.target.getAttribute('data-src')) {
           const img = new Image();
@@ -71,6 +72,7 @@ const initDomImages = (domImages) => {
             domImage.target.classList.add("loaded");
           };
         }
+        observer.unobserve(domImage.target)
       }
     });
   }, observerOptions);

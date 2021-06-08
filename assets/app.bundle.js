@@ -3116,7 +3116,7 @@ const setBackgroundImages = () => {
   let observer = new IntersectionObserver((element) => {
     
     element.forEach(backgroundElement => {
-
+      if(!backgroundElement.isIntersecting) return;
       if(backgroundElement.intersectionRatio > 0) {
         
         const img = new Image();
@@ -3127,6 +3127,7 @@ const setBackgroundImages = () => {
           backgroundElement.target.closest('.section-bg').classList.add('active')
           backgroundElement.target.setAttribute('data-bg', '')
         }
+        observer.unobserve(backgroundElement.target)
       }
     })
   }, config)
@@ -3209,6 +3210,7 @@ const initDomImages = (domImages) => {
   let observer = new IntersectionObserver((element) => {
 
     element.forEach((domImage) => {
+      if(!domImage.isIntersecting) return;
       if (domImage.intersectionRatio > 0) {
         if(domImage.target.getAttribute('data-src')) {
           const img = new Image();
@@ -3218,6 +3220,7 @@ const initDomImages = (domImages) => {
             domImage.target.classList.add("loaded");
           };
         }
+        observer.unobserve(domImage.target)
       }
     });
   }, observerOptions);

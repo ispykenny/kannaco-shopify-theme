@@ -11,7 +11,7 @@ const setBackgroundImages = () => {
   let observer = new IntersectionObserver((element) => {
     
     element.forEach(backgroundElement => {
-
+      if(!backgroundElement.isIntersecting) return;
       if(backgroundElement.intersectionRatio > 0) {
         
         const img = new Image();
@@ -22,6 +22,7 @@ const setBackgroundImages = () => {
           backgroundElement.target.closest('.section-bg').classList.add('active')
           backgroundElement.target.setAttribute('data-bg', '')
         }
+        observer.unobserve(backgroundElement.target)
       }
     })
   }, config)
