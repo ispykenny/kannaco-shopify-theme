@@ -73,7 +73,7 @@
       </div>
     </div>
   {% endif %}
-
+{% comment %} 
   <div class="inner two-col-parent-slide">
     {% for block in section.blocks %}
     {% assign product_item = all_products[block.settings.slide_product_image] %}
@@ -143,6 +143,7 @@
 
       {% endfor %}
     </div>
+   {% endcomment %}
   <div class="bg-element">
     {% include 'flower' %}
   </div>
